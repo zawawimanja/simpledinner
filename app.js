@@ -514,6 +514,36 @@ const RECIPES = [
       "Goreng sambil golek-golekkan 3-4 minit sampai perang gelap berkilat. Angkat dan toskan!"
     ],
     chefTip: "Goreng guna api sederhana supaya bahagian dalam masak empuk dan luar tak hangus."
+  },
+  {
+    id: "coleslaw-krim-segar",
+    name: "Coleslaw Berkrim Segar (Ala KFC)",
+    category: "salad",
+    categoryLabel: "🥗 Geng Salad Fresh",
+    time: "3 minit",
+    gear: "1 Mangkuk & Sudu Sahaja",
+    bannerIcon: "🥗",
+    bannerGradient: "linear-gradient(135deg, #10b981 0%, #047857 100%)",
+    desc: "Kobis dan lobak merah yang dicincang halus disalut sos mayonis berkrim, sedikit susu, perahan lemon dan secubit gula. Rangup manis dan sejuk menyegarkan tekak!",
+    vibe: "Rangup sejuk, manis berlemak, penyejuk tekak terbaik",
+    cravingCall: "Tekak nak benda yang sejuk rangup berlemak manis untuk seimbangkan makanan goreng panas malam ni.",
+    pantryTags: ["salad", "kudap"],
+    ingredients: [
+      "1 cawan kobis (cincang dadu halus)",
+      "2 sudu besar lobak merah (cincang halus)",
+      "2 sudu besar mayonis (Kewpie / regular)",
+      "1 sudu besar susu segar / susu cair",
+      "1/2 sudu kecil gula (ikut manis)",
+      "1/2 sudu kecil jus lemon / cuka masakan",
+      "Secubit garam & lada sulah"
+    ],
+    steps: [
+      "Cincang dadu halus kobis dan lobak merah (ala tekstur coleslaw KFC).",
+      "Dalam mangkuk, kacau mayonis, susu, gula, jus lemon, garam, dan lada sulah sampai jadi sos berkrim.",
+      "Masukkan sayur cincang ke dalam mangkuk sos, gaul rata sehingga semuanya bersalut pekat.",
+      "Ratah terus atau simpan dalam peti ais sekejap untuk rasa sejuk rangup yang luar biasa!"
+    ],
+    chefTip: "Cincang kobis halus-halus (jangan hiris panjang) supaya kuah mayonis dapat menyaluti setiap butiran sayur dengan sempurna."
   }
 ];
 
