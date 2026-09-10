@@ -37,33 +37,33 @@ const RECIPES = [
     chefTip: "Jangan defrost fries sebelum masak; masak terus masa beku supaya luar kekal garing dan tak serap minyak."
   },
   {
-    id: "korean-corn-cheese",
-    name: "Korean Sweet Corn Cheese Meleleh",
+    id: "jagung-cawan-pasar-malam",
+    name: "Jagung Manis Cawan Susu Mentega (Pasar Malam)",
     category: "kudap",
-    categoryLabel: "🌽 Sektor Jagung & Keju",
-    time: "5 minit",
-    gear: "1 Kuali Leper / Skillet",
-    bannerIcon: "🧀",
+    categoryLabel: "🌽 Sektor Jagung Manis",
+    time: "2 minit",
+    gear: "1 Cawan & Microwave / Periuk Kecil",
+    bannerIcon: "🌽",
     image: "images/korean_corn_cheese.jpg",
-    bannerGradient: "linear-gradient(135deg, #eab308 0%, #a16207 100%)",
-    desc: "Jagung manis berjus dibalut limpahan keju mozzarella cair yang meregang panjang dengan aroma mentega wangi.",
-    vibe: "Cheese pull melimpah, manis lemak berlemak",
-    cravingCall: "Ketagih keju mozzarella cair panas yang berbalut jagung manis meletup-letup.",
+    bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+    desc: "Jagung manis berjus panas dalam cawan digaul marjerin Planta/mentega wangi, sedikit susu pekat manis dan secubit garam. Zero kuali, tak berminyak, ratah sudu demi sudu.",
+    vibe: "Manis lemak berjus meletup-letup, aroma mentega wangi berasap, zero basuh periuk",
+    cravingCall: "Nak kudapan manis lemak panas yang terus siap dalam 2 minit tanpa buat dapur berasap atau bersepah.",
     pantryTags: ["jagung", "mentega"],
     ingredients: [
       "1 cawan jagung manis tin (toskan airnya)",
-      "1 sudu besar mentega",
-      "1 sudu besar mayonis",
-      "Segenggam keju mozzarella / cheddar parut",
-      "Sedikit serbuk lada hitam & parsley"
+      "1 sudu besar marjerin Planta / mentega wangi",
+      "1 sudu besar susu pekat manis",
+      "Secubit kecil garam halus (rahsia peniaga naikkan lemak)"
     ],
     steps: [
-      "Cairkan mentega dalam kuali kecil, masukkan jagung manis dan mayonis. Gaul rata 1 minit.",
-      "Ratakan jagung leper dalam kuali, tabur keju mozzarella melimpah ruah di atas permukaan.",
-      "Tutup kuali dengan penutup selama 2-3 minit dengan api kecil sehingga keju cair dan menggelegak.",
-      "Tabur lada hitam dan terus tarik suapan pertama dengan cheese pull!"
+      "Masukkan jagung manis ke dalam cawan seramik atau mangkuk kecil.",
+      "Letakkan mentega/Planta dan susu pekat di atas jagung.",
+      "Masukkan ke dalam microwave selama 45–60 saat sehingga mentega cair dan jagung berasap panas.",
+      "Keluarkan, taburkan secubit garam dan kacau sebati terus dengan sudu.",
+      "Terus suap panas-panas sambil santai di sofa!"
     ],
-    chefTip: "Guna kuali non-stick bertutup supaya wap panas mencairkan keju dari atas dengan sekata."
+    chefTip: "Secubit garam halus tu rahsia penting peniaga pasar malam — ia potong rasa muak manis dan naikkan rasa lemak berkrim berkali ganda!"
   },
   {
     id: "cucur-jagung-manis",
@@ -648,6 +648,35 @@ const RECIPES = [
       "Makan panas-panas sambil merasa keenakan kelapa berempah di dalamnya!"
     ],
     chefTip: "Guna api sederhana kecil agar inti kelapa dalam panas sekata tanpa lapisan kulit luar cepat gelap."
+  },
+  {
+    id: "sup-telur-enoki-panas",
+    name: "Sup Telur Bersarang Cendawan Enoki",
+    category: "bubur",
+    categoryLabel: "🥣 Geng Bubur & Sup",
+    time: "3 minit",
+    gear: "1 Periuk Kecil & Mangkuk",
+    bannerIcon: "🍲",
+    bannerGradient: "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
+    desc: "Sup jernih panas menenangkan perut malam hari: cendawan enoki segar berjus dan tali telur gebu bersarang. Sangat licin, wangi minyak bijan, tak buat perut sebu.",
+    vibe: "Hirup kuah panas suam, enoki kenyal berjus, tali telur gebu sutera",
+    cravingCall: "Malam sejuk tekak nak hirup kuah panas yang menenangkan perut sebelum tidur tanpa makanan berat.",
+    pantryTags: ["telur", "cendawan"],
+    ingredients: [
+      "1 paket cendawan enoki segar (potong akar & basuh)",
+      "1–2 biji telur ayam (pukul ringan)",
+      "1 1/2 cawan air panas",
+      "1/2 kiub pati ayam / ikan bilis",
+      "Sedikit serbuk lada sulah & titisan minyak bijan (pilihan)"
+    ],
+    steps: [
+      "Didihkan air bersama separuh kiub pati dalam periuk kecil (1 minit).",
+      "Masukkan cendawan enoki segar, biar menggelegak 1 minit.",
+      "Kacau kuah buat pusaran bulat, tuang telur perlahan-lahan supaya jadi jalur telur halus bersarang (egg drop).",
+      "Tutup api, tabur lada sulah dan titis sedikit minyak bijan untuk aroma wangi.",
+      "Tuang terus ke dalam mangkuk dan hirup panas-panas!"
+    ],
+    chefTip: "Kacau kuah berpusar sebelum tuang telur supaya telur masak gebu bersarang macam sup hotel tanpa bergumpal ketul besar."
   }
 ];
 
