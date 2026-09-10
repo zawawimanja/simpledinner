@@ -677,6 +677,118 @@ const RECIPES = [
       "Tuang terus ke dalam mangkuk dan hirup panas-panas!"
     ],
     chefTip: "Kacau kuah berpusar sebelum tuang telur supaya telur masak gebu bersarang macam sup hotel tanpa bergumpal ketul besar."
+  },
+  {
+    id: "tortilla-telur-gulung",
+    name: "Tortilla Tekap Telur Gulung (Egg Wrap)",
+    category: "wrap",
+    categoryLabel: "🌯 Geng Wrap & Shawarma",
+    time: "2 minit",
+    gear: "1 Kuali Leper Sahaja",
+    bannerIcon: "🌯",
+    bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
+    desc: "Pecahkan telur atas kuali, terus tekap kepingan tortilla di atasnya. Balikkan, picit sos cili & mayo, gulung kemas semasa panas. Sangat empuk, sedap dan kenyang tanpa sebu!",
+    vibe: "Telur melekat empuk pada roti gandum lembut, picit sos terus gulung panas",
+    cravingCall: "Lapar nak makan ala shawarma wrap tapi nak siap dalam 2 minit guna sebiji telur di dapur.",
+    pantryTags: ["wrap", "telur"],
+    ingredients: [
+      "1 keping roti tortilla / wrap gandum",
+      "1–2 biji telur ayam",
+      "Sedikit serbuk lada hitam & secubit garam",
+      "Sos cili & mayonis secukup rasa"
+    ],
+    steps: [
+      "Panaskan sedikit minyak atau secebis mentega di kuali leper.",
+      "Pecahkan telur, tabur sedikit garam dan serbuk lada hitam.",
+      "Semasa telur masih basah cair, terus tekap kepingan tortilla di atas telur dan tekan perlahan-lahan.",
+      "Biarkan 30–40 saat sehingga telur melekat kukuh pada roti, kemudian terbalikkan.",
+      "Picitkan sos cili dan mayonis memanjang di tengah, terus gulung kemas semasa panas dan sedia digigit!"
+    ],
+    chefTip: "Tekap tortilla masa telur masih basah cair supaya roti melekat kemas menjadi satu lapisan empuk tanpa tertanggal."
+  },
+  {
+    id: "roti-garlic-airfryer",
+    name: "Roti Bawang Putih Garing (Garlic Toast)",
+    category: "kudap",
+    categoryLabel: "🍟 Geng Kudap & Goreng",
+    time: "3 minit",
+    gear: "Air Fryer / Pembakar Roti",
+    bannerIcon: "🍞",
+    bannerGradient: "linear-gradient(135deg, #d97706 0%, #78350f 100%)",
+    desc: "Roti keping disapu mentega wangi, serbuk bawang putih dan herba parsley. Dibakar garing berderai keemasan dalam air fryer. Krup-krap beraroma, sedap dicicah sos atau sup!",
+    vibe: "Garing krup-krap berderai, harum mentega bawang putih wangi satu rumah",
+    cravingCall: "Tekak nak mengunyah benda rangup masin bermentega tanpa payah goreng minyak banyak.",
+    pantryTags: ["mentega", "kudap"],
+    ingredients: [
+      "2–3 keping roti putih / wholemeal",
+      "1 sudu besar mentega / marjerin Planta",
+      "1/2 sudu kecil serbuk bawang putih (garlic powder)",
+      "Sedikit herba parsley / oregano kering (pilihan)"
+    ],
+    steps: [
+      "Gaul mentega bersama serbuk bawang putih dan sedikit herba dalam mangkuk kecil.",
+      "Sapu rata di atas permukaan roti keping.",
+      "Potong roti bentuk jejari (ala fries) atau bentuk segitiga.",
+      "Masukkan ke dalam air fryer pada suhu 180°C selama 3–4 minit sehingga kuning keemasan garing.",
+      "Keluarkan dan nikmati kunyahan panas berderai krup krap!"
+    ],
+    chefTip: "Potong roti memanjang macam kentang jejari sebelum bakar; rasa mengunyah dia sebiji macam makan fries rangup tapi versi bakar tanpa minyak!"
+  },
+  {
+    id: "telur-separuh-masak-kopitiam",
+    name: "Telur Separuh Masak Kicap & Lada Sulah",
+    category: "bubur",
+    categoryLabel: "🥚 Sektor Telur Sutera",
+    time: "6 minit (Rendam Air Panas)",
+    gear: "1 Mangkuk & Air Mendidih Sahaja",
+    bannerIcon: "🥚",
+    bannerGradient: "linear-gradient(135deg, #eab308 0%, #ca8a04 100%)",
+    desc: "Dua biji telur separuh masak bergoyang gebu disiram kicap manis pekat dan taburan lada sulah putih. Suam berkrim meluncur di tekak, zero minyak, paling menenangkan perut malam.",
+    vibe: "Suam, licin berkrim, lemak masin wangi lada sulah, zero basuh periuk",
+    cravingCall: "Lapar tengah malam tapi nak makanan berkhasiat yang hangat, suam dan licin meluncur di tekak tanpa kuali kotor.",
+    pantryTags: ["telur"],
+    ingredients: [
+      "2 biji telur ayam gred A / B (suhu bilik)",
+      "Air mendidih secukupnya untuk rendaman",
+      "1 sudu teh kicap manis / kicap masin cap kipas udang",
+      "Secubit lada sulah putih"
+    ],
+    steps: [
+      "Didihkan air dalam cerek atau periuk kecil.",
+      "Letakkan 2 biji telur ke dalam cawan/mangkuk tahan panas, tuang air mendidih sampai tenggelam sepenuhnya.",
+      "Tutup mangkuk dengan piring rapat-rapat, biarkan selama tepat 6–7 minit (jangan usik, tak payah buka api).",
+      "Keluarkan telur, ketuk dan belah dua ke dalam mangkuk kecil.",
+      "Renjis kicap manis dan tabur lada sulah. Kacau sedikit dan hirup licin suap demi suap!"
+    ],
+    chefTip: "Trik kopitiam: Pastikan telur berada pada suhu bilik (bukan terus dari peti sejuk) supaya masa rendaman 6 minit menghasilkan putih telur berkrim dan kuning berair goyang sempurna!"
+  },
+  {
+    id: "keledek-madu-microwave",
+    name: "Ubi Keledek Madu Gebu Berwap (Microwave)",
+    category: "lenyek",
+    categoryLabel: "🥔 Geng Lenyek & Empuk",
+    time: "4 minit",
+    gear: "Microwave & Tisu Lembap",
+    bannerIcon: "🍠",
+    bannerGradient: "linear-gradient(135deg, #ea580c 0%, #c2410c 100%)",
+    desc: "Ubi keledek madu gebu empuk berasap panas: isi manis karamel semulajadi seperti kek span, diselit secebis mentega cair dan secubit garam. Zero kuali, kenyang empuk berkhasiat.",
+    vibe: "Empuk gebu macam kek, manis asli madu, berwap wangi panas",
+    cravingCall: "Nak makanan manis berlemak panas yang empuk gebu macam kek tapi 100% dari ubi segar semulajadi.",
+    pantryTags: ["kentang", "mentega"],
+    ingredients: [
+      "1 biji ubi keledek madu / oren / ungu",
+      "1 helai tisu dapur (kitchen towel)",
+      "1 sudu kecil mentega / marjerin Planta",
+      "Secubit kecil garam halus"
+    ],
+    steps: [
+      "Basuh bersih kulit ubi keledek, lap sedikit.",
+      "Cucuk seluruh permukaan ubi dengan garfu 6–8 kali.",
+      "Basahkan sehelai tisu dapur dengan air suam, balut longgar mengelilingi ubi keledek.",
+      "Letak atas pinggan microwave, panaskan kuasa tinggi selama 4–5 minit (picit lembut bila dah masak).",
+      "Belah tengah ubi yang panas berasap, letakkan secebis mentega dan secubit garam. Nikmati suapan manis gebunya!"
+    ],
+    chefTip: "Balut tisu lembap bertindak seperti ruang stim wap mikro — mengelakkan kulit ubi daripada mengering dan menjadikan isi dalamnya selembut kastard."
   }
 ];
 
@@ -687,6 +799,8 @@ const HEALTH_METRICS = {
   // 🟢 BAGUS & SIHAT (Real Food / Rendah Minyak / Mesra Perut Malam)
   "chawanmushi-telur": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "100% tanpa minyak! Telur kukus protein tulen, licin & paling mesra perut malam." },
   "sup-telur-enoki-panas": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Sup bening jernih: cendawan enoki segar & telur. Zero minyak, mudah dihadam sebelum tidur." },
+  "telur-separuh-masak-kopitiam": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "100% protein tulen tanpa minyak! Paling mesra perut, senang hadam dan tidur nyenyak." },
+  "keledek-madu-microwave": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Ubi asli tinggi serat & antioksidan. Manis semula jadi madu tanpa sebarang gula proses." },
   "bubur-oat-savoury": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Oat bijirin penuh tinggi serat + telur goyang. Kenyang lena tanpa bebankan pencernaan." },
   "salad-telur-creamy": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Telur rebus kaya protein tulen tanpa goreng minyak. Ringan & menyegarkan badan." },
   "coleslaw-krim-segar": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Kobis segar tinggi enzim pencernaan & serat. Sejuk, rangup dan menyegarkan perut." },
@@ -694,6 +808,8 @@ const HEALTH_METRICS = {
   "jacket-potato-microwave": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Ubi kentang bulat asli kaya kalium & serat, dimasak microwave tanpa minyak." },
 
   // 🟡 SEDERHANA (MEDIUM) (Homemade / Seimbang / Karbo Ringkas)
+  "tortilla-telur-gulung": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Wrap gandum nipis & protein telur tulen. Mengenyangkan tanpa beban minyak/nasi berat." },
+  "roti-garlic-airfryer": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Roti dibakar garing tanpa minyak goreng. Memuaskan rasa mengunyah rangup waktu malam." },
   "jagung-cawan-pasar-malam": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Jagung manis asli kaya serat, ada lemak manis susu & Planta. Sesuai dimakan sederhana." },
   "lempeng-telur-bawang": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Masakan rumah ringkas (telur + tepung + bawang). Minyak minimum, kenyang elok." },
   "cucur-jagung-manis": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Bancuhan tepung & jagung manis segar. Goreng nipis, sedap dan selesa perut." },
