@@ -681,6 +681,50 @@ const RECIPES = [
 ];
 
 // ==========================================
+// 1.1 TAHAP KESIHATAN & GUILT-METER (BAGUS / MEDIUM / CHEAT)
+// ==========================================
+const HEALTH_METRICS = {
+  // 🟢 BAGUS & SIHAT (Real Food / Rendah Minyak / Mesra Perut Malam)
+  "chawanmushi-telur": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "100% tanpa minyak! Telur kukus protein tulen, licin & paling mesra perut malam." },
+  "sup-telur-enoki-panas": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Sup bening jernih: cendawan enoki segar & telur. Zero minyak, mudah dihadam sebelum tidur." },
+  "bubur-oat-savoury": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Oat bijirin penuh tinggi serat + telur goyang. Kenyang lena tanpa bebankan pencernaan." },
+  "salad-telur-creamy": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Telur rebus kaya protein tulen tanpa goreng minyak. Ringan & menyegarkan badan." },
+  "coleslaw-krim-segar": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Kobis segar tinggi enzim pencernaan & serat. Sejuk, rangup dan menyegarkan perut." },
+  "nasi-impit-instant": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Beras rebus tulen tanpa sebarang minyak atau perasa tiruan. Ringan dan selesa perut." },
+  "jacket-potato-microwave": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Ubi kentang bulat asli kaya kalium & serat, dimasak microwave tanpa minyak." },
+
+  // 🟡 SEDERHANA (MEDIUM) (Homemade / Seimbang / Karbo Ringkas)
+  "jagung-cawan-pasar-malam": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Jagung manis asli kaya serat, ada lemak manis susu & Planta. Sesuai dimakan sederhana." },
+  "lempeng-telur-bawang": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Masakan rumah ringkas (telur + tepung + bawang). Minyak minimum, kenyang elok." },
+  "cucur-jagung-manis": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Bancuhan tepung & jagung manis segar. Goreng nipis, sedap dan selesa perut." },
+  "mashed-potato-ekspres": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Kentang lenyek empuk berkarbohidrat kompleks + mentega wangi. Sangat lembut di perut." },
+  "cekodok-bilis-rangup": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Ikan bilis asli kaya kalsium & bawang merah. Kudapan kampung seimbang." },
+  "cekodok-pisang-emas": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Pisang ranum kaya tenaga semula jadi tanpa perasa tiruan. Lemak manis semula jadi." },
+  "enoki-goreng-crispy": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Cendawan enoki segar kaya antioksidan, bersalut tepung goreng garing." },
+  "wrap-popcorn-shawarma": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Salad segar berbalut tortilla gandum dan ayam goreng. Seimbang & kenyang." },
+  "mushroom-soup-telur": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Sup cendawan berkhasiat memanaskan badan malam hari, lemak berkrim sederhana." },
+  "pau-gebu-panas": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Dimasak secara kukus atau microwave tanpa minyak langsung. Empuk dan mengenyangkan." },
+
+  // 🔴 KURANG SIHAT (CHEAT MEAL / MAKANAN PROSES / JARANG-JARANG)
+  "french-fries-panas": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Kentang proses beku & tinggi garam, goreng minyak. Elok makan jarang-jarang." },
+  "nuget-crispy": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Daging proses beku bertepung. Sesuai bila malas, tapi jangan jadikan menu harian." },
+  "maggi-kari-telur": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Mi segera tinggi sodium & perasa. Sangat layan bila teringin, tapi jarakkan makan." },
+  "keropok-lekor": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Protein ikan sedap tetapi digoreng rendam minyak penuh (deep fried). Makan sesekali." },
+  "karipap-frozen-berapi": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Pastri beku berlapis lelemak shortening & digoreng minyak. Kudapan cheat rangup." },
+  "popia-frozen-rangup": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Kulit popia beku goreng minyak garing. Kudapan rangup sedap untuk santai sesekali." },
+  "cucur-badak-frozen": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Kuih tradisional goreng minyak berinti kelapa pedas. Sedap dimakan waktu teringin." }
+};
+
+// Automatik pasang data kesihatan pada setiap menu
+RECIPES.forEach(recipe => {
+  recipe.health = HEALTH_METRICS[recipe.id] || {
+    level: "medium",
+    label: "🟡 Sederhana (Medium)",
+    desc: "Kudapan santai seimbang untuk malam hari."
+  };
+});
+
+// ==========================================
 // 2. AUDIO SYNTHESIS
 // ==========================================
 class SoundFX {
@@ -1430,6 +1474,17 @@ function updateFocusedCard(recipe) {
   if (arrowText) {
     arrowText.textContent = `📍 ${recipe.bannerIcon} ${recipe.name}`;
   }
+
+  // Indikator Tahap Kesihatan (Bagus / Medium / Cheat)
+  const healthPill = document.getElementById("focusHealthPill");
+  const healthDesc = document.getElementById("focusHealthDesc");
+  if (healthPill && recipe.health) {
+    healthPill.textContent = recipe.health.label;
+    healthPill.className = `health-pill health-${recipe.health.level}`;
+  }
+  if (healthDesc && recipe.health) {
+    healthDesc.textContent = `💡 ${recipe.health.desc}`;
+  }
 }
 
 // ==========================================
@@ -1444,6 +1499,18 @@ function openRecipeModal(recipe) {
   
   dom.modalTimePill.textContent = `⏱️ Siap Dalam: ${recipe.time}`;
   dom.modalGearPill.textContent = `🍳 ${recipe.gear}`;
+
+  // Indikator Kesihatan di Modal
+  const modalHealthPill = document.getElementById("modalHealthPill");
+  const modalHealthDescBox = document.getElementById("modalHealthDescBox");
+  if (modalHealthPill && recipe.health) {
+    modalHealthPill.textContent = recipe.health.label;
+    modalHealthPill.className = `stat-pill health-pill health-${recipe.health.level}`;
+  }
+  if (modalHealthDescBox && recipe.health) {
+    modalHealthDescBox.innerHTML = `<strong>Tahap Kesihatan:</strong> ${recipe.health.desc}`;
+    modalHealthDescBox.className = `modal-health-desc-box health-box-${recipe.health.level}`;
+  }
 
   dom.modalIngredients.innerHTML = recipe.ingredients.map(ing => `
     <li class="ingredient-item">
@@ -1528,7 +1595,7 @@ function renderMenuGrid() {
         <div class="banner-icon" ${recipe.image ? 'style="display:none;"' : ''}>${recipe.bannerIcon}</div>
         <div class="card-badges">
           <span class="time-badge">⏱️ ${recipe.time}</span>
-          <span class="category-tag">${recipe.categoryLabel}</span>
+          <span class="card-badge-health health-${recipe.health.level}">${recipe.health.label}</span>
         </div>
       </div>
       

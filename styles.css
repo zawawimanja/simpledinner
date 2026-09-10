@@ -418,13 +418,124 @@ body {
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
 }
 
+.focus-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.25rem;
+}
+
 .focus-badge {
   font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
   color: var(--amber-light);
   letter-spacing: 0.06em;
-  margin-bottom: 0.2rem;
+}
+
+.health-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.03em;
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.health-pill.health-bagus {
+  background: rgba(16, 185, 129, 0.18);
+  border: 1px solid #10b981;
+  color: #34d399;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.3);
+}
+
+.health-pill.health-medium {
+  background: rgba(245, 158, 11, 0.18);
+  border: 1px solid #f59e0b;
+  color: #fbbf24;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.3);
+}
+
+.health-pill.health-cheat {
+  background: rgba(239, 68, 68, 0.18);
+  border: 1px solid #ef4444;
+  color: #f87171;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.3);
+}
+
+.focus-health-desc {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #a7f3d0;
+  margin-top: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(16, 185, 129, 0.08);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border-left: 2px solid #10b981;
+}
+
+.card-badge-health {
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+}
+
+.card-badge-health.health-bagus {
+  background: rgba(6, 78, 59, 0.9);
+  color: #a7f3d0;
+  border: 1px solid #10b981;
+}
+
+.card-badge-health.health-medium {
+  background: rgba(120, 53, 15, 0.9);
+  color: #fde68a;
+  border: 1px solid #f59e0b;
+}
+
+.card-badge-health.health-cheat {
+  background: rgba(127, 29, 29, 0.9);
+  color: #fca5a5;
+  border: 1px solid #ef4444;
+}
+
+.modal-health-desc-box {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: var(--radius-md);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  background: rgba(18, 24, 38, 0.9);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+}
+
+.modal-health-desc-box.health-box-bagus {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: rgba(6, 78, 59, 0.25);
+  color: #a7f3d0;
+}
+
+.modal-health-desc-box.health-box-medium {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(120, 53, 15, 0.25);
+  color: #fde68a;
+}
+
+.modal-health-desc-box.health-box-cheat {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: rgba(127, 29, 29, 0.25);
+  color: #fca5a5;
 }
 
 .focus-dish-name {
