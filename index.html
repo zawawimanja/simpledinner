@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bumi Menu — Midnight Comfort Food 3D</title>
+  <meta name="description" content="Pusing Bumi Menu 3D untuk memilih makanan malam kegemaran anda: bubur lembut, lempeng gebu, cucur jagung manis, mashed potato dan sup pekat berkrim. Bawah 15 minit, anti-renyah.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+  <!-- Three.js 3D Engine via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header class="top-header">
+    <div class="container top-header-content">
+      <a href="#" class="brand-logo" id="brandLogoLink">
+        <span class="brand-icon">🪐</span>
+        <div class="brand-text">
+          <h2>Planet Comfortia</h2>
+          <p>Pusat Makanan Lembut &amp; Panas Galaksi</p>
+        </div>
+      </a>
+      <div class="status-pill" id="liveClockPill">
+        <span class="status-dot"></span>
+        <span id="liveClock">Orbit Aktif</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 3D Globe Hero Section -->
+    <section class="globe-hero-section" id="globeHeroSection">
+      <div class="hero-tag">
+        <span>🪐 Sistem Bintang Comfortia • Sekali Tengok Terus Terliur</span>
+      </div>
+      <h1 class="hero-title">
+        Pening Nak Makan Apa? <br>
+        <span class="gradient-text">Pusing Planet Comfortia Ni!</span>
+      </h1>
+      <p class="hero-desc">
+        Sebuah planet misteri di galaksi malam yang dipenuhi menu <strong>empuk, lembut, berkanji, dan berkrim</strong>. Setiap kali kau tekan pusing, planet berputar dan mendaratkan kapal selera kau tepat pada menu idaman malam ni.
+      </p>
+
+      <!-- 3D Interactive Globe Stage -->
+      <div class="globe-stage-wrapper" id="globeStageWrapper">
+        <!-- HUD Header -->
+        <div class="globe-hud-header">
+          <div class="hud-radar-status">
+            <span class="radar-sweep"></span>
+            <span>Navigasi Orbit 3D • Planet Comfortia</span>
+          </div>
+          <div class="hud-instructions">
+            👆 Tarik planet untuk pusing manual atau tekan butang di bawah
+          </div>
+        </div>
+
+        <!-- Canvas Container -->
+        <div class="globe-canvas-container" id="globeCanvasContainer">
+          <canvas id="globeCanvas"></canvas>
+          <div class="globe-target-reticle" id="globeReticle"></div>
+        </div>
+
+        <!-- Focused HUD Destination Card -->
+        <div class="globe-focus-card" id="globeFocusCard">
+          <div class="focus-card-left">
+            <div class="focus-dish-icon" id="focusDishIcon">🥣</div>
+            <div>
+              <div class="focus-badge" id="focusBadge">Geng Bubur Lembut • ⏱️ 4 minit</div>
+              <h2 class="focus-dish-name" id="focusDishName">Bubur Oat Savoury Telur Goyang</h2>
+              <div class="focus-dish-vibe" id="focusDishVibe">✨ Tekak nak rasa hangat, masin gurih dan licin tanpa tunggu lama.</div>
+            </div>
+          </div>
+
+          <div class="focus-card-actions">
+            <button class="btn-spin-globe" id="spinGlobeBtn">
+              <span>🪐</span> Pusing Planet Comfortia!
+            </button>
+            <button class="btn-open-direct" id="openFocusedRecipeBtn">
+              Buka Resipi Terus ➔
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- "Check Dapur" Pantry Filter Section -->
+    <section class="pantry-section" id="pantrySection">
+      <div class="pantry-header">
+        <h3>
+          <span>🧺</span> Check Dapur: Bahan Apa Ada Kat Rumah Sekarang?
+        </h3>
+        <button class="pantry-reset-btn" id="resetPantryBtn">Kosongkan Pilihan</button>
+      </div>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
+        Pilih bahan yang ada di dapur kau. Menu di bawah akan terus ditapis mengikut bahan sedia ada:
+      </p>
+
+      <div class="pantry-chips-grid" id="pantryChipsGrid">
+        <button class="pantry-chip" data-item="kentang" id="chipKentang">
+          <span class="check-icon">✓</span> 🥔 Kentang / Fries
+        </button>
+        <button class="pantry-chip" data-item="telur" id="chipTelur">
+          <span class="check-icon">✓</span> 🥚 Telur
+        </button>
+        <button class="pantry-chip" data-item="maggi" id="chipMaggi">
+          <span class="check-icon">✓</span> 🍜 Maggi
+        </button>
+        <button class="pantry-chip" data-item="nasi" id="chipNasi">
+          <span class="check-icon">✓</span> 🍚 Nasi / Oat / Impit
+        </button>
+        <button class="pantry-chip" data-item="kudap" id="chipKudap">
+          <span class="check-icon">✓</span> 🍗 Nuget / Lekor
+        </button>
+        <button class="pantry-chip" data-item="wrap" id="chipWrap">
+          <span class="check-icon">✓</span> 🌯 Roti Wrap
+        </button>
+        <button class="pantry-chip" data-item="cendawan" id="chipCendawan">
+          <span class="check-icon">✓</span> 🍄 Cendawan / Enoki
+        </button>
+        <button class="pantry-chip" data-item="jagung" id="chipJagung">
+          <span class="check-icon">✓</span> 🌽 Jagung Tin
+        </button>
+        <button class="pantry-chip" data-item="tepung" id="chipTepung">
+          <span class="check-icon">✓</span> 🌾 Tepung Gandum
+        </button>
+        <button class="pantry-chip" data-item="mentega" id="chipMentega">
+          <span class="check-icon">✓</span> 🧈 Mentega / Keju
+        </button>
+      </div>
+    </section>
+
+    <!-- Menu Explorer Shelf & Categories -->
+    <section class="menu-explorer-section" id="menuExplorerSection">
+      <div class="filter-bar-section">
+        <div class="category-tabs" id="categoryTabsGroup">
+          <button class="category-tab active" data-category="all" id="tabAll">
+            ✨ Semua Menu
+          </button>
+          <button class="category-tab" data-category="kudap" id="tabKudap">
+            🍟 Geng Kudap &amp; Goreng
+          </button>
+          <button class="category-tab" data-category="wrap" id="tabWrap">
+            🌯 Geng Wrap &amp; Shawarma
+          </button>
+          <button class="category-tab" data-category="maggi" id="tabMaggi">
+            🍜 Maggi &amp; Nasi Impit
+          </button>
+          <button class="category-tab" data-category="lempeng" id="tabLempeng">
+            🥞 Geng Lempeng &amp; Cucur
+          </button>
+          <button class="category-tab" data-category="bubur" id="tabBubur">
+            🥣 Geng Bubur &amp; Sup
+          </button>
+          <button class="category-tab" data-category="lenyek" id="tabLenyek">
+            🥔 Geng Lenyek &amp; Empuk
+          </button>
+          <button class="category-tab" data-category="salad" id="tabSalad">
+            🥗 Geng Salad Fresh
+          </button>
+        </div>
+
+        <div class="search-wrapper">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            class="search-input" 
+            id="searchBar" 
+            placeholder="Cari menu (e.g. jagung, bubur, lempeng)..."
+            autocomplete="off"
+          >
+        </div>
+      </div>
+
+      <!-- Results Count Info -->
+      <div class="results-info-bar">
+        <div id="resultsCount">Menunjukkan senarai menu padu...</div>
+        <div style="font-size: 0.8rem; color: var(--text-dim);">💡 Klik mana-mana kad untuk tengok resipi &amp; pusingkan glob ke menu tersebut</div>
+      </div>
+
+      <!-- Menu Grid Cards Container -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Gourmet Recipe Modal ("Ha, Aku Nak Makan Ni!" - Tanpa Timer) -->
+  <div class="modal-overlay" id="recipeModal" role="dialog" aria-modal="true">
+    <div class="modal-content glass">
+      <div class="modal-header-banner">
+        <button class="modal-close-btn" id="closeModalBtn" aria-label="Tutup Paparan">&times;</button>
+        
+        <div class="modal-craving-badge" id="modalCravingBadge">
+          🔥 Citarasa Khas: Geng Bubur Lembut
+        </div>
+
+        <h2 class="modal-title" id="modalTitle">Bubur Oat Savoury Telur Goyang</h2>
+
+        <div class="modal-vibe-box" id="modalVibeBox">
+          💡 Kenapa tekak kau nak benda ni sekarang: "Super lembut, menenangkan perut, siap 4 minit!"
+        </div>
+
+        <div class="modal-quick-stats">
+          <span class="stat-pill" id="modalTimePill">⏱️ Siap Dalam: 4 minit</span>
+          <span class="stat-pill" id="modalGearPill">🍳 1 Periuk Kecil Sahaja</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <!-- Minimum Ingredients -->
+        <h3 class="section-title">
+          <span>📋</span> Bahan Minimum (Tak Perlu Sukat Timbang)
+        </h3>
+        <ul class="ingredients-list" id="modalIngredients">
+          <!-- Injected dynamically -->
+        </ul>
+
+        <!-- 3-4 Quick Steps -->
+        <h3 class="section-title">
+          <span>👨‍🍳</span> 3-4 Langkah Ekspres (Terus Masak Siap)
+        </h3>
+        <div class="steps-timeline" id="modalSteps">
+          <!-- Injected dynamically -->
+        </div>
+
+        <!-- Midnight Chef Tip -->
+        <div class="chef-tip-box">
+          <span style="font-size: 1.35rem;">💡</span>
+          <div>
+            <strong>Tip Pantas Malam Hari:</strong>
+            <div id="modalChefTip">Guna kuali non-stick supaya tak lekat dan mudah dibasuh bila dah mengantuk.</div>
+          </div>
+        </div>
+
+        <div class="modal-actions-bar">
+          <button class="btn-spin-globe" onclick="closeRecipeModal()" style="padding: 0.65rem 1.6rem; font-size: 0.95rem;">
+            Dah Nampak, Nak Masak Sekarang! 😋
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <p class="footer-quote">"Malam-malam perut nak tenang, makanan panas empuk peneman tidur lena."</p>
+      <p>Planet Comfortia Midnight • Dunia masakan comfort food khas mengikut citarasa anda.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
