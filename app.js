@@ -1099,10 +1099,6 @@ class PlanetComfortiaGlobe {
         if (reticle) reticle.classList.remove("locking");
         sfx.playLock();
         updateFocusedCard(target);
-        
-        setTimeout(() => {
-          openRecipeModal(target);
-        }, 400);
 
         if (this.onSelect) this.onSelect(target);
       }
