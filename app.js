@@ -457,7 +457,63 @@ const RECIPES = [
       "Keluarkan, belah tanda 'X' di atas dan picit tepi supaya isinya terbuka empuk.",
       "Sumbat mentega ke tengah isi panas berasap, letak kepingan keju dan biar cair melimpah!"
     ],
-    chefTip: "Tak payah kupas kulit pun, isi dalam akan jadi sangat manis dan berwap empuk."
+  },
+  {
+    id: "cekodok-bilis-rangup",
+    name: "Cekodok Bilis Bawang Rangup & Bulat",
+    category: "lempeng",
+    categoryLabel: "🥞 Geng Lempeng & Cekodok",
+    time: "7 minit",
+    gear: "1 Kuali Menggoreng",
+    bannerIcon: "🧆",
+    bannerGradient: "linear-gradient(135deg, #b45309 0%, #78350f 100%)",
+    desc: "Cekodok ikan bilis tumbuk dan hirisan bawang merah yang digoreng garing di luar, gebu lembut di dalam. Sangat sedap dicicah sos cili panas.",
+    vibe: "Garing berkerak luar, gebu wangi bilis di dalam",
+    cravingCall: "Tekak mengidam cekodok panas berasap yang rangup bila digigit waktu malam.",
+    pantryTags: ["tepung", "bawang", "kudap"],
+    ingredients: [
+      "1 cawan tepung gandum",
+      "Segenggam ikan bilis (cuci & tumbuk kasar)",
+      "1/2 biji bawang merah / holland (hiris nipis)",
+      "1 tangkai daun sup / daun bawang",
+      "1/2 cawan air panas suam (kunci gebu)",
+      "1/2 sudu teh garam"
+    ],
+    steps: [
+      "Gaul tepung gandum, ikan bilis tumbuk, bawang, dan garam dalam mangkuk.",
+      "Tuang air panas suam sedikit demi sedikit sambil kacau rata sampai adunan pekat melekit.",
+      "Panaskan minyak sederhana. Jemput guna sudu atau jari basah ke dalam minyak panas.",
+      "Goreng 3-4 minit sambil balik-balikkan sampai bulat keemasan garing. Angkat dan toskan!"
+    ],
+    chefTip: "Guna air panas suam masa bancuh tepung supaya cekodok tak serap minyak dan kekal gebu tak liat."
+  },
+  {
+    id: "cekodok-pisang-emas",
+    name: "Cekodok Pisang Emas Montok",
+    category: "lempeng",
+    categoryLabel: "🥞 Geng Lempeng & Cekodok",
+    time: "8 minit",
+    gear: "1 Kuali Menggoreng",
+    bannerIcon: "🍌",
+    bannerGradient: "linear-gradient(135deg, #b45309 0%, #78350f 100%)",
+    desc: "Cekodok pisang klasik berkerak nipis di luar dan sangat lembap empuk di dalam. Paling sedap dimakan panas berwap.",
+    vibe: "Manis lemak pisang, lembut gebu berwap",
+    cravingCall: "Rindu rasa cekodok pisang kampung yang manis harum panas baru angkat dari kuali.",
+    pantryTags: ["pisang", "tepung"],
+    ingredients: [
+      "3-4 biji pisang masak ranum",
+      "3/4 cawan tepung gandum",
+      "1 sudu besar gula (pilihan)",
+      "1/4 sudu teh garam",
+      "Minyak untuk menggoreng"
+    ],
+    steps: [
+      "Lenyek pisang bersama garam dan sedikit gula sampai lumat berair.",
+      "Masukkan tepung gandum sedikit demi sedikit. Kacau sampai adunan pekat melekit.",
+      "Panaskan minyak sederhana panas. Jemput adunan dengan sudu atau hujung jari terus ke minyak.",
+      "Goreng sambil golek-golekkan 3-4 minit sampai perang gelap berkilat. Angkat dan toskan!"
+    ],
+    chefTip: "Goreng guna api sederhana supaya bahagian dalam masak empuk dan luar tak hangus."
   }
 ];
 
