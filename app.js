@@ -544,6 +544,110 @@ const RECIPES = [
       "Ratah terus atau simpan dalam peti ais sekejap untuk rasa sejuk rangup yang luar biasa!"
     ],
     chefTip: "Cincang kobis halus-halus (jangan hiris panjang) supaya kuah mayonis dapat menyaluti setiap butiran sayur dengan sempurna."
+  },
+  {
+    id: "karipap-frozen-berapi",
+    name: "Karipap Pusing Frozen Rangup Berlapis",
+    category: "frozen",
+    categoryLabel: "🥟 Geng Frozen Kuih",
+    time: "6 minit",
+    gear: "Air Fryer / Kuali Goreng",
+    bannerIcon: "🥟",
+    bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
+    desc: "Karipap pusing beku digoreng garing keemasan terus dari freezer. Kulit berkerak rapuh berlapis krup krap, isi kentang kari pekat berasap panas.",
+    vibe: "Kulit berkerak rangup berlapis krup-krap, inti kentang kari berempah berasap panas",
+    cravingCall: "Tengah malam lapar nak mengunyah karipap panas berempah dengan kulit rapuh tanpa renyah menguli tepung.",
+    pantryTags: ["frozenkuih", "kudap"],
+    ingredients: [
+      "4–5 biji karipap kentang/daging beku (frozen)",
+      "Sedikit semburan minyak masak (jika guna air fryer)",
+      "Sos cili Thai / cili padi kicap untuk dicicah"
+    ],
+    steps: [
+      "Keluarkan karipap terus dari freezer (jangan biarkan lembik defrost).",
+      "Pilihan Air Fryer: Susun dalam bakul, sembur sedikit minyak masak, bakar suhu 180°C selama 7-8 minit sampai kulit garing keemasan.",
+      "Pilihan Kuali: Panaskan minyak sederhana panas, masukkan karipap beku dan goreng 4-5 minit sambil balik-balikkan perlahan sehingga kuning keemasan.",
+      "Angkat dan toskan sekejap minyaknya.",
+      "Gigit perlahan-lahan masa panas berasap, nikmati kerangupan kulit dan haruman rempah karinya!"
+    ],
+    chefTip: "Masak terus dalam keadaan beku keras! Kalau biar defrost sampai lembik, kulitnya mudah koyak dan serap minyak."
+  },
+  {
+    id: "pau-gebu-panas",
+    name: "Pau Gebu Lembut Sutera Panas",
+    category: "frozen",
+    categoryLabel: "🥟 Geng Frozen Kuih",
+    time: "4 minit",
+    gear: "Pengukus / Microwave Berpenutup",
+    bannerIcon: "🥮",
+    bannerGradient: "linear-gradient(135deg, #64748b 0%, #334155 100%)",
+    desc: "Pau frozen putih gebu selembut sutera. Inti sambal bilis pedas manis, daging atau kaya. Cukup lembut, panas menggebu bila dipegang.",
+    vibe: "Lembut gebu macam bantal kapas, isi sambal atau daging berasap panas manis pedas",
+    cravingCall: "Nak makanan yang betul-betul empuk lembut, gebu dan panas mengenyangkan dalam beberapa minit.",
+    pantryTags: ["frozenkuih", "kudap"],
+    ingredients: [
+      "2–3 biji pau frozen kegemaran (sambal bilis / daging / kacang merah / kaya)",
+      "Sedikit air panas untuk kukusan / basahkan tisu dapur"
+    ],
+    steps: [
+      "Keluarkan pau terus dari peti beku.",
+      "Trik Microwave Pantas (1 Minit): Balut pau longgar-longgar dengan tisu dapur bersih yang dibasahkan sedikit air suam. Microwave kuasa sederhana 45–50 saat.",
+      "Cara Pengukus Tradisional (4-5 Minit): Didihkan air pengukus, letak pau atas lapik kertas dan kukus 5 minit sehingga naik montok gebu.",
+      "Koyak pau panas berasap dan nikmati kelembutan roti sutera dengan inti yang meleleh!"
+    ],
+    chefTip: "Tisu dapur lembap dalam microwave berfungsi persis periuk stim mini — elak pau jadi kering atau liat macam getah."
+  },
+  {
+    id: "popia-frozen-rangup",
+    name: "Popia Sayur & Ayam Frozen Rangup Krup-Krap",
+    category: "frozen",
+    categoryLabel: "🥟 Geng Frozen Kuih",
+    time: "5 minit",
+    gear: "Air Fryer / Kuali Menggoreng",
+    bannerIcon: "🥢",
+    bannerGradient: "linear-gradient(135deg, #d97706 0%, #92400e 100%)",
+    desc: "Popia frozen digoreng terus sampai kulit garing nipis keemasan. Inti sengkuang sayur dan ayam yang manis berjus dicicah sos cili manis berkilat.",
+    vibe: "Kulit rangup nipis krup-krap, inti sayur manis berjus basah",
+    cravingCall: "Mengidam bunyi krup-krap rangup gigitan popia goreng panas dicicah sos cili manis pekat berkilat.",
+    pantryTags: ["frozenkuih", "kudap"],
+    ingredients: [
+      "5–6 batang popia sayur/ayam beku",
+      "Minyak masak secukupnya untuk menggoreng / semburan minyak",
+      "Sos cili manis pekat pencicah"
+    ],
+    steps: [
+      "Keluarkan popia beku dari freezer.",
+      "Masukkan terus ke dalam minyak sederhana panas atau air fryer pada suhu 190°C selama 6 minit.",
+      "Golek-golekkan agar setiap sisi kulit masak sekata dan keemasan berkilat.",
+      "Angkat, toskan atas tisu minyak, dan cicah terus dengan sos cili manis!"
+    ],
+    chefTip: "Jangan tinggal popia terlalu lama semasa menggoreng kerana kulit popia nipis mudah cepat garing keemasan."
+  },
+  {
+    id: "cucur-badak-frozen",
+    name: "Cucur Badak & Kuih Melayu Frozen Panas",
+    category: "frozen",
+    categoryLabel: "🥟 Geng Frozen Kuih",
+    time: "6 minit",
+    gear: "1 Kuali Minyak Panas",
+    bannerIcon: "🍠",
+    bannerGradient: "linear-gradient(135deg, #ea580c 0%, #9a3412 100%)",
+    desc: "Kuih tradisional frozen kegemaran: adunan keledek empuk lembut dengan inti kelapa pedas berempah. Digoreng keemasan panas-panas beraroma.",
+    vibe: "Empuk keledek lemak manis, inti kelapa pedas berempah padu",
+    cravingCall: "Rindu kuih tradisional Melayu panas-panas waktu malam tanpa payah rebus dan mengadun keledek dari mula.",
+    pantryTags: ["frozenkuih", "kudap"],
+    ingredients: [
+      "4–5 biji cucur badak / onde-onde / keria frozen",
+      "Minyak masak untuk menggoreng"
+    ],
+    steps: [
+      "Panaskan minyak sederhana dalam kuali.",
+      "Masukkan cucur badak terus dari freezer tanpa dinyahbekukan.",
+      "Goreng 4–5 minit dengan api sederhana-kecil supaya bahagian tengah empuk panas dan luar tidak hangus.",
+      "Bila dah keemasan gebu, angkat dan toskan.",
+      "Makan panas-panas sambil merasa keenakan kelapa berempah di dalamnya!"
+    ],
+    chefTip: "Guna api sederhana kecil agar inti kelapa dalam panas sekata tanpa lapisan kulit luar cepat gelap."
   }
 ];
 
