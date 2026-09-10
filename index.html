@@ -49,7 +49,28 @@
         <!-- Canvas Container -->
         <div class="globe-canvas-container" id="globeCanvasContainer">
           <canvas id="globeCanvas"></canvas>
-          <div class="globe-target-reticle" id="globeReticle"></div>
+          
+          <!-- Target Reticle with Downward Location Pointer Arrow -->
+          <div class="globe-target-reticle" id="globeReticle">
+            <div class="reticle-target-arrow" id="reticleTargetArrow">
+              <div class="target-arrow-badge" id="targetArrowBadge">
+                <span class="arrow-radar-pulse"></span>
+                <span id="targetArrowText">📍 SASARAN ORBIT</span>
+              </div>
+              <div class="target-arrow-stem">
+                <svg viewBox="0 0 24 24" width="34" height="34" class="arrow-svg" fill="none">
+                  <path d="M12 22L3 9H8V2H16V9H21L12 22Z" fill="url(#arrowGrad)"/>
+                  <defs>
+                    <linearGradient id="arrowGrad" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#fef08a"/>
+                      <stop offset="0.4" stop-color="#f59e0b"/>
+                      <stop offset="1" stop-color="#b45309"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Focused HUD Destination Card -->

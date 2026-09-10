@@ -838,6 +838,7 @@ class PlanetComfortiaGlobe {
     this.createAtmosphereHalo();
     this.createStarCosmos();
     this.createMenuBeacons();
+    this.create3DPointerArrow();
 
     this.setupInteractions();
     this.animate();
@@ -1056,6 +1057,48 @@ class PlanetComfortiaGlobe {
     });
   }
 
+  create3DPointerArrow() {
+    this.pointer3DGroup = new THREE.Group();
+
+    // Inverted 3D Arrow Cone pointing straight down at the beacon on the planet
+    const coneGeo = new THREE.ConeGeometry(0.28, 0.82, 16);
+    coneGeo.rotateX(Math.PI);
+    
+    const coneMat = new THREE.MeshBasicMaterial({
+      color: 0xf59e0b
+    });
+    const coneMesh = new THREE.Mesh(coneGeo, coneMat);
+    coneMesh.position.y = 0.41;
+    this.pointer3DGroup.add(coneMesh);
+
+    // Glowing target ring hovering around the pointer
+    const ringGeo = new THREE.TorusGeometry(0.4, 0.035, 12, 32);
+    const ringMat = new THREE.MeshBasicMaterial({
+      color: 0xfde68a,
+      transparent: true,
+      opacity: 0.9
+    });
+    this.pointer3DRing = new THREE.Mesh(ringGeo, ringMat);
+    this.pointer3DRing.rotation.x = Math.PI / 2;
+    this.pointer3DGroup.add(this.pointer3DRing);
+
+    this.planetGroup.add(this.pointer3DGroup);
+    if (this.recipes.length > 0) {
+      this.update3DPointerPosition(this.recipes[0]);
+    }
+  }
+
+  update3DPointerPosition(recipe) {
+    if (!this.pointer3DGroup || !recipe) return;
+    const marker = this.markers.find(m => m.userData.recipe.id === recipe.id);
+    if (!marker) return;
+
+    const normPos = marker.userData.origPos.clone().normalize();
+    const arrowPos = normPos.clone().multiplyScalar(this.radius * 1.35);
+    this.pointer3DGroup.position.copy(arrowPos);
+    this.pointer3DGroup.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), normPos);
+  }
+
   setupInteractions() {
     const dom = this.canvas;
     this.raycaster = new THREE.Raycaster();
@@ -1149,9 +1192,12 @@ class PlanetComfortiaGlobe {
       }
     });
 
-    if (bestRecipe && bestRecipe !== this.currentFocusedRecipe) {
-      this.currentFocusedRecipe = bestRecipe;
-      updateFocusedCard(bestRecipe);
+    if (bestRecipe) {
+      if (bestRecipe !== this.currentFocusedRecipe) {
+        this.currentFocusedRecipe = bestRecipe;
+        updateFocusedCard(bestRecipe);
+      }
+      this.update3DPointerPosition(bestRecipe);
     }
   }
 
@@ -1177,7 +1223,14 @@ class PlanetComfortiaGlobe {
     const finalRotX = -targetPhi;
 
     const reticle = document.getElementById("globeReticle");
-    if (reticle) reticle.classList.add("locking");
+    const arrowText = document.getElementById("targetArrowText");
+    if (reticle) {
+      reticle.classList.remove("locking");
+      reticle.classList.add("spinning");
+    }
+    if (arrowText) {
+      arrowText.textContent = "🛰️ MENGESAN KOORDINAT...";
+    }
 
     const startTime = performance.now();
     const duration = 2400;
@@ -1194,15 +1247,21 @@ class PlanetComfortiaGlobe {
       if (now - lastTick > 120 && progress < 0.85) {
         sfx.playTick();
         lastTick = now;
+        this.checkHover();
       }
 
       if (progress < 1) {
         requestAnimationFrame(animateSpin);
       } else {
         this.isSpinning = false;
-        if (reticle) reticle.classList.remove("locking");
+        if (reticle) {
+          reticle.classList.remove("spinning");
+          reticle.classList.add("locking");
+          setTimeout(() => reticle.classList.remove("locking"), 700);
+        }
         sfx.playLock();
         updateFocusedCard(target);
+        this.update3DPointerPosition(target);
 
         if (this.onSelect) this.onSelect(target);
       }
@@ -1241,6 +1300,7 @@ class PlanetComfortiaGlobe {
       } else {
         this.currentFocusedRecipe = recipe;
         updateFocusedCard(recipe);
+        this.update3DPointerPosition(recipe);
         if (openModal) {
           openRecipeModal(recipe);
         }
@@ -1265,6 +1325,10 @@ class PlanetComfortiaGlobe {
 
     if (this.cloudMesh) {
       this.cloudMesh.rotation.y += 0.0018;
+    }
+
+    if (this.pointer3DRing) {
+      this.pointer3DRing.rotation.z += 0.04;
     }
 
     if (!this.isDragging && !this.isSpinning) {
@@ -1332,6 +1396,11 @@ function updateFocusedCard(recipe) {
   dom.focusBadge.textContent = `${recipe.categoryLabel} • ⏱️ ${recipe.time}`;
   dom.focusDishName.textContent = recipe.name;
   dom.focusDishVibe.textContent = `✨ ${recipe.cravingCall}`;
+
+  const arrowText = document.getElementById("targetArrowText");
+  if (arrowText) {
+    arrowText.textContent = `📍 ${recipe.bannerIcon} ${recipe.name}`;
+  }
 }
 
 // ==========================================
