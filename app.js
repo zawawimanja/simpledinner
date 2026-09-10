@@ -789,6 +789,120 @@ const RECIPES = [
       "Belah tengah ubi yang panas berasap, letakkan secebis mentega dan secubit garam. Nikmati suapan manis gebunya!"
     ],
     chefTip: "Balut tisu lembap bertindak seperti ruang stim wap mikro — mengelakkan kulit ubi daripada mengering dan menjadikan isi dalamnya selembut kastard."
+  },
+  {
+    id: "telur-hancur-mentega",
+    name: "Telur Hancur Mentega Meleleh (Creamy Scrambled)",
+    category: "bubur",
+    categoryLabel: "🥚 Sektor Telur Sutera",
+    time: "1 minit",
+    gear: "1 Kuali Leper Kecil",
+    bannerIcon: "🍳",
+    bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+    desc: "Dua biji telur dikacau perlahan dengan mentega wangi di atas api kecil selama 40 saat. Tekstur selembut sutera dan berkrim basah, ditabur lada hitam dan secubit garam.",
+    vibe: "Lembut gebu berkrim macam kastard sutera, aroma mentega wangi meleleh",
+    cravingCall: "Nak makanan berkhasiat yang hangat, empuk dan terus siap dalam 1 minit bila lapar tengah malam.",
+    pantryTags: ["telur", "mentega"],
+    ingredients: [
+      "2 biji telur ayam",
+      "1 sudu besar mentega / marjerin Planta wangi",
+      "Secubit garam halus",
+      "Sedikit serbuk lada hitam kasar"
+    ],
+    steps: [
+      "Pecahkan telur ke dalam mangkuk kecil, kocok ringan dengan garfu bersama secubit garam.",
+      "Cairkan mentega atas kuali leper kecil dengan api paling kecil (low heat).",
+      "Tuang telur, tolak perlahan-lahan dari tepi ke tengah kuali selama 40–50 saat sehingga berlipat lembut.",
+      "Tutup api semasa telur masih basah berkrim (ia akan terus masak dengan sisa haba kuali).",
+      "Tabur lada hitam dan suap terus panas-panas dari pinggan!"
+    ],
+    chefTip: "Jangan biar telur kering keras di kuali; angkat masa masih basah berkrim (runny) supaya teksturnya kekal selembut sutera hotel!"
+  },
+  {
+    id: "telur-dadar-bawang-karamel",
+    name: "Telur Dadar Bawang Merah Karamel Garing",
+    category: "lempeng",
+    categoryLabel: "🥞 Geng Lempeng & Telur",
+    time: "2 minit",
+    gear: "1 Kuali Leper Sahaja",
+    bannerIcon: "🧅",
+    bannerGradient: "linear-gradient(135deg, #b45309 0%, #78350f 100%)",
+    desc: "Hirisan bawang merah banyak-banyak digoreng garing sehingga manis berkaramel, disatukan dengan telur dadar berkerak keemasan. Wangi satu rumah bila lapar malam!",
+    vibe: "Bawang manis berkaramel, tepi telur garing berkerak wangi",
+    cravingCall: "Rindu rasa lauk telur kampung yang garing wangi beraroma bawang goreng bila lapar malam.",
+    pantryTags: ["telur", "bawang"],
+    ingredients: [
+      "2 biji telur ayam",
+      "1 biji bawang merah besar / holland (hiris nipis banyak-banyak)",
+      "1 biji cili padi (hiris, jika suka pedas)",
+      "1/2 sudu teh garam & sedikit lada sulah",
+      "1 sudu besar minyak masak"
+    ],
+    steps: [
+      "Panaskan minyak dalam kuali leper. Tumis hirisan bawang merah 1 minit sampai layu keperangan wangi.",
+      "Pukul telur bersama garam dan lada sulah dalam mangkuk.",
+      "Tuang telur terus ke atas timbunan bawang panas di kuali.",
+      "Biarkan bahagian bawah garing berkerak keemasan selama 1 minit, terbalikkan sekali selama 30 saat.",
+      "Angkat dan makan panas-panas — manis bawang karamel dia memang luar biasa!"
+    ],
+    chefTip: "Goreng bawang dulu sekejap sebelum tuang telur supaya gula semulajadi bawang keluar berkaramel manis dan garing."
+  },
+  {
+    id: "lempeng-pisang-kampung",
+    name: "Lempeng Pisang Kampung Gebu (Tanpa Minyak)",
+    category: "lempeng",
+    categoryLabel: "🥞 Geng Lempeng & Cucur",
+    time: "3 minit",
+    gear: "1 Kuali Leper Sahaja",
+    bannerIcon: "🍌",
+    bannerGradient: "linear-gradient(135deg, #ca8a04 0%, #a16207 100%)",
+    desc: "Pisang masak ranum dilenyek bersama tepung gandum dan secubit garam, dilayur atas kuali leper tanpa minyak. Sangat empuk gebu, manis semulajadi tanpa gula tambahan.",
+    vibe: "Empuk gebu beraroma pisang kampung, manis asli tanpa setitis minyak goreng",
+    cravingCall: "Tekak nak kudapan manis berwap panas yang mengenyangkan tapi tak berminyak macam cekodok.",
+    pantryTags: ["pisang", "tepung"],
+    ingredients: [
+      "2–3 biji pisang masak ranum",
+      "3–4 sudu besar tepung gandum",
+      "Secubit kecil garam (penaik rasa lemak pisang)",
+      "Sedikit mentega/Planta untuk sapu kuali (pilihan)"
+    ],
+    steps: [
+      "Lenyek pisang masak dengan garfu dalam mangkuk sehingga lumat berair.",
+      "Masukkan tepung gandum dan secubit garam. Gaul rata sehingga adunan pekat melekat.",
+      "Panaskan kuali leper non-stick (boleh sapu secalit mentega). Sudukan adunan dan ratakan leper bulat.",
+      "Masak dengan api sederhana-kecil 1.5 minit sehingga berlubang kecil, terbalikkan sebelah lagi selama 1 minit.",
+      "Angkat dan terus makan panas-panas — gebu empuk dan harum semerbak!"
+    ],
+    chefTip: "Guna pisang yang kulitnya ada bintik hitam (overripe); pisang terlebih masak menghasilkan lempeng yang paling manis dan empuk gebu!"
+  },
+  {
+    id: "roti-canai-murtabak-mini",
+    name: "Roti Canai Murtabak Mini Ekspres",
+    category: "wrap",
+    categoryLabel: "🌯 Geng Wrap & Shawarma",
+    time: "3 minit",
+    gear: "1 Kuali Leper Sahaja",
+    bannerIcon: "🫓",
+    bannerGradient: "linear-gradient(135deg, #d97706 0%, #b45309 100%)",
+    desc: "Roti canai segera dilayur di kuali, diisi telur pukul dan hirisan bawang di tengah, dilipat empat segi kemas. Luar garing berlapis krup-krap, dalam berintikan telur empuk berwap!",
+    vibe: "Kulit garing krup-krap, inti telur bawang empuk berasap panas",
+    cravingCall: "Rindu nak makan murtabak mamak atau pasar malam panas-panas tanpa payah keluar rumah.",
+    pantryTags: ["wrap", "telur", "bawang"],
+    ingredients: [
+      "1 keping roti canai segera frozen",
+      "1 biji telur ayam",
+      "1/2 biji bawang merah (cincang halus)",
+      "Sedikit garam & serbuk kari / lada hitam",
+      "Sos cili untuk dicicah"
+    ],
+    steps: [
+      "Pukul telur bersama bawang cincang, secubit garam dan sedikit serbuk kari dalam mangkuk kecil.",
+      "Letak sekeping roti canai frozen atas kuali leper panas api sederhana (tanpa minyak).",
+      "Bila roti mula lembut dan separa masak (1 minit), tuang bancuhan telur ke bahagian tengah roti.",
+      "Lipat 4 sisi roti ke arah tengah menutup telur menjadi bentuk empat segi (seperti murtabak mini).",
+      "Balik-balikkan perlahan sehingga kedua-dua belah garing keemasan dan telur di dalam masak empuk. Angkat dan potong dua!"
+    ],
+    chefTip: "Guna api sederhana kecil supaya bahagian dalam telur sempat masak empuk gebu sementara kulit roti canai luar kekal garing tak hangus."
   }
 ];
 
@@ -797,6 +911,9 @@ const RECIPES = [
 // ==========================================
 const HEALTH_METRICS = {
   // 🟢 BAGUS & SIHAT (Real Food / Rendah Minyak / Mesra Perut Malam)
+  "telur-hancur-mentega": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "100% protein tulen & mentega sihat, zero bahan proses, sangat mudah dihadam sebelum tidur." },
+  "telur-dadar-bawang-karamel": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Bawang merah antioksidan & protein telur segar, cepat kenyang dan menyihatkan badan." },
+  "lempeng-pisang-kampung": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Buah pisang asli kaya serat prebiotik, dimasak tanpa minyak goreng. Lembut dan berkhasiat." },
   "chawanmushi-telur": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "100% tanpa minyak! Telur kukus protein tulen, licin & paling mesra perut malam." },
   "sup-telur-enoki-panas": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Sup bening jernih: cendawan enoki segar & telur. Zero minyak, mudah dihadam sebelum tidur." },
   "telur-separuh-masak-kopitiam": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "100% protein tulen tanpa minyak! Paling mesra perut, senang hadam dan tidur nyenyak." },
@@ -808,6 +925,7 @@ const HEALTH_METRICS = {
   "jacket-potato-microwave": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Ubi kentang bulat asli kaya kalium & serat, dimasak microwave tanpa minyak." },
 
   // 🟡 SEDERHANA (MEDIUM) (Homemade / Seimbang / Karbo Ringkas)
+  "roti-canai-murtabak-mini": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Protein telur segar & roti canai garing layur pan. Mengenyangkan dan memuaskan selera." },
   "tortilla-telur-gulung": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Wrap gandum nipis & protein telur tulen. Mengenyangkan tanpa beban minyak/nasi berat." },
   "roti-garlic-airfryer": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Roti dibakar garing tanpa minyak goreng. Memuaskan rasa mengunyah rangup waktu malam." },
   "jagung-cawan-pasar-malam": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Jagung manis asli kaya serat, ada lemak manis susu & Planta. Sesuai dimakan sederhana." },
