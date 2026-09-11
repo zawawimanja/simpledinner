@@ -222,6 +222,7 @@ const RECIPES = [
     time: "4 minit",
     gear: "1 Periuk Kecil",
     bannerIcon: "🍜",
+    image: "images/maggi_kari_telur.jpg",
     bannerGradient: "linear-gradient(135deg, #ea580c 0%, #9a3412 100%)",
     desc: "Lagenda waktu malam: mee kari kenyal berkuah pekat berkrim hasil telur separuh masak yang dipecahkan tepat pada waktunya.",
     vibe: "Panas berempah, kuah pekat berlemak, aroma tak tertahan",
@@ -250,6 +251,7 @@ const RECIPES = [
     time: "7 minit",
     gear: "1 Periuk",
     bannerIcon: "🍚",
+    image: "images/nasi_impit.jpg",
     bannerGradient: "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
     desc: "Ketulan nasi padat lembut yang dipotong dadu, dinikmati bersama kuah sambal tumis panas, rendang segera atau dihirup bersama sup.",
     vibe: "Padat kenyang, empuk lembut, nostalgia hari raya",
@@ -276,6 +278,7 @@ const RECIPES = [
     time: "6 minit",
     gear: "Air Fryer / Kuali",
     bannerIcon: "🐟",
+    image: "images/keropok_lekor.jpg",
     bannerGradient: "linear-gradient(135deg, #78350f 0%, #451a03 100%)",
     desc: "Hirisan keropok lekor ikan yang digoreng panas: kerak luar rangup garing berbunyi, dalamnya sangat kenyal empuk berjus.",
     vibe: "Garing berkerak luar, kenyal empuk isi ikan di dalam",
@@ -302,6 +305,7 @@ const RECIPES = [
     time: "5 minit",
     gear: "1 Kuali Menggoreng",
     bannerIcon: "🍄",
+    image: "images/enoki_goreng.jpg",
     bannerGradient: "linear-gradient(135deg, #b45309 0%, #78350f 100%)",
     desc: "Jambangan cendawan enoki disalut tepung berempah nipis dan digoreng garing keemasan. Bunyi krup krap yang bikin ketagih!",
     vibe: "Super rangup, ringan macam keropok, wangi bawang putih",
@@ -329,6 +333,7 @@ const RECIPES = [
     time: "5 minit",
     gear: "1 Kuali Leper / Toaster",
     bannerIcon: "🌯",
+    image: "images/chicken_wrap.jpg",
     bannerGradient: "linear-gradient(135deg, #ea580c 0%, #c2410c 100%)",
     desc: "Kepingan tortilla lembut dibalut popcorn chicken rangup, timun rangup, sos mayonis bawang putih dan limpahan sos keju meleleh.",
     vibe: "Kulit lembut panas, isi ayam rangup bersalut sos",
@@ -357,6 +362,7 @@ const RECIPES = [
     time: "6 minit",
     gear: "Air Fryer / Kuali",
     bannerIcon: "🍗",
+    image: "images/nuget_ayam.jpg",
     bannerGradient: "linear-gradient(135deg, #d97706 0%, #b45309 100%)",
     desc: "Nuget ayam keemasan yang rangup di luar dan empuk berjus di dalam, cicah sos cili manis atau sos BBQ berasap.",
     vibe: "Kegemaran klasik, sifar renyah, terus siap",
@@ -382,6 +388,7 @@ const RECIPES = [
     time: "3 minit",
     gear: "1 Mangkuk & Garfu",
     bannerIcon: "🥗",
+    image: "images/salad_telur.jpg",
     bannerGradient: "linear-gradient(135deg, #16a34a 0%, #15803d 100%)",
     desc: "Telur rebus hancur digaulkan bersama mayonis Jepun berkrim, lada hitam kasar dan daun bawang. Boleh diratah sejuk atau disapu atas biskut.",
     vibe: "Segar, berkrim sejuk, menyejukkan tekak malam",
@@ -410,6 +417,7 @@ const RECIPES = [
     time: "5 minit",
     gear: "1 Periuk Sahaja",
     bannerIcon: "🍄",
+    image: "images/mushroom_soup.jpg",
     bannerGradient: "linear-gradient(135deg, #78716c 0%, #292524 100%)",
     desc: "Sup cendawan berkrim pekat dihangatkan terus, ditambah sebiji telur separuh masak dan cicahan biskut tawar.",
     vibe: "Super berkrim, rasa mewah 5 minit siap",
@@ -439,6 +447,7 @@ const RECIPES = [
     time: "6 minit",
     gear: "Microwave Sahaja (Zero Kuali)",
     bannerIcon: "🧀",
+    image: "images/jacket_potato.jpg",
     bannerGradient: "linear-gradient(135deg, #ca8a04 0%, #854d0e 100%)",
     desc: "Kentang empuk meleleh disalut mentega cair dan limpahan keju tanpa perlu buka oven.",
     vibe: "Hangat, padat mengenyangkan, sifar kerja basuh",
@@ -466,6 +475,7 @@ const RECIPES = [
     time: "7 minit",
     gear: "1 Kuali Menggoreng",
     bannerIcon: "🧆",
+    image: "images/cekodok_bilis.jpg",
     bannerGradient: "linear-gradient(135deg, #b45309 0%, #78350f 100%)",
     desc: "Cekodok ikan bilis tumbuk dan hirisan bawang merah yang digoreng garing di luar, gebu lembut di dalam. Sangat sedap dicicah sos cili panas.",
     vibe: "Garing berkerak luar, gebu wangi bilis di dalam",
@@ -495,6 +505,7 @@ const RECIPES = [
     time: "8 minit",
     gear: "1 Kuali Menggoreng",
     bannerIcon: "🍌",
+    image: "images/cekodok_pisang.jpg",
     bannerGradient: "linear-gradient(135deg, #b45309 0%, #78350f 100%)",
     desc: "Cekodok pisang klasik berkerak nipis di luar dan sangat lembap empuk di dalam. Paling sedap dimakan panas berwap.",
     vibe: "Manis lemak pisang, lembut gebu berwap",
@@ -523,6 +534,7 @@ const RECIPES = [
     time: "3 minit",
     gear: "1 Mangkuk & Sudu Sahaja",
     bannerIcon: "🥗",
+    image: "images/coleslaw.jpg",
     bannerGradient: "linear-gradient(135deg, #10b981 0%, #047857 100%)",
     desc: "Kobis dan lobak merah yang dicincang halus disalut sos mayonis berkrim, sedikit susu, perahan lemon dan secubit gula. Rangup manis dan sejuk menyegarkan tekak!",
     vibe: "Rangup sejuk, manis berlemak, penyejuk tekak terbaik",
@@ -553,6 +565,7 @@ const RECIPES = [
     time: "6 minit",
     gear: "Air Fryer / Kuali Goreng",
     bannerIcon: "🥟",
+    image: "images/karipap_pusing.jpg",
     bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
     desc: "Karipap pusing beku digoreng garing keemasan terus dari freezer. Kulit berkerak rapuh berlapis krup krap, isi kentang kari pekat berasap panas.",
     vibe: "Kulit berkerak rangup berlapis krup-krap, inti kentang kari berempah berasap panas",
@@ -580,6 +593,7 @@ const RECIPES = [
     time: "4 minit",
     gear: "Pengukus / Microwave Berpenutup",
     bannerIcon: "🥮",
+    image: "images/karipap_pusing.jpg",
     bannerGradient: "linear-gradient(135deg, #64748b 0%, #334155 100%)",
     desc: "Pau frozen putih gebu selembut sutera. Inti sambal bilis pedas manis, daging atau kaya. Cukup lembut, panas menggebu bila dipegang.",
     vibe: "Lembut gebu macam bantal kapas, isi sambal atau daging berasap panas manis pedas",
@@ -605,6 +619,7 @@ const RECIPES = [
     time: "5 minit",
     gear: "Air Fryer / Kuali Menggoreng",
     bannerIcon: "🥢",
+    image: "images/enoki_goreng.jpg",
     bannerGradient: "linear-gradient(135deg, #d97706 0%, #92400e 100%)",
     desc: "Popia frozen digoreng terus sampai kulit garing nipis keemasan. Inti sengkuang sayur dan ayam yang manis berjus dicicah sos cili manis berkilat.",
     vibe: "Kulit rangup nipis krup-krap, inti sayur manis berjus basah",
@@ -631,6 +646,7 @@ const RECIPES = [
     time: "6 minit",
     gear: "1 Kuali Minyak Panas",
     bannerIcon: "🍠",
+    image: "images/cekodok_bilis.jpg",
     bannerGradient: "linear-gradient(135deg, #ea580c 0%, #9a3412 100%)",
     desc: "Kuih tradisional frozen kegemaran: adunan keledek empuk lembut dengan inti kelapa pedas berempah. Digoreng keemasan panas-panas beraroma.",
     vibe: "Empuk keledek lemak manis, inti kelapa pedas berempah padu",
@@ -657,6 +673,7 @@ const RECIPES = [
     time: "3 minit",
     gear: "1 Periuk Kecil & Mangkuk",
     bannerIcon: "🍲",
+    image: "images/chawanmushi.jpg",
     bannerGradient: "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
     desc: "Sup jernih panas menenangkan perut malam hari: cendawan enoki segar berjus dan tali telur gebu bersarang. Sangat licin, wangi minyak bijan, tak buat perut sebu.",
     vibe: "Hirup kuah panas suam, enoki kenyal berjus, tali telur gebu sutera",
@@ -686,6 +703,7 @@ const RECIPES = [
     time: "2 minit",
     gear: "1 Kuali Leper Sahaja",
     bannerIcon: "🌯",
+    image: "images/chicken_wrap.jpg",
     bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
     desc: "Pecahkan telur atas kuali, terus tekap kepingan tortilla di atasnya. Balikkan, picit sos cili & mayo, gulung kemas semasa panas. Sangat empuk, sedap dan kenyang tanpa sebu!",
     vibe: "Telur melekat empuk pada roti gandum lembut, picit sos terus gulung panas",
@@ -714,6 +732,7 @@ const RECIPES = [
     time: "3 minit",
     gear: "Air Fryer / Pembakar Roti",
     bannerIcon: "🍞",
+    image: "images/french_fries.jpg",
     bannerGradient: "linear-gradient(135deg, #d97706 0%, #78350f 100%)",
     desc: "Roti keping disapu mentega wangi, serbuk bawang putih dan herba parsley. Dibakar garing berderai keemasan dalam air fryer. Krup-krap beraroma, sedap dicicah sos atau sup!",
     vibe: "Garing krup-krap berderai, harum mentega bawang putih wangi satu rumah",
@@ -742,6 +761,7 @@ const RECIPES = [
     time: "6 minit (Rendam Air Panas)",
     gear: "1 Mangkuk & Air Mendidih Sahaja",
     bannerIcon: "🥚",
+    image: "images/chawanmushi.jpg",
     bannerGradient: "linear-gradient(135deg, #eab308 0%, #ca8a04 100%)",
     desc: "Dua biji telur separuh masak bergoyang gebu disiram kicap manis pekat dan taburan lada sulah putih. Suam berkrim meluncur di tekak, zero minyak, paling menenangkan perut malam.",
     vibe: "Suam, licin berkrim, lemak masin wangi lada sulah, zero basuh periuk",
@@ -770,6 +790,7 @@ const RECIPES = [
     time: "4 minit",
     gear: "Microwave & Tisu Lembap",
     bannerIcon: "🍠",
+    image: "images/jacket_potato.jpg",
     bannerGradient: "linear-gradient(135deg, #ea580c 0%, #c2410c 100%)",
     desc: "Ubi keledek madu gebu empuk berasap panas: isi manis karamel semulajadi seperti kek span, diselit secebis mentega cair dan secubit garam. Zero kuali, kenyang empuk berkhasiat.",
     vibe: "Empuk gebu macam kek, manis asli madu, berwap wangi panas",
@@ -798,6 +819,7 @@ const RECIPES = [
     time: "1 minit",
     gear: "1 Kuali Leper Kecil",
     bannerIcon: "🍳",
+    image: "images/salad_telur.jpg",
     bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
     desc: "Dua biji telur dikacau perlahan dengan mentega wangi di atas api kecil selama 40 saat. Tekstur selembut sutera dan berkrim basah, ditabur lada hitam dan secubit garam.",
     vibe: "Lembut gebu berkrim macam kastard sutera, aroma mentega wangi meleleh",
@@ -826,6 +848,7 @@ const RECIPES = [
     time: "2 minit",
     gear: "1 Kuali Leper Sahaja",
     bannerIcon: "🧅",
+    image: "images/lempeng_telur.jpg",
     bannerGradient: "linear-gradient(135deg, #b45309 0%, #78350f 100%)",
     desc: "Hirisan bawang merah banyak-banyak digoreng garing sehingga manis berkaramel, disatukan dengan telur dadar berkerak keemasan. Wangi satu rumah bila lapar malam!",
     vibe: "Bawang manis berkaramel, tepi telur garing berkerak wangi",
@@ -855,6 +878,7 @@ const RECIPES = [
     time: "3 minit",
     gear: "1 Kuali Leper Sahaja",
     bannerIcon: "🍌",
+    image: "images/cekodok_pisang.jpg",
     bannerGradient: "linear-gradient(135deg, #ca8a04 0%, #a16207 100%)",
     desc: "Pisang masak ranum dilenyek bersama tepung gandum dan secubit garam, dilayur atas kuali leper tanpa minyak. Sangat empuk gebu, manis semulajadi tanpa gula tambahan.",
     vibe: "Empuk gebu beraroma pisang kampung, manis asli tanpa setitis minyak goreng",
@@ -883,6 +907,7 @@ const RECIPES = [
     time: "3 minit",
     gear: "1 Kuali Leper Sahaja",
     bannerIcon: "🫓",
+    image: "images/chicken_wrap.jpg",
     bannerGradient: "linear-gradient(135deg, #d97706 0%, #b45309 100%)",
     desc: "Roti canai segera dilayur di kuali, diisi telur pukul dan hirisan bawang di tengah, dilipat empat segi kemas. Luar garing berlapis krup-krap, dalam berintikan telur empuk berwap!",
     vibe: "Kulit garing krup-krap, inti telur bawang empuk berasap panas",
@@ -1271,46 +1296,79 @@ class PlanetComfortiaGlobe {
     this.scene.add(new THREE.Points(starGeo, starMat));
   }
 
-  createBeaconSprite(icon, title) {
+  createBeaconSprite(icon, title, imagePath = null) {
     const canvas = document.createElement("canvas");
     canvas.width = 280;
     canvas.height = 130;
-    const ctx = canvas.getContext("2d");
-
-    ctx.fillStyle = "rgba(7, 10, 20, 0.88)";
-    ctx.strokeStyle = "#f59e0b";
-    ctx.lineWidth = 4;
-    
-    const r = 26;
-    const w = 264, h = 114, x = 8, y = 8;
-    ctx.beginPath();
-    ctx.moveTo(x + r, y);
-    ctx.lineTo(x + w - r, y);
-    ctx.quadraticCurveTo(x + w, y, x + w, y + r);
-    ctx.lineTo(x + w, y + h - r);
-    ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
-    ctx.lineTo(x + r, y + h);
-    ctx.quadraticCurveTo(x, y + h, x, y + h - r);
-    ctx.lineTo(x, y + r);
-    ctx.quadraticCurveTo(x, y, x + r, y);
-    ctx.closePath();
-    ctx.fill();
-    ctx.stroke();
-
-    ctx.font = "48px sans-serif";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText(icon, 56, 65);
-
-    ctx.fillStyle = "#ffffff";
-    ctx.font = "bold 23px Outfit, sans-serif";
-    ctx.textAlign = "left";
-    let displayTitle = title;
-    if (displayTitle.length > 13) displayTitle = displayTitle.substring(0, 12) + "…";
-    ctx.fillText(displayTitle, 102, 65);
-
     const texture = new THREE.CanvasTexture(canvas);
     texture.minFilter = THREE.LinearFilter;
+
+    const renderCanvas = (imgObj = null) => {
+      const ctx = canvas.getContext("2d");
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "rgba(7, 10, 20, 0.90)";
+      ctx.strokeStyle = "#f59e0b";
+      ctx.lineWidth = 4;
+      
+      const r = 26;
+      const w = 264, h = 114, x = 8, y = 8;
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.lineTo(x + w - r, y);
+      ctx.quadraticCurveTo(x + w, y, x + w, y + r);
+      ctx.lineTo(x + w, y + h - r);
+      ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
+      ctx.lineTo(x + r, y + h);
+      ctx.quadraticCurveTo(x, y + h, x, y + h - r);
+      ctx.lineTo(x, y + r);
+      ctx.quadraticCurveTo(x, y, x + r, y);
+      ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+
+      if (imgObj && imgObj.complete && imgObj.naturalWidth !== 0) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(58, 65, 30, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.clip();
+        ctx.drawImage(imgObj, 28, 35, 60, 60);
+        ctx.restore();
+
+        ctx.strokeStyle = "#f59e0b";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(58, 65, 30, 0, Math.PI * 2);
+        ctx.stroke();
+      } else {
+        ctx.font = "46px sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(icon, 58, 65);
+      }
+
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "bold 23px Outfit, sans-serif";
+      ctx.textAlign = "left";
+      ctx.textBaseline = "middle";
+      let displayTitle = title;
+      if (displayTitle.length > 12) displayTitle = displayTitle.substring(0, 11) + "…";
+      ctx.fillText(displayTitle, 102, 65);
+
+      texture.needsUpdate = true;
+    };
+
+    renderCanvas(null);
+
+    if (imagePath) {
+      const img = new Image();
+      img.onload = () => {
+        renderCanvas(img);
+      };
+      img.src = imagePath;
+    }
+
     const spriteMat = new THREE.SpriteMaterial({ map: texture, transparent: true });
     const sprite = new THREE.Sprite(spriteMat);
     sprite.scale.set(2.5, 1.25, 1);
@@ -1345,7 +1403,7 @@ class PlanetComfortiaGlobe {
       pinMesh.position.copy(pos);
 
       const spritePos = pos.clone().multiplyScalar(1.28);
-      const sprite = this.createBeaconSprite(recipe.bannerIcon, recipe.name);
+      const sprite = this.createBeaconSprite(recipe.bannerIcon, recipe.name, recipe.image);
       sprite.position.copy(spritePos);
 
       const beaconGroup = new THREE.Group();
@@ -1699,7 +1757,11 @@ function updateLiveClock() {
 
 function updateFocusedCard(recipe) {
   if (!recipe) return;
-  dom.focusDishIcon.textContent = recipe.bannerIcon;
+  if (recipe.image) {
+    dom.focusDishIcon.innerHTML = `<img src="${recipe.image}" alt="${recipe.name}" class="focus-dish-thumb" onerror="this.onerror=null; this.parentElement.textContent='${recipe.bannerIcon}'">`;
+  } else {
+    dom.focusDishIcon.textContent = recipe.bannerIcon;
+  }
   dom.focusBadge.textContent = `${recipe.categoryLabel} • ⏱️ ${recipe.time}`;
   dom.focusDishName.textContent = recipe.name;
   dom.focusDishVibe.textContent = `✨ ${recipe.cravingCall}`;

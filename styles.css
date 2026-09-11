@@ -416,6 +416,18 @@ body {
 .focus-dish-icon {
   font-size: 2.75rem;
   filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.focus-dish-thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--amber-primary);
+  box-shadow: 0 0 16px var(--amber-glow);
 }
 
 .focus-badge-row {
