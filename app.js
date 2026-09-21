@@ -732,12 +732,12 @@ const RECIPES = [
     time: "3 minit",
     gear: "Air Fryer / Pembakar Roti",
     bannerIcon: "🍞",
-    image: "images/french_fries.jpg",
+    image: "images/roti_garlic.png",
     bannerGradient: "linear-gradient(135deg, #d97706 0%, #78350f 100%)",
     desc: "Roti keping disapu mentega wangi, serbuk bawang putih dan herba parsley. Dibakar garing berderai keemasan dalam air fryer. Krup-krap beraroma, sedap dicicah sos atau sup!",
     vibe: "Garing krup-krap berderai, harum mentega bawang putih wangi satu rumah",
     cravingCall: "Tekak nak mengunyah benda rangup masin bermentega tanpa payah goreng minyak banyak.",
-    pantryTags: ["mentega", "kudap"],
+    pantryTags: ["roti", "mentega", "kudap"],
     ingredients: [
       "2–3 keping roti putih / wholemeal",
       "1 sudu besar mentega / marjerin Planta",
@@ -752,6 +752,123 @@ const RECIPES = [
       "Keluarkan dan nikmati kunyahan panas berderai krup krap!"
     ],
     chefTip: "Potong roti memanjang macam kentang jejari sebelum bakar; rasa mengunyah dia sebiji macam makan fries rangup tapi versi bakar tanpa minyak!"
+  },
+  {
+    id: "roti-telur-lemas",
+    name: "Roti Telur Lemas (French Toast Ala Kampung)",
+    category: "lempeng",
+    categoryLabel: "🥞 Geng Lempeng & Cucur",
+    time: "4 minit",
+    gear: "1 Kuali Leper",
+    bannerIcon: "🍞",
+    image: "images/roti_telur.png",
+    bannerGradient: "linear-gradient(135deg, #eab308 0%, #ca8a04 100%)",
+    desc: "Roti keping dicelup dalam bancuhan telur kocok berempah lada sulah, digoreng garing atas kuali bermentega. Lembut empuk dan kenyang wangi!",
+    vibe: "Empuk gebu berwap, masin lemak telur dan lada sulah",
+    cravingCall: "Nak makan berat sikit tapi malas masak lauk, roti dan telur penyelamat malam.",
+    pantryTags: ["roti", "telur", "mentega"],
+    ingredients: [
+      "2 keping roti putih",
+      "1 biji telur ayam",
+      "Sedikit mentega / Planta untuk kuali",
+      "Secubit garam & serbuk lada sulah",
+      "Sekeping keju (pilihan)"
+    ],
+    steps: [
+      "Pukul telur dalam pinggan leper bersama secubit garam dan lada sulah.",
+      "Celup roti keping ke dalam bancuhan telur sampai meresap penuh dua-dua belah.",
+      "Cairkan mentega atas kuali leper. Goreng roti telur 1-2 minit setiap sisi sampai garing keemasan.",
+      "Angkat, lipat bersama sekeping keju di tengah (pilihan) dan sedia dimakan panas-panas!"
+    ],
+    chefTip: "Guna api sederhana kecil masa menggoreng supaya telur masak elok meresap ke dalam roti, bukan hangus di luar tapi basah di dalam."
+  },
+  {
+    id: "roti-sosej-gulung",
+    name: "Roti Sosej Gulung Cheese Berapi",
+    category: "kudap",
+    categoryLabel: "🍟 Geng Kudap & Goreng",
+    time: "6 minit",
+    gear: "1 Kuali Goreng / Air Fryer",
+    bannerIcon: "🌭",
+    image: "images/roti_sosej.png",
+    bannerGradient: "linear-gradient(135deg, #ea580c 0%, #9a3412 100%)",
+    desc: "Roti dileperkan, digulung kemas dengan sosej padat dan keju. Digoreng garing krup krap, keju cair meleleh bila digigit.",
+    vibe: "Garing di luar, keju meleleh pedas di dalam",
+    cravingCall: "Teringin nak makan kudap-kudap sosej cheese ala cafe tapi versi jimat buat sendiri dekat rumah.",
+    pantryTags: ["roti", "kudap"],
+    ingredients: [
+      "2 keping roti putih (buang tepi kalau suka)",
+      "2 batang sosej (rebus sekejap atau potong dua)",
+      "2 keping keju (Cheddar)",
+      "Sebiji telur (kocok untuk celup / lekatkan gulungan)",
+      "Minyak untuk menggoreng"
+    ],
+    steps: [
+      "Gelek roti putih bagi leper dan nipis guna penggelek atau botol bersih.",
+      "Letak sekeping keju, satu sosej, sedikit sos cili/mayo dan gulung kemas-kemas.",
+      "Sapu sikit telur dekat hujung roti supaya gulungan tak terbuka. Celup semua gulungan dalam baki telur.",
+      "Goreng dalam kuali panas sampai garing atau masuk Air Fryer 180°C selama 5-7 minit.",
+      "Gigit perlahan-lahan masa panas, cheese meleleh!"
+    ],
+    chefTip: "Penting gelek roti sampai nipis dan mampat supaya roti tak serap minyak banyak masa digoreng."
+  },
+  {
+    id: "piza-roti-segera",
+    name: "Piza Roti Segera (Air Fryer)",
+    category: "kudap",
+    categoryLabel: "🍟 Geng Kudap & Goreng",
+    time: "5 minit",
+    gear: "Air Fryer / Pembakar Roti",
+    bannerIcon: "🍕",
+    image: "images/roti_piza.png",
+    bannerGradient: "linear-gradient(135deg, #ef4444 0%, #b91c1c 100%)",
+    desc: "Craving piza tengah malam? Buat je guna roti keping! Lapiskan sos, sosej, bawang dan cheese, bakar sekejap terus rangup dan cheese tarik.",
+    vibe: "Cheese tarik memanjang, kerak roti garing",
+    cravingCall: "Tekak meronta nak makan piza tapi kedai dah tutup, buat je piza ekspres guna apa ada kat dapur.",
+    pantryTags: ["roti", "kudap"],
+    ingredients: [
+      "2 keping roti putih",
+      "2 sudu besar sos tomato / sos cili",
+      "Sosej, jejari ketam, atau lebihan ayam semalam (potong halus)",
+      "Keju Mozzarella / Cheddar (parut / keping)",
+      "Sedikit bawang Holland & taburan oregano"
+    ],
+    steps: [
+      "Sapu rata sos tomato dan sos cili atas roti keping.",
+      "Tabur segala jenis lauk topping yang ada (sosej, bawang holland, jejari ketam).",
+      "Timpa atas sekali dengan cheese banyak-banyak. Tabur oregano kalau ada.",
+      "Bakar dalam Air Fryer suhu 180°C selama 4-5 minit atau sampai cheese cair perang dan roti garing.",
+      "Potong segi tiga macam piza betul, makan panas-panas!"
+    ],
+    chefTip: "Jangan letak sos terlalu tebal atau sayur yang berair sangat, nanti piza roti jadi lembik dan lambat garing."
+  },
+  {
+    id: "roti-bakar-kaya",
+    name: "Roti Bakar Kaya Butter (Kopitiam)",
+    category: "kudap",
+    categoryLabel: "☕ Geng Kopitiam Santai",
+    time: "3 minit",
+    gear: "Kuali Leper / Pembakar Roti",
+    bannerIcon: "🧈",
+    image: "images/roti_kaya.png",
+    bannerGradient: "linear-gradient(135deg, #d97706 0%, #92400e 100%)",
+    desc: "Klasik sepanjang zaman. Roti dibakar garing, disapu kaya manis tebal, dan diapit sekeping butter sejuk. Lapis nipis krup krap!",
+    vibe: "Krup krap, sejuk butter cair dalam mulut dengan manis kaya",
+    cravingCall: "Nak mengunyah sambil hirup kopi atau lepak santai, fefeeling dekat kopitiam lama.",
+    pantryTags: ["roti", "mentega"],
+    ingredients: [
+      "2 keping roti putih / roti benggali",
+      "2 sudu besar seri kaya",
+      "Sekeping butter sejuk (mentega tulen, bukan marjerin untuk rasa terbaik)"
+    ],
+    steps: [
+      "Bakar roti keping tanpa minyak atas kuali leper atau guna toaster sampai perang garing.",
+      "Bila roti dah diangkat tapi masih panas berwap, sapu kaya tebal dekat satu bahagian.",
+      "Ambil butter yang sejuk terus dari peti ais, potong kepingan tebal sedikit, susun atas kaya.",
+      "Tutup dengan satu lagi kepingan roti garing, potong kecil dan ngap!",
+      "Sedapnya luar biasa kalau makan bersama telur separuh masak."
+    ],
+    chefTip: "Rahsia sedap: Roti mesti betul-betul panas garing, butter mesti sejuk beku supaya bila gigit, dapat rasa sejuk-panas dalam mulut serentak."
   },
   {
     id: "telur-separuh-masak-kopitiam",
@@ -1139,7 +1256,7 @@ class PlanetComfortiaGlobe {
 
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-    this.camera.position.z = 13.5;
+    this.camera.position.z = 16.5;
 
     this.renderer = new THREE.WebGLRenderer({
       canvas: this.canvas,
@@ -1298,8 +1415,8 @@ class PlanetComfortiaGlobe {
 
   createBeaconSprite(icon, title, imagePath = null) {
     const canvas = document.createElement("canvas");
-    canvas.width = 280;
-    canvas.height = 130;
+    canvas.width = 120;
+    canvas.height = 120;
     const texture = new THREE.CanvasTexture(canvas);
     texture.minFilter = THREE.LinearFilter;
 
@@ -1311,50 +1428,30 @@ class PlanetComfortiaGlobe {
       ctx.strokeStyle = "#f59e0b";
       ctx.lineWidth = 4;
       
-      const r = 26;
-      const w = 264, h = 114, x = 8, y = 8;
       ctx.beginPath();
-      ctx.moveTo(x + r, y);
-      ctx.lineTo(x + w - r, y);
-      ctx.quadraticCurveTo(x + w, y, x + w, y + r);
-      ctx.lineTo(x + w, y + h - r);
-      ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
-      ctx.lineTo(x + r, y + h);
-      ctx.quadraticCurveTo(x, y + h, x, y + h - r);
-      ctx.lineTo(x, y + r);
-      ctx.quadraticCurveTo(x, y, x + r, y);
-      ctx.closePath();
+      ctx.arc(60, 60, 50, 0, Math.PI * 2);
       ctx.fill();
       ctx.stroke();
 
       if (imgObj && imgObj.complete && imgObj.naturalWidth !== 0) {
         ctx.save();
         ctx.beginPath();
-        ctx.arc(58, 65, 30, 0, Math.PI * 2);
-        ctx.closePath();
+        ctx.arc(60, 60, 50, 0, Math.PI * 2);
         ctx.clip();
-        ctx.drawImage(imgObj, 28, 35, 60, 60);
+        ctx.drawImage(imgObj, 10, 10, 100, 100);
         ctx.restore();
 
         ctx.strokeStyle = "#f59e0b";
         ctx.lineWidth = 3;
         ctx.beginPath();
-        ctx.arc(58, 65, 30, 0, Math.PI * 2);
+        ctx.arc(60, 60, 50, 0, Math.PI * 2);
         ctx.stroke();
       } else {
-        ctx.font = "46px sans-serif";
+        ctx.font = "60px sans-serif";
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
-        ctx.fillText(icon, 58, 65);
+        ctx.fillText(icon, 60, 65);
       }
-
-      ctx.fillStyle = "#ffffff";
-      ctx.font = "bold 23px Outfit, sans-serif";
-      ctx.textAlign = "left";
-      ctx.textBaseline = "middle";
-      let displayTitle = title;
-      if (displayTitle.length > 12) displayTitle = displayTitle.substring(0, 11) + "…";
-      ctx.fillText(displayTitle, 102, 65);
 
       texture.needsUpdate = true;
     };
@@ -1371,7 +1468,7 @@ class PlanetComfortiaGlobe {
 
     const spriteMat = new THREE.SpriteMaterial({ map: texture, transparent: true });
     const sprite = new THREE.Sprite(spriteMat);
-    sprite.scale.set(2.5, 1.25, 1);
+    sprite.scale.set(0.7, 0.7, 1);
     return sprite;
   }
 
@@ -1389,26 +1486,11 @@ class PlanetComfortiaGlobe {
 
       const pos = new THREE.Vector3(x, y, z).multiplyScalar(this.radius);
 
-      const beamGeo = new THREE.CylinderGeometry(0.04, 0.04, 1.1, 8);
-      const beamMat = new THREE.MeshBasicMaterial({ color: 0xfbbf24, transparent: true, opacity: 0.65 });
-      const beamMesh = new THREE.Mesh(beamGeo, beamMat);
-      
-      const midPos = pos.clone().multiplyScalar(1.11);
-      beamMesh.position.copy(midPos);
-      beamMesh.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), pos.clone().normalize());
-
-      const pinGeo = new THREE.SphereGeometry(0.2, 16, 16);
-      const pinMat = new THREE.MeshBasicMaterial({ color: 0xf59e0b });
-      const pinMesh = new THREE.Mesh(pinGeo, pinMat);
-      pinMesh.position.copy(pos);
-
-      const spritePos = pos.clone().multiplyScalar(1.28);
+      const spritePos = pos.clone().multiplyScalar(1.08);
       const sprite = this.createBeaconSprite(recipe.bannerIcon, recipe.name, recipe.image);
       sprite.position.copy(spritePos);
 
       const beaconGroup = new THREE.Group();
-      beaconGroup.add(pinMesh);
-      beaconGroup.add(beamMesh);
       beaconGroup.add(sprite);
 
       beaconGroup.userData = {
@@ -1571,7 +1653,18 @@ class PlanetComfortiaGlobe {
     this.isSpinning = true;
     sfx.playWhoosh();
 
-    const target = forceRecipe || this.recipes[Math.floor(Math.random() * this.recipes.length)];
+    let target = forceRecipe;
+    if (!target) {
+      if (this.recipes.length > 1) {
+        let newTarget;
+        do {
+          newTarget = this.recipes[Math.floor(Math.random() * this.recipes.length)];
+        } while (this.currentFocusedRecipe && newTarget.id === this.currentFocusedRecipe.id);
+        target = newTarget;
+      } else {
+        target = this.recipes[0];
+      }
+    }
     this.currentFocusedRecipe = target;
 
     const marker = this.markers.find(m => m.userData.recipe.id === target.id);
@@ -1788,6 +1881,17 @@ function updateFocusedCard(recipe) {
 // ==========================================
 function openRecipeModal(recipe) {
   sfx.init();
+  
+  const modalImg = document.getElementById("modalRecipeImage");
+  if (modalImg) {
+    if (recipe.image) {
+      modalImg.src = recipe.image;
+      modalImg.alt = recipe.name;
+      modalImg.style.display = "block";
+    } else {
+      modalImg.style.display = "none";
+    }
+  }
   
   dom.modalTitle.textContent = `${recipe.bannerIcon} ${recipe.name}`;
   dom.modalCravingBadge.textContent = `🔥 Sektor Selera: ${recipe.categoryLabel}`;
