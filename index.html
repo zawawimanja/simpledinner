@@ -7,12 +7,9 @@
   <meta name="description" content="Pusing Planet Comfortia 3D untuk memilih makanan malam kegemaran anda: bubur lembut, lempeng gebu, cucur jagung manis, mashed potato dan sup pekat berkrim. Bawah 15 minit, anti-renyah.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
-  <!-- Three.js 3D Engine via CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
-
-  <!-- Slim Compact Top Header -->
   <header class="top-header">
     <div class="container top-header-content">
       <a href="#" class="brand-logo" id="brandLogoLink">
@@ -25,17 +22,12 @@
       </div>
     </div>
   </header>
-
   <main class="container">
-    <!-- Compact 3D Globe Hero Section -->
     <section class="globe-hero-section" id="globeHeroSection">
       <h1 class="hero-title-compact">
         Pening Nak Makan Apa? <span class="gradient-text">Pusing Planet Comfortia!</span>
       </h1>
-
-      <!-- 3D Interactive Globe Stage -->
       <div class="globe-stage-wrapper" id="globeStageWrapper">
-        <!-- HUD Header -->
         <div class="globe-hud-header">
           <div class="hud-radar-status">
             <span class="radar-sweep"></span>
@@ -45,12 +37,8 @@
             👆 Tarik planet untuk pusing manual atau tekan butang di bawah
           </div>
         </div>
-
-        <!-- Canvas Container -->
         <div class="globe-canvas-container" id="globeCanvasContainer">
           <canvas id="globeCanvas"></canvas>
-          
-          <!-- Target Reticle with Downward Location Pointer Arrow -->
           <div class="globe-target-reticle" id="globeReticle">
             <div class="reticle-target-arrow" id="reticleTargetArrow">
               <div class="target-arrow-badge" id="targetArrowBadge">
@@ -72,8 +60,6 @@
             </div>
           </div>
         </div>
-
-        <!-- Focused HUD Destination Card -->
         <div class="globe-focus-card" id="globeFocusCard">
           <div class="focus-card-left">
             <div class="focus-dish-icon" id="focusDishIcon">🥣</div>
@@ -87,7 +73,6 @@
               <div class="focus-health-desc" id="focusHealthDesc">🥗 Oat bijirin penuh &amp; telur: mudah hadam, kenyang lena tanpa lemak berat.</div>
             </div>
           </div>
-
           <div class="focus-card-actions">
             <button class="btn-spin-globe" id="spinGlobeBtn">
               <span>🪐</span> Pusing Planet Comfortia!
@@ -99,8 +84,6 @@
         </div>
       </div>
     </section>
-
-    <!-- "Check Dapur" Pantry Filter Section -->
     <section class="pantry-section" id="pantrySection">
       <div class="pantry-header">
         <h3>
@@ -111,7 +94,6 @@
       <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">
         Pilih bahan yang ada di dapur kau. Menu di bawah akan terus ditapis mengikut bahan sedia ada:
       </p>
-
       <div class="pantry-chips-grid" id="pantryChipsGrid">
         <button class="pantry-chip" data-item="kentang" id="chipKentang">
           <span class="check-icon">✓</span> 🥔 Kentang / Fries
@@ -151,8 +133,6 @@
         </button>
       </div>
     </section>
-
-    <!-- Menu Explorer Shelf & Categories -->
     <section class="menu-explorer-section" id="menuExplorerSection">
       <div class="filter-bar-section">
         <div class="category-tabs" id="categoryTabsGroup">
@@ -184,7 +164,6 @@
             🥗 Geng Salad Fresh
           </button>
         </div>
-
         <div class="search-wrapper">
           <span class="search-icon">🔍</span>
           <input 
@@ -197,39 +176,26 @@
           >
         </div>
       </div>
-
-      <!-- Results Count Info -->
       <div class="results-info-bar">
         <div id="resultsCount">Menunjukkan senarai menu padu...</div>
         <div style="font-size: 0.8rem; color: var(--text-dim);">💡 Klik mana-mana kad untuk tengok resipi &amp; pusingkan glob ke menu tersebut</div>
       </div>
-
-      <!-- Menu Grid Cards Container -->
       <div class="menu-grid" id="menuGrid">
-        <!-- Injected dynamically via app.js -->
       </div>
     </section>
   </main>
-
-  <!-- Gourmet Recipe Modal ("Ha, Aku Nak Makan Ni!" - Tanpa Timer) -->
   <div class="modal-overlay" id="recipeModal" role="dialog" aria-modal="true">
     <div class="modal-content glass">
       <div class="modal-header-banner">
         <button class="modal-close-btn" id="closeModalBtn" aria-label="Tutup Paparan">&times;</button>
-        
         <img id="modalRecipeImage" class="modal-recipe-image" src="" alt="" style="display: none;">
-
-
         <div class="modal-craving-badge" id="modalCravingBadge">
           🔥 Citarasa Khas: Geng Bubur Lembut
         </div>
-
         <h2 class="modal-title" id="modalTitle">Bubur Oat Savoury Telur Goyang</h2>
-
         <div class="modal-vibe-box" id="modalVibeBox">
           💡 Kenapa tekak kau nak benda ni sekarang: "Super lembut, menenangkan perut, siap 4 minit!"
         </div>
-
         <div class="modal-quick-stats">
           <span class="stat-pill" id="modalTimePill">⏱️ Siap Dalam: 4 minit</span>
           <span class="stat-pill" id="modalGearPill">🍳 1 Periuk Kecil Sahaja</span>
@@ -239,25 +205,17 @@
           🥗 Oat bijirin penuh &amp; telur: mudah hadam, kenyang lena tanpa lemak berat.
         </div>
       </div>
-
       <div class="modal-body">
-        <!-- Minimum Ingredients -->
         <h3 class="section-title">
           <span>📋</span> Bahan Minimum (Tak Perlu Sukat Timbang)
         </h3>
         <ul class="ingredients-list" id="modalIngredients">
-          <!-- Injected dynamically -->
         </ul>
-
-        <!-- 3-4 Quick Steps -->
         <h3 class="section-title">
           <span>👨‍🍳</span> 3-4 Langkah Ekspres (Terus Masak Siap)
         </h3>
         <div class="steps-timeline" id="modalSteps">
-          <!-- Injected dynamically -->
         </div>
-
-        <!-- Midnight Chef Tip -->
         <div class="chef-tip-box">
           <span style="font-size: 1.35rem;">💡</span>
           <div>
@@ -265,7 +223,6 @@
             <div id="modalChefTip">Guna kuali non-stick supaya tak lekat dan mudah dibasuh bila dah mengantuk.</div>
           </div>
         </div>
-
         <div class="modal-actions-bar">
           <button class="btn-spin-globe" onclick="closeRecipeModal()" style="padding: 0.65rem 1.6rem; font-size: 0.95rem;">
             Dah Nampak, Nak Masak Sekarang! 😋
@@ -274,15 +231,13 @@
       </div>
     </div>
   </div>
-
-  <!-- Footer -->
   <footer class="main-footer">
     <div class="container">
       <p class="footer-quote">"Malam-malam perut nak tenang, makanan panas empuk peneman tidur lena."</p>
       <p>Planet Comfortia Midnight • Dunia masakan comfort food khas mengikut citarasa anda.</p>
     </div>
   </footer>
-
   <script src="app.js"></script>
 </body>
 </html>
+

@@ -1,12 +1,3 @@
-/**
- * PLANET COMFORTIA - 3D CELESTIAL GLOBE ENGINE
- * Menggabungkan tekstur fotorealistik Planet Comfortia, foto hidangan realistik,
- * dan koleksi lengkap menu kegemaran anda (Fries, Nuget, Maggi, Nasi Impit, Lekor, Enoki, Shawarma Wrap, Salad, Lempeng, Bubur, dll).
- */
-
-// ==========================================
-// 1. DATA RESIPI PLANET COMFORTIA (LENGKAP)
-// ==========================================
 const RECIPES = [
   {
     id: "french-fries-panas",
@@ -1047,12 +1038,7 @@ const RECIPES = [
     chefTip: "Guna api sederhana kecil supaya bahagian dalam telur sempat masak empuk gebu sementara kulit roti canai luar kekal garing tak hangus."
   }
 ];
-
-// ==========================================
-// 1.1 TAHAP KESIHATAN & GUILT-METER (BAGUS / MEDIUM / CHEAT)
-// ==========================================
 const HEALTH_METRICS = {
-  // 🟢 BAGUS & SIHAT (Real Food / Rendah Minyak / Mesra Perut Malam)
   "telur-hancur-mentega": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "100% protein tulen & mentega sihat, zero bahan proses, sangat mudah dihadam sebelum tidur." },
   "telur-dadar-bawang-karamel": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Bawang merah antioksidan & protein telur segar, cepat kenyang dan menyihatkan badan." },
   "lempeng-pisang-kampung": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Buah pisang asli kaya serat prebiotik, dimasak tanpa minyak goreng. Lembut dan berkhasiat." },
@@ -1065,8 +1051,6 @@ const HEALTH_METRICS = {
   "coleslaw-krim-segar": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Kobis segar tinggi enzim pencernaan & serat. Sejuk, rangup dan menyegarkan perut." },
   "nasi-impit-instant": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Beras rebus tulen tanpa sebarang minyak atau perasa tiruan. Ringan dan selesa perut." },
   "jacket-potato-microwave": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Ubi kentang bulat asli kaya kalium & serat, dimasak microwave tanpa minyak." },
-
-  // 🟡 SEDERHANA (MEDIUM) (Homemade / Seimbang / Karbo Ringkas)
   "roti-canai-murtabak-mini": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Protein telur segar & roti canai garing layur pan. Mengenyangkan dan memuaskan selera." },
   "tortilla-telur-gulung": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Wrap gandum nipis & protein telur tulen. Mengenyangkan tanpa beban minyak/nasi berat." },
   "roti-garlic-airfryer": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Roti dibakar garing tanpa minyak goreng. Memuaskan rasa mengunyah rangup waktu malam." },
@@ -1080,8 +1064,6 @@ const HEALTH_METRICS = {
   "wrap-popcorn-shawarma": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Salad segar berbalut tortilla gandum dan ayam goreng. Seimbang & kenyang." },
   "mushroom-soup-telur": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Sup cendawan berkhasiat memanaskan badan malam hari, lemak berkrim sederhana." },
   "pau-gebu-panas": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Dimasak secara kukus atau microwave tanpa minyak langsung. Empuk dan mengenyangkan." },
-
-  // 🔴 KURANG SIHAT (CHEAT MEAL / MAKANAN PROSES / JARANG-JARANG)
   "french-fries-panas": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Kentang proses beku & tinggi garam, goreng minyak. Elok makan jarang-jarang." },
   "nuget-crispy": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Daging proses beku bertepung. Sesuai bila malas, tapi jangan jadikan menu harian." },
   "maggi-kari-telur": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Mi segera tinggi sodium & perasa. Sangat layan bila teringin, tapi jarakkan makan." },
@@ -1090,8 +1072,6 @@ const HEALTH_METRICS = {
   "popia-frozen-rangup": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Kulit popia beku goreng minyak garing. Kudapan rangup sedap untuk santai sesekali." },
   "cucur-badak-frozen": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Kuih tradisional goreng minyak berinti kelapa pedas. Sedap dimakan waktu teringin." }
 };
-
-// Automatik pasang data kesihatan pada setiap menu
 RECIPES.forEach(recipe => {
   recipe.health = HEALTH_METRICS[recipe.id] || {
     level: "medium",
@@ -1099,22 +1079,16 @@ RECIPES.forEach(recipe => {
     desc: "Kudapan santai seimbang untuk malam hari."
   };
 });
-
-// ==========================================
-// 2. AUDIO SYNTHESIS
-// ==========================================
 class SoundFX {
   constructor() {
     this.ctx = null;
   }
-
   init() {
     if (!this.ctx) {
       const AudioCtx = window.AudioContext || window.webkitAudioContext;
       if (AudioCtx) this.ctx = new AudioCtx();
     }
   }
-
   playWhoosh() {
     try {
       this.init();
@@ -1132,7 +1106,6 @@ class SoundFX {
       osc.stop(this.ctx.currentTime + 0.3);
     } catch (e) {}
   }
-
   playTick() {
     try {
       this.init();
@@ -1149,7 +1122,6 @@ class SoundFX {
       osc.stop(this.ctx.currentTime + 0.05);
     } catch (e) {}
   }
-
   playLock() {
     try {
       this.init();
@@ -1170,18 +1142,12 @@ class SoundFX {
     } catch (e) {}
   }
 }
-
 const sfx = new SoundFX();
-
-// ==========================================
-// 3. PROCEDURAL TEXTURES
-// ==========================================
 function generateRingTexture() {
   const canvas = document.createElement("canvas");
   canvas.width = 512;
   canvas.height = 64;
   const ctx = canvas.getContext("2d");
-
   const grad = ctx.createLinearGradient(0, 0, canvas.width, 0);
   grad.addColorStop(0, "rgba(245, 158, 11, 0)");
   grad.addColorStop(0.15, "rgba(251, 191, 36, 0.4)");
@@ -1191,45 +1157,33 @@ function generateRingTexture() {
   grad.addColorStop(0.75, "rgba(249, 115, 22, 0.5)");
   grad.addColorStop(0.9, "rgba(245, 158, 11, 0.25)");
   grad.addColorStop(1, "rgba(245, 158, 11, 0)");
-
   ctx.fillStyle = grad;
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-
   return new THREE.CanvasTexture(canvas);
 }
-
 function generateCloudTexture() {
   const canvas = document.createElement("canvas");
   canvas.width = 1024;
   canvas.height = 512;
   const ctx = canvas.getContext("2d");
-
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
   for (let i = 0; i < 55; i++) {
     const cx = Math.random() * canvas.width;
     const cy = Math.random() * (canvas.height * 0.7) + (canvas.height * 0.15);
     const rad = Math.random() * 80 + 35;
-    
     const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, rad);
     grad.addColorStop(0, "rgba(254, 243, 199, 0.35)");
     grad.addColorStop(0.5, "rgba(255, 255, 255, 0.18)");
     grad.addColorStop(1, "transparent");
-
     ctx.fillStyle = grad;
     ctx.beginPath();
     ctx.arc(cx, cy, rad, 0, Math.PI * 2);
     ctx.fill();
   }
-
   const texture = new THREE.CanvasTexture(canvas);
   texture.wrapS = THREE.RepeatWrapping;
   return texture;
 }
-
-// ==========================================
-// 4. PLANET COMFORTIA 3D GLOBE ENGINE
-// ==========================================
 class PlanetComfortiaGlobe {
   constructor(canvasId, recipes, onSelect) {
     this.canvas = document.getElementById(canvasId);
@@ -1239,25 +1193,19 @@ class PlanetComfortiaGlobe {
     this.isSpinning = false;
     this.radius = 4.8;
     this.currentFocusedRecipe = recipes[0];
-    
     this.isDragging = false;
     this.previousMousePosition = { x: 0, y: 0 };
     this.dragVelocity = { x: 0, y: 0 };
-    
     this.init();
   }
-
   init() {
     if (!window.THREE) return;
-
     const container = this.canvas.parentElement;
     const width = container.clientWidth;
     const height = container.clientHeight;
-
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
     this.camera.position.z = 16.5;
-
     this.renderer = new THREE.WebGLRenderer({
       canvas: this.canvas,
       alpha: true,
@@ -1266,21 +1214,16 @@ class PlanetComfortiaGlobe {
     });
     this.renderer.setSize(width, height);
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.85);
     this.scene.add(ambientLight);
-
     const sunLight = new THREE.DirectionalLight(0xfef08a, 1.6);
     sunLight.position.set(8, 10, 8);
     this.scene.add(sunLight);
-
     const rimLight = new THREE.DirectionalLight(0x38bdf8, 0.9);
     rimLight.position.set(-8, -6, -6);
     this.scene.add(rimLight);
-
     this.planetGroup = new THREE.Group();
     this.scene.add(this.planetGroup);
-
     this.createPlanetSphere();
     this.createCloudLayer();
     this.createPlanetaryRings();
@@ -1288,19 +1231,14 @@ class PlanetComfortiaGlobe {
     this.createStarCosmos();
     this.createMenuBeacons();
     this.create3DPointerArrow();
-
     this.setupInteractions();
     this.animate();
-
     window.addEventListener("resize", () => this.onWindowResize());
   }
-
   createPlanetSphere() {
     const loader = new THREE.TextureLoader();
-    // Memuatkan foto realistik Planet Comfortia yang telah digenerate!
     const planetTex = loader.load('images/planet_comfortia.jpg');
     planetTex.wrapS = THREE.RepeatWrapping;
-
     const sphereGeo = new THREE.SphereGeometry(this.radius, 64, 64);
     const sphereMat = new THREE.MeshPhongMaterial({
       map: planetTex,
@@ -1308,11 +1246,9 @@ class PlanetComfortiaGlobe {
       specular: 0xf59e0b,
       bumpScale: 0.05
     });
-
     this.planetMesh = new THREE.Mesh(sphereGeo, sphereMat);
     this.planetGroup.add(this.planetMesh);
   }
-
   createCloudLayer() {
     const cloudTex = generateCloudTexture();
     const cloudGeo = new THREE.SphereGeometry(this.radius * 1.018, 48, 48);
@@ -1322,15 +1258,12 @@ class PlanetComfortiaGlobe {
       opacity: 0.6,
       blending: THREE.AdditiveBlending
     });
-
     this.cloudMesh = new THREE.Mesh(cloudGeo, cloudMat);
     this.planetGroup.add(this.cloudMesh);
   }
-
   createPlanetaryRings() {
     const ringTex = generateRingTexture();
     const ringGeo = new THREE.RingGeometry(this.radius * 1.35, this.radius * 2.05, 64);
-
     const pos = ringGeo.attributes.position;
     const uvs = ringGeo.attributes.uv;
     for (let i = 0; i < pos.count; i++) {
@@ -1340,20 +1273,17 @@ class PlanetComfortiaGlobe {
       const u = (d - this.radius * 1.35) / (this.radius * 0.7);
       uvs.setXY(i, u, 0.5);
     }
-
     const ringMat = new THREE.MeshBasicMaterial({
       map: ringTex,
       side: THREE.DoubleSide,
       transparent: true,
       opacity: 0.65
     });
-
     this.ringMesh = new THREE.Mesh(ringGeo, ringMat);
     this.ringMesh.rotation.x = Math.PI / 2.5;
     this.ringMesh.rotation.y = 0.2;
     this.planetGroup.add(this.ringMesh);
   }
-
   createAtmosphereHalo() {
     const atmoGeo = new THREE.SphereGeometry(this.radius * 1.18, 36, 36);
     const atmoMat = new THREE.ShaderMaterial({
@@ -1375,22 +1305,18 @@ class PlanetComfortiaGlobe {
       side: THREE.BackSide,
       transparent: true
     });
-
     const atmosphere = new THREE.Mesh(atmoGeo, atmoMat);
     this.scene.add(atmosphere);
   }
-
   createStarCosmos() {
     const starCount = 500;
     const starGeo = new THREE.BufferGeometry();
     const positions = new Float32Array(starCount * 3);
     const colors = new Float32Array(starCount * 3);
-
     for (let i = 0; i < starCount * 3; i += 3) {
       positions[i] = (Math.random() - 0.5) * 100;
       positions[i + 1] = (Math.random() - 0.5) * 100;
       positions[i + 2] = (Math.random() - 0.5) * 100 - 15;
-
       if (Math.random() > 0.6) {
         colors[i] = 0.98; colors[i + 1] = 0.75; colors[i + 2] = 0.15;
       } else if (Math.random() > 0.4) {
@@ -1399,40 +1325,32 @@ class PlanetComfortiaGlobe {
         colors[i] = 1.0; colors[i + 1] = 1.0; colors[i + 2] = 1.0;
       }
     }
-
     starGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
     starGeo.setAttribute("color", new THREE.BufferAttribute(colors, 3));
-
     const starMat = new THREE.PointsMaterial({
       size: 0.32,
       vertexColors: true,
       transparent: true,
       opacity: 0.75
     });
-
     this.scene.add(new THREE.Points(starGeo, starMat));
   }
-
   createBeaconSprite(icon, title, imagePath = null) {
     const canvas = document.createElement("canvas");
     canvas.width = 120;
     canvas.height = 120;
     const texture = new THREE.CanvasTexture(canvas);
     texture.minFilter = THREE.LinearFilter;
-
     const renderCanvas = (imgObj = null) => {
       const ctx = canvas.getContext("2d");
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
       ctx.fillStyle = "rgba(7, 10, 20, 0.90)";
       ctx.strokeStyle = "#f59e0b";
       ctx.lineWidth = 4;
-      
       ctx.beginPath();
       ctx.arc(60, 60, 50, 0, Math.PI * 2);
       ctx.fill();
       ctx.stroke();
-
       if (imgObj && imgObj.complete && imgObj.naturalWidth !== 0) {
         ctx.save();
         ctx.beginPath();
@@ -1440,7 +1358,6 @@ class PlanetComfortiaGlobe {
         ctx.clip();
         ctx.drawImage(imgObj, 10, 10, 100, 100);
         ctx.restore();
-
         ctx.strokeStyle = "#f59e0b";
         ctx.lineWidth = 3;
         ctx.beginPath();
@@ -1452,12 +1369,9 @@ class PlanetComfortiaGlobe {
         ctx.textBaseline = "middle";
         ctx.fillText(icon, 60, 65);
       }
-
       texture.needsUpdate = true;
     };
-
     renderCanvas(null);
-
     if (imagePath) {
       const img = new Image();
       img.onload = () => {
@@ -1465,60 +1379,45 @@ class PlanetComfortiaGlobe {
       };
       img.src = imagePath;
     }
-
     const spriteMat = new THREE.SpriteMaterial({ map: texture, transparent: true });
     const sprite = new THREE.Sprite(spriteMat);
     sprite.scale.set(0.7, 0.7, 1);
     return sprite;
   }
-
   createMenuBeacons() {
     const total = this.recipes.length;
     const phi = Math.PI * (3 - Math.sqrt(5));
-
     this.recipes.forEach((recipe, i) => {
       const y = 1 - (i / (total - 1)) * 2;
       const radiusAtY = Math.sqrt(1 - y * y);
       const theta = phi * i;
-
       const x = Math.cos(theta) * radiusAtY;
       const z = Math.sin(theta) * radiusAtY;
-
       const pos = new THREE.Vector3(x, y, z).multiplyScalar(this.radius);
-
       const spritePos = pos.clone().multiplyScalar(1.08);
       const sprite = this.createBeaconSprite(recipe.bannerIcon, recipe.name, recipe.image);
       sprite.position.copy(spritePos);
-
       const beaconGroup = new THREE.Group();
       beaconGroup.add(sprite);
-
       beaconGroup.userData = {
         recipe: recipe,
         origPos: pos.clone(),
         index: i
       };
-
       this.planetGroup.add(beaconGroup);
       this.markers.push(beaconGroup);
     });
   }
-
   create3DPointerArrow() {
     this.pointer3DGroup = new THREE.Group();
-
-    // Inverted 3D Arrow Cone pointing straight down at the beacon on the planet
     const coneGeo = new THREE.ConeGeometry(0.28, 0.82, 16);
     coneGeo.rotateX(Math.PI);
-    
     const coneMat = new THREE.MeshBasicMaterial({
       color: 0xf59e0b
     });
     const coneMesh = new THREE.Mesh(coneGeo, coneMat);
     coneMesh.position.y = 0.41;
     this.pointer3DGroup.add(coneMesh);
-
-    // Glowing target ring hovering around the pointer
     const ringGeo = new THREE.TorusGeometry(0.4, 0.035, 12, 32);
     const ringMat = new THREE.MeshBasicMaterial({
       color: 0xfde68a,
@@ -1528,81 +1427,63 @@ class PlanetComfortiaGlobe {
     this.pointer3DRing = new THREE.Mesh(ringGeo, ringMat);
     this.pointer3DRing.rotation.x = Math.PI / 2;
     this.pointer3DGroup.add(this.pointer3DRing);
-
     this.planetGroup.add(this.pointer3DGroup);
     if (this.recipes.length > 0) {
       this.update3DPointerPosition(this.recipes[0]);
     }
   }
-
   update3DPointerPosition(recipe) {
     if (!this.pointer3DGroup || !recipe) return;
     const marker = this.markers.find(m => m.userData.recipe.id === recipe.id);
     if (!marker) return;
-
     const normPos = marker.userData.origPos.clone().normalize();
     const arrowPos = normPos.clone().multiplyScalar(this.radius * 1.35);
     this.pointer3DGroup.position.copy(arrowPos);
     this.pointer3DGroup.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), normPos);
   }
-
   setupInteractions() {
     const dom = this.canvas;
     this.raycaster = new THREE.Raycaster();
     this.mouse = new THREE.Vector2();
-
     const onStart = (clientX, clientY) => {
       if (this.isSpinning) return;
       this.isDragging = true;
       this.previousMousePosition = { x: clientX, y: clientY };
       this.dragVelocity = { x: 0, y: 0 };
     };
-
     const onMove = (clientX, clientY) => {
       if (!this.isDragging || this.isSpinning) return;
-
       const deltaX = clientX - this.previousMousePosition.x;
       const deltaY = clientY - this.previousMousePosition.y;
-
       this.dragVelocity = {
         x: deltaX * 0.005,
         y: deltaY * 0.005
       };
-
       this.planetGroup.rotation.y += this.dragVelocity.x;
       this.planetGroup.rotation.x += this.dragVelocity.y;
-
       this.previousMousePosition = { x: clientX, y: clientY };
       this.checkHover();
     };
-
     const onEnd = () => {
       this.isDragging = false;
     };
-
     dom.addEventListener("mousedown", (e) => onStart(e.clientX, e.clientY));
     window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
     window.addEventListener("mouseup", onEnd);
-
     dom.addEventListener("touchstart", (e) => {
       if (e.touches.length === 1) onStart(e.touches[0].clientX, e.touches[0].clientY);
     }, { passive: true });
-
     window.addEventListener("touchmove", (e) => {
       if (e.touches.length === 1) onMove(e.touches[0].clientX, e.touches[0].clientY);
     }, { passive: true });
-
     window.addEventListener("touchend", onEnd);
-
     dom.addEventListener("click", (e) => {
       if (this.isSpinning) return;
       const rect = dom.getBoundingClientRect();
       this.mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
       this.mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
-
       this.raycaster.setFromCamera(this.mouse, this.camera);
       const intersects = this.raycaster.intersectObjects(this.planetGroup.children, true);
-
       if (intersects.length > 0) {
         let hitMarker = null;
         intersects.forEach(hit => {
@@ -1615,7 +1496,6 @@ class PlanetComfortiaGlobe {
             cur = cur.parent;
           }
         });
-
         if (hitMarker && hitMarker.userData.recipe) {
           sfx.playLock();
           this.focusOnRecipe(hitMarker.userData.recipe, true);
@@ -1623,22 +1503,18 @@ class PlanetComfortiaGlobe {
       }
     });
   }
-
   checkHover() {
     let bestDist = Infinity;
     let bestRecipe = null;
     const forward = new THREE.Vector3(0, 0, 1);
-
     this.markers.forEach(m => {
       const currentPos = m.userData.origPos.clone().applyMatrix4(this.planetGroup.matrixWorld);
       const angle = forward.angleTo(currentPos.clone().normalize());
-
       if (angle < bestDist) {
         bestDist = angle;
         bestRecipe = m.userData.recipe;
       }
     });
-
     if (bestRecipe) {
       if (bestRecipe !== this.currentFocusedRecipe) {
         this.currentFocusedRecipe = bestRecipe;
@@ -1647,12 +1523,10 @@ class PlanetComfortiaGlobe {
       this.update3DPointerPosition(bestRecipe);
     }
   }
-
   spinToRandomRecipe(forceRecipe = null) {
     if (this.isSpinning) return;
     this.isSpinning = true;
     sfx.playWhoosh();
-
     let target = forceRecipe;
     if (!target) {
       if (this.recipes.length > 1) {
@@ -1666,20 +1540,15 @@ class PlanetComfortiaGlobe {
       }
     }
     this.currentFocusedRecipe = target;
-
     const marker = this.markers.find(m => m.userData.recipe.id === target.id);
     const pos = marker.userData.origPos.clone().normalize();
-
     const targetTheta = Math.atan2(-pos.x, pos.z);
     const targetPhi = Math.asin(pos.y);
-
     const extraSpins = 4 * Math.PI * 2;
     const startRotY = this.planetGroup.rotation.y;
     const startRotX = this.planetGroup.rotation.x;
-
     const finalRotY = startRotY + extraSpins + (targetTheta - (startRotY % (Math.PI * 2)));
     const finalRotX = -targetPhi;
-
     const reticle = document.getElementById("globeReticle");
     const arrowText = document.getElementById("targetArrowText");
     if (reticle) {
@@ -1689,29 +1558,25 @@ class PlanetComfortiaGlobe {
     if (arrowText) {
       arrowText.textContent = "🛰️ MENGESAN KOORDINAT...";
     }
-
     const startTime = performance.now();
     const duration = 2400;
     let lastTick = 0;
-
     const animateSpin = (now) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const ease = 1 - Math.pow(1 - progress, 4);
-
       this.planetGroup.rotation.y = startRotY + (finalRotY - startRotY) * ease;
       this.planetGroup.rotation.x = startRotX + (finalRotX - startRotX) * ease;
-
       if (now - lastTick > 120 && progress < 0.85) {
         sfx.playTick();
         lastTick = now;
         this.checkHover();
       }
-
       if (progress < 1) {
         requestAnimationFrame(animateSpin);
       } else {
         this.isSpinning = false;
+        this.currentFocusedRecipe = target;
         if (reticle) {
           reticle.classList.remove("spinning");
           reticle.classList.add("locking");
@@ -1720,39 +1585,29 @@ class PlanetComfortiaGlobe {
         sfx.playLock();
         updateFocusedCard(target);
         this.update3DPointerPosition(target);
-
         if (this.onSelect) this.onSelect(target);
       }
     };
-
     requestAnimationFrame(animateSpin);
   }
-
   focusOnRecipe(recipe, openModal = false) {
     const marker = this.markers.find(m => m.userData.recipe.id === recipe.id);
     if (!marker) return;
-
     const pos = marker.userData.origPos.clone().normalize();
     const targetTheta = Math.atan2(-pos.x, pos.z);
     const targetPhi = Math.asin(pos.y);
-
     const startRotY = this.planetGroup.rotation.y;
     const startRotX = this.planetGroup.rotation.x;
-
     const finalRotY = startRotY + (targetTheta - (startRotY % (Math.PI * 2)));
     const finalRotX = -targetPhi;
-
     const startTime = performance.now();
     const duration = 800;
-
     const animateFocus = (now) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
       const ease = 1 - Math.pow(1 - progress, 3);
-
       this.planetGroup.rotation.y = startRotY + (finalRotY - startRotY) * ease;
       this.planetGroup.rotation.x = startRotX + (finalRotX - startRotX) * ease;
-
       if (progress < 1) {
         requestAnimationFrame(animateFocus);
       } else {
@@ -1764,31 +1619,24 @@ class PlanetComfortiaGlobe {
         }
       }
     };
-
     requestAnimationFrame(animateFocus);
   }
-
   onWindowResize() {
     const container = this.canvas.parentElement;
     const width = container.clientWidth;
     const height = container.clientHeight;
-
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(width, height);
   }
-
   animate() {
     requestAnimationFrame(() => this.animate());
-
     if (this.cloudMesh) {
       this.cloudMesh.rotation.y += 0.0018;
     }
-
     if (this.pointer3DRing) {
       this.pointer3DRing.rotation.z += 0.04;
     }
-
     if (!this.isDragging && !this.isSpinning) {
       this.planetGroup.rotation.y += 0.0011;
       this.dragVelocity.x *= 0.94;
@@ -1796,21 +1644,15 @@ class PlanetComfortiaGlobe {
       this.planetGroup.rotation.y += this.dragVelocity.x;
       this.planetGroup.rotation.x += this.dragVelocity.y;
     }
-
     this.renderer.render(this.scene, this.camera);
   }
 }
-
-// ==========================================
-// 5. UI STATE & CONTROLLERS
-// ==========================================
 const state = {
   activeCategory: "all",
   searchQuery: "",
   selectedPantry: new Set(),
   globeInstance: null
 };
-
 const dom = {
   menuGrid: document.getElementById("menuGrid"),
   searchBar: document.getElementById("searchBar"),
@@ -1818,14 +1660,12 @@ const dom = {
   categoryTabs: document.querySelectorAll(".category-tab"),
   pantryChips: document.querySelectorAll(".pantry-chip"),
   resetPantryBtn: document.getElementById("resetPantryBtn"),
-  
   spinGlobeBtn: document.getElementById("spinGlobeBtn"),
   focusDishIcon: document.getElementById("focusDishIcon"),
   focusBadge: document.getElementById("focusBadge"),
   focusDishName: document.getElementById("focusDishName"),
   focusDishVibe: document.getElementById("focusDishVibe"),
   openFocusedRecipeBtn: document.getElementById("openFocusedRecipeBtn"),
-  
   recipeModal: document.getElementById("recipeModal"),
   closeModalBtn: document.getElementById("closeModalBtn"),
   modalCravingBadge: document.getElementById("modalCravingBadge"),
@@ -1836,10 +1676,8 @@ const dom = {
   modalIngredients: document.getElementById("modalIngredients"),
   modalSteps: document.getElementById("modalSteps"),
   modalChefTip: document.getElementById("modalChefTip"),
-  
   liveClock: document.getElementById("liveClock")
 };
-
 function updateLiveClock() {
   const now = new Date();
   const timeStr = now.toLocaleTimeString('ms-MY', { hour: '2-digit', minute: '2-digit' });
@@ -1847,7 +1685,6 @@ function updateLiveClock() {
     dom.liveClock.textContent = `${timeStr} • Orbit Aktif`;
   }
 }
-
 function updateFocusedCard(recipe) {
   if (!recipe) return;
   if (recipe.image) {
@@ -1858,13 +1695,10 @@ function updateFocusedCard(recipe) {
   dom.focusBadge.textContent = `${recipe.categoryLabel} • ⏱️ ${recipe.time}`;
   dom.focusDishName.textContent = recipe.name;
   dom.focusDishVibe.textContent = `✨ ${recipe.cravingCall}`;
-
   const arrowText = document.getElementById("targetArrowText");
   if (arrowText) {
     arrowText.textContent = `📍 ${recipe.bannerIcon} ${recipe.name}`;
   }
-
-  // Indikator Tahap Kesihatan (Bagus / Medium / Cheat)
   const healthPill = document.getElementById("focusHealthPill");
   const healthDesc = document.getElementById("focusHealthDesc");
   if (healthPill && recipe.health) {
@@ -1875,13 +1709,8 @@ function updateFocusedCard(recipe) {
     healthDesc.textContent = `💡 ${recipe.health.desc}`;
   }
 }
-
-// ==========================================
-// 6. GOURMET RECIPE MODAL
-// ==========================================
 function openRecipeModal(recipe) {
   sfx.init();
-  
   const modalImg = document.getElementById("modalRecipeImage");
   if (modalImg) {
     if (recipe.image) {
@@ -1892,15 +1721,11 @@ function openRecipeModal(recipe) {
       modalImg.style.display = "none";
     }
   }
-  
   dom.modalTitle.textContent = `${recipe.bannerIcon} ${recipe.name}`;
   dom.modalCravingBadge.textContent = `🔥 Sektor Selera: ${recipe.categoryLabel}`;
   dom.modalVibeBox.textContent = `💡 Kenapa tekak kau nak benda ni sekarang: "${recipe.cravingCall}"`;
-  
   dom.modalTimePill.textContent = `⏱️ Siap Dalam: ${recipe.time}`;
   dom.modalGearPill.textContent = `🍳 ${recipe.gear}`;
-
-  // Indikator Kesihatan di Modal
   const modalHealthPill = document.getElementById("modalHealthPill");
   const modalHealthDescBox = document.getElementById("modalHealthDescBox");
   if (modalHealthPill && recipe.health) {
@@ -1911,41 +1736,31 @@ function openRecipeModal(recipe) {
     modalHealthDescBox.innerHTML = `<strong>Tahap Kesihatan:</strong> ${recipe.health.desc}`;
     modalHealthDescBox.className = `modal-health-desc-box health-box-${recipe.health.level}`;
   }
-
   dom.modalIngredients.innerHTML = recipe.ingredients.map(ing => `
     <li class="ingredient-item">
       <span class="ingredient-bullet">✦</span>
       <span>${ing}</span>
     </li>
   `).join('');
-
   dom.modalSteps.innerHTML = recipe.steps.map((step, idx) => `
     <div class="step-row">
       <div class="step-number">${idx + 1}</div>
       <div class="step-text">${step}</div>
     </div>
   `).join('');
-
   dom.modalChefTip.textContent = recipe.chefTip;
-
   dom.recipeModal.classList.add("active");
   document.body.style.overflow = "hidden";
 }
-
 function closeRecipeModal() {
   dom.recipeModal.classList.remove("active");
   document.body.style.overflow = "";
 }
-
-// ==========================================
-// 7. MENU EXPLORER & FILTERING
-// ==========================================
 function getFilteredRecipes() {
   return RECIPES.filter(recipe => {
     if (state.activeCategory !== "all" && recipe.category !== state.activeCategory) {
       return false;
     }
-
     if (state.searchQuery.trim() !== "") {
       const q = state.searchQuery.toLowerCase();
       const matchName = recipe.name.toLowerCase().includes(q);
@@ -1953,22 +1768,18 @@ function getFilteredRecipes() {
       const matchIng = recipe.ingredients.some(ing => ing.toLowerCase().includes(q));
       if (!matchName && !matchDesc && !matchIng) return false;
     }
-
     if (state.selectedPantry.size > 0) {
       const hasAnyPantryMatch = [...state.selectedPantry].some(item => 
         recipe.pantryTags.includes(item)
       );
       if (!hasAnyPantryMatch) return false;
     }
-
     return true;
   });
 }
-
 function renderMenuGrid() {
   const filtered = getFilteredRecipes();
   dom.menuGrid.innerHTML = "";
-
   if (filtered.length === 0) {
     dom.menuGrid.innerHTML = `
       <div class="empty-state">
@@ -1981,14 +1792,11 @@ function renderMenuGrid() {
     dom.resultsCount.textContent = "0 menu";
     return;
   }
-
   dom.resultsCount.innerHTML = `Menunjukkan <span class="highlight-match">${filtered.length} menu</span> padu di Planet Comfortia`;
-
   filtered.forEach(recipe => {
     const card = document.createElement("div");
     card.className = "food-card glass";
     card.id = `card-${recipe.id}`;
-
     card.innerHTML = `
       <div class="food-card-banner" style="background: ${recipe.bannerGradient}">
         ${recipe.image ? `<img src="${recipe.image}" alt="${recipe.name}" class="food-card-img" loading="lazy" onerror="this.style.display='none'">` : ''}
@@ -1998,11 +1806,9 @@ function renderMenuGrid() {
           <span class="card-badge-health health-${recipe.health.level}">${recipe.health.label}</span>
         </div>
       </div>
-      
       <div class="food-card-body">
         <h3 class="food-card-title">${recipe.name}</h3>
         <p class="food-card-desc">${recipe.desc}</p>
-        
         <div class="food-card-ingredients">
           ${recipe.pantryTags.map(tag => {
             const isMatched = state.selectedPantry.has(tag);
@@ -2011,7 +1817,6 @@ function renderMenuGrid() {
             </span>`;
           }).join('')}
         </div>
-        
         <div class="food-card-footer">
           <span style="font-size: 0.78rem; color: var(--text-dim);">
             🍳 ${recipe.gear}
@@ -2022,7 +1827,6 @@ function renderMenuGrid() {
         </div>
       </div>
     `;
-
     card.addEventListener("click", () => {
       sfx.playTick();
       if (state.globeInstance) {
@@ -2030,51 +1834,38 @@ function renderMenuGrid() {
       }
       openRecipeModal(recipe);
     });
-
     dom.menuGrid.appendChild(card);
   });
 }
-
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
-
 function resetAllFilters() {
   state.activeCategory = "all";
   state.searchQuery = "";
   state.selectedPantry.clear();
-
   dom.searchBar.value = "";
   dom.categoryTabs.forEach(t => t.classList.toggle("active", t.dataset.category === "all"));
   dom.pantryChips.forEach(c => c.classList.remove("selected"));
-
   renderMenuGrid();
 }
 window.resetAllFilters = resetAllFilters;
-
-// ==========================================
-// 8. EVENT LISTENERS
-// ==========================================
 function setupEventListeners() {
   dom.spinGlobeBtn.addEventListener("click", () => {
     sfx.init();
     dom.spinGlobeBtn.disabled = true;
     dom.spinGlobeBtn.innerHTML = `<span>⏳</span> Mengorbit Planet Comfortia...`;
-
     state.globeInstance.spinToRandomRecipe();
-
     setTimeout(() => {
       dom.spinGlobeBtn.disabled = false;
       dom.spinGlobeBtn.innerHTML = `<span>🪐</span> Pusing Planet Comfortia!`;
     }, 2600);
   });
-
   dom.openFocusedRecipeBtn.addEventListener("click", () => {
     if (state.globeInstance && state.globeInstance.currentFocusedRecipe) {
       openRecipeModal(state.globeInstance.currentFocusedRecipe);
     }
   });
-
   dom.closeModalBtn.addEventListener("click", closeRecipeModal);
   dom.recipeModal.addEventListener("click", (e) => {
     if (e.target === dom.recipeModal) closeRecipeModal();
@@ -2084,7 +1875,6 @@ function setupEventListeners() {
       closeRecipeModal();
     }
   });
-
   dom.categoryTabs.forEach(tab => {
     tab.addEventListener("click", () => {
       sfx.playTick();
@@ -2092,14 +1882,12 @@ function setupEventListeners() {
       tab.classList.add("active");
       state.activeCategory = tab.dataset.category;
       renderMenuGrid();
-
       const firstMatch = RECIPES.find(r => r.category === state.activeCategory);
       if (firstMatch && state.globeInstance) {
         state.globeInstance.focusOnRecipe(firstMatch, false);
       }
     });
   });
-
   dom.pantryChips.forEach(chip => {
     chip.addEventListener("click", () => {
       sfx.playTick();
@@ -2114,32 +1902,25 @@ function setupEventListeners() {
       renderMenuGrid();
     });
   });
-
   dom.resetPantryBtn.addEventListener("click", () => {
     sfx.playTick();
     state.selectedPantry.clear();
     dom.pantryChips.forEach(c => c.classList.remove("selected"));
     renderMenuGrid();
   });
-
   dom.searchBar.addEventListener("input", (e) => {
     state.searchQuery = e.target.value;
     renderMenuGrid();
   });
 }
-
-// ==========================================
-// 9. INITIALIZE
-// ==========================================
 document.addEventListener("DOMContentLoaded", () => {
   setupEventListeners();
   renderMenuGrid();
   updateLiveClock();
   setInterval(updateLiveClock, 30000);
-
   state.globeInstance = new PlanetComfortiaGlobe("globeCanvas", RECIPES, (chosen) => {
     updateFocusedCard(chosen);
   });
-
   updateFocusedCard(RECIPES[0]);
 });
+
