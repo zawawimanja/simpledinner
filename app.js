@@ -1649,6 +1649,7 @@ class PlanetComfortiaGlobe {
 }
 const state = {
   activeCategory: "all",
+  activeHealth: "all",
   searchQuery: "",
   selectedPantry: new Set(),
   globeInstance: null
@@ -1658,6 +1659,7 @@ const dom = {
   searchBar: document.getElementById("searchBar"),
   resultsCount: document.getElementById("resultsCount"),
   categoryTabs: document.querySelectorAll(".category-tab"),
+  healthTabs: document.querySelectorAll(".health-tab"),
   pantryChips: document.querySelectorAll(".pantry-chip"),
   resetPantryBtn: document.getElementById("resetPantryBtn"),
   spinGlobeBtn: document.getElementById("spinGlobeBtn"),
@@ -1774,6 +1776,9 @@ function getFilteredRecipes() {
     if (state.activeCategory !== "all" && recipe.category !== state.activeCategory) {
       return false;
     }
+    if (state.activeHealth !== "all" && recipe.health && recipe.health.level !== state.activeHealth) {
+      return false;
+    }
     if (state.searchQuery.trim() !== "") {
       const q = state.searchQuery.toLowerCase();
       const matchName = recipe.name.toLowerCase().includes(q);
@@ -1798,7 +1803,7 @@ function renderMenuGrid() {
       <div class="empty-state">
         <div style="font-size: 3rem; margin-bottom: 0.5rem;">🍳</div>
         <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.5rem;">Tiada Menu Ditemui</h3>
-        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Cuba tukar pilihan bahan dapur atau pilih sektor lain.</p>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Cuba tukar pilihan bahan dapur, tahap kesihatan, atau sektor lain.</p>
         <button class="btn-spin-globe" onclick="resetAllFilters()" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Reset Saringan</button>
       </div>
     `;
@@ -1855,10 +1860,12 @@ function capitalize(str) {
 }
 function resetAllFilters() {
   state.activeCategory = "all";
+  state.activeHealth = "all";
   state.searchQuery = "";
   state.selectedPantry.clear();
   dom.searchBar.value = "";
   dom.categoryTabs.forEach(t => t.classList.toggle("active", t.dataset.category === "all"));
+  dom.healthTabs.forEach(t => t.classList.toggle("active", t.dataset.health === "all"));
   dom.pantryChips.forEach(c => c.classList.remove("selected"));
   renderMenuGrid();
 }
@@ -1895,7 +1902,20 @@ function setupEventListeners() {
       tab.classList.add("active");
       state.activeCategory = tab.dataset.category;
       renderMenuGrid();
-      const firstMatch = RECIPES.find(r => r.category === state.activeCategory);
+      const firstMatch = getFilteredRecipes()[0];
+      if (firstMatch && state.globeInstance) {
+        state.globeInstance.focusOnRecipe(firstMatch, false);
+      }
+    });
+  });
+  dom.healthTabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      sfx.playTick();
+      dom.healthTabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+      state.activeHealth = tab.dataset.health;
+      renderMenuGrid();
+      const firstMatch = getFilteredRecipes()[0];
       if (firstMatch && state.globeInstance) {
         state.globeInstance.focusOnRecipe(firstMatch, false);
       }

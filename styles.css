@@ -602,11 +602,81 @@ body {
 }
 .filter-bar-section {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+  background: rgba(15, 21, 36, 0.5);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 0.85rem;
+}
+.health-filter-wrapper {
+  display: flex;
   align-items: center;
-  gap: 1.25rem;
-  margin-bottom: 0.5rem;
+  justify-content: space-between;
+  width: 100%;
+}
+.health-tabs-group {
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.filter-group-label {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--amber-light);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-right: 0.35rem;
+}
+.health-tab {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 0.42rem 0.95rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.health-tab:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+.health-tab.active[data-health="all"] {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+}
+.health-tab.active.health-tab-bagus,
+.health-tab.active[data-health="bagus"] {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+  color: #34d399;
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.35);
+}
+.health-tab.active.health-tab-medium,
+.health-tab.active[data-health="medium"] {
+  background: rgba(245, 158, 11, 0.2);
+  border-color: #f59e0b;
+  color: #fbbf24;
+  box-shadow: 0 0 14px rgba(245, 158, 11, 0.35);
+}
+.health-tab.active.health-tab-cheat,
+.health-tab.active[data-health="cheat"] {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: #ef4444;
+  color: #f87171;
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.35);
 }
 .category-tabs {
   display: flex;
