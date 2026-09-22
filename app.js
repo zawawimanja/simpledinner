@@ -1676,6 +1676,7 @@ const dom = {
   modalIngredients: document.getElementById("modalIngredients"),
   modalSteps: document.getElementById("modalSteps"),
   modalChefTip: document.getElementById("modalChefTip"),
+  modalActionsBar: document.getElementById("modalActionsBar"),
   liveClock: document.getElementById("liveClock")
 };
 function updateLiveClock() {
@@ -1749,6 +1750,18 @@ function openRecipeModal(recipe) {
     </div>
   `).join('');
   dom.modalChefTip.textContent = recipe.chefTip;
+  
+  const ytLink = recipe.ytLink || ('https://www.youtube.com/results?search_query=' + encodeURIComponent(recipe.name + ' resepi'));
+  
+  dom.modalActionsBar.innerHTML = `
+    <button class="btn-spin-globe" onclick="closeRecipeModal()" style="padding: 0.65rem 1.6rem; font-size: 0.95rem;">
+      Dah Nampak, Nak Masak Sekarang! 😋
+    </button>
+    <a href="${ytLink}" target="_blank" class="btn-yt-video">
+      <span>▶️</span> Tonton Video YT
+    </a>
+  `;
+
   dom.recipeModal.classList.add("active");
   document.body.style.overflow = "hidden";
 }
