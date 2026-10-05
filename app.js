@@ -35,7 +35,7 @@ const RECIPES = [
     time: "2 minit",
     gear: "1 Cawan & Microwave / Periuk Kecil",
     bannerIcon: "🌽",
-    image: "images/korean_corn_cheese.jpg",
+    image: "images/jagung_cawan.png",
     bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
     desc: "Jagung manis berjus panas dalam cawan digaul marjerin Planta/mentega wangi, sedikit susu pekat manis dan secubit garam. Zero kuali, tak berminyak, ratah sudu demi sudu.",
     vibe: "Manis lemak berjus meletup-letup, aroma mentega wangi berasap, zero basuh periuk",
@@ -718,8 +718,8 @@ const RECIPES = [
   {
     id: "roti-garlic-airfryer",
     name: "Roti Bawang Putih Garing (Garlic Toast)",
-    category: "kudap",
-    categoryLabel: "🍟 Geng Kudap & Goreng",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
     time: "3 minit",
     gear: "Air Fryer / Pembakar Roti",
     bannerIcon: "🍞",
@@ -747,8 +747,8 @@ const RECIPES = [
   {
     id: "roti-telur-lemas",
     name: "Roti Telur Lemas (French Toast Ala Kampung)",
-    category: "lempeng",
-    categoryLabel: "🥞 Geng Lempeng & Cucur",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
     time: "4 minit",
     gear: "1 Kuali Leper",
     bannerIcon: "🍞",
@@ -776,8 +776,8 @@ const RECIPES = [
   {
     id: "roti-sosej-gulung",
     name: "Roti Sosej Gulung Cheese Berapi",
-    category: "kudap",
-    categoryLabel: "🍟 Geng Kudap & Goreng",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
     time: "6 minit",
     gear: "1 Kuali Goreng / Air Fryer",
     bannerIcon: "🌭",
@@ -806,8 +806,8 @@ const RECIPES = [
   {
     id: "piza-roti-segera",
     name: "Piza Roti Segera (Air Fryer)",
-    category: "kudap",
-    categoryLabel: "🍟 Geng Kudap & Goreng",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
     time: "5 minit",
     gear: "Air Fryer / Pembakar Roti",
     bannerIcon: "🍕",
@@ -836,8 +836,8 @@ const RECIPES = [
   {
     id: "roti-bakar-kaya",
     name: "Roti Bakar Kaya Butter (Kopitiam)",
-    category: "kudap",
-    categoryLabel: "☕ Geng Kopitiam Santai",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
     time: "3 minit",
     gear: "Kuali Leper / Pembakar Roti",
     bannerIcon: "🧈",
@@ -1036,6 +1036,700 @@ const RECIPES = [
       "Balik-balikkan perlahan sehingga kedua-dua belah garing keemasan dan telur di dalam masak empuk. Angkat dan potong dua!"
     ],
     chefTip: "Guna api sederhana kecil supaya bahagian dalam telur sempat masak empuk gebu sementara kulit roti canai luar kekal garing tak hangus."
+  },
+  {
+    id: "roti-sardin-pedas",
+    name: "Roti Sardin Pedas Berlauk (Ala Kantin Sekolah)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "7 minit",
+    gear: "1 Kuali Kecil & Sudu",
+    bannerIcon: "🐟",
+    image: "images/roti_sardin.png",
+    bannerGradient: "linear-gradient(135deg, #dc2626 0%, #9a3412 100%)",
+    desc: "Sardin tin ditumis bawang besar, cili dan perahan limau sampai pekat merah berlemak, diapit roti Gardenia lembut. Rasa nostalgia kantin sekolah!",
+    vibe: "Pedas masam manis, roti lembut serap kuah sardin",
+    cravingCall: "Teringin rasa roti sardin zaman sekolah yang pedas berlemak dan mengenyangkan.",
+    pantryTags: ["roti", "sardin", "bawang"],
+    ingredients: [
+      "4 keping roti Gardenia",
+      "1 tin kecil sardin (155g)",
+      "1/2 biji bawang besar (dadu halus)",
+      "1 sudu besar cili sos / cili kisar (ikut tahap pedas)",
+      "Perahan 1 biji limau kasturi / nipis",
+      "Secubit gula & garam, hirisan timun (pilihan)"
+    ],
+    steps: [
+      "Keluarkan sardin dari tin, buang tulang tengah dan lenyek kasar. Simpan kuah tomatonya.",
+      "Panaskan sedikit minyak, tumis bawang besar sampai layu dan wangi.",
+      "Masukkan sardin, kuah tin dan cili. Kacau 2–3 minit sampai pekat dan tak berair.",
+      "Perah limau, perasakan gula dan garam. Tutup api dan biar suam sekejap.",
+      "Sapu tebal inti sardin atas roti, letak timun kalau ada, tutup dan potong segi tiga."
+    ],
+    chefTip: "Masak inti sampai betul-betul pekat dan kering sikit — kalau berair, roti Gardenia cepat lembik. Nak lagi rangup? Bakar sekejap roti tu atas kuali leper."
+  },
+  {
+    id: "roti-telur-mayo",
+    name: "Sandwich Telur Mayo Gebu (Tamago Sando)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "10 minit",
+    gear: "1 Periuk Kecil & Garfu",
+    bannerIcon: "🥪",
+    image: "images/roti_telur_mayo.png",
+    bannerGradient: "linear-gradient(135deg, #facc15 0%, #ca8a04 100%)",
+    desc: "Telur rebus dilenyek bersama mayonis, secubit gula dan lada sulah, diapit roti Gardenia yang dibuang kulit. Lembut, berkrim, ala kedai serbaneka Jepun.",
+    vibe: "Gebu berkrim, lembut macam awan",
+    cravingCall: "Nak makan benda lembut berkrim, sejuk-sejuk sedap, tak perlu kuali berminyak.",
+    pantryTags: ["roti", "telur"],
+    ingredients: [
+      "4 keping roti Gardenia (buang kulit jika suka)",
+      "2 biji telur",
+      "2 sudu besar mayonis",
+      "Secubit gula, garam & lada sulah",
+      "Sedikit mentega untuk sapu roti"
+    ],
+    steps: [
+      "Rebus telur 9 minit, rendam air sejuk dan kupas.",
+      "Lenyek telur dengan garfu, gaul bersama mayonis, gula, garam dan lada sulah.",
+      "Sapu nipis mentega atas roti supaya tak lembik.",
+      "Ratakan inti telur tebal-tebal, tutup dan potong dua. Siap!"
+    ],
+    chefTip: "Asingkan kuning telur dan lenyek dengan mayo dulu sampai licin, baru masuk putih telur dicincang — tekstur jadi lebih berkrim macam sando Jepun."
+  },
+  {
+    id: "roti-john-mini",
+    name: "Roti John Mini Roti Keping",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "8 minit",
+    gear: "1 Kuali Leper (Non-Stick)",
+    bannerIcon: "🌭",
+    image: "images/roti_john_mini.png",
+    bannerGradient: "linear-gradient(135deg, #f97316 0%, #9a3412 100%)",
+    desc: "Rasa Roti John pasar malam guna roti Gardenia biasa: telur bawang (dan sosej/ayam cincang) ditekap atas kuali, siram mayo dan sos cili.",
+    vibe: "Garing berlemak, telur gebu, sos berselirat",
+    cravingCall: "Rindu Roti John pasar malam tapi malas keluar rumah.",
+    pantryTags: ["roti", "telur", "bawang"],
+    ingredients: [
+      "3 keping roti Gardenia",
+      "2 biji telur",
+      "1/2 biji bawang besar (cincang)",
+      "1 batang sosej / sedikit ayam cincang (pilihan)",
+      "Mentega, mayonis & sos cili"
+    ],
+    steps: [
+      "Pukul telur dengan bawang, sosej hiris dan secubit garam.",
+      "Cairkan sedikit mentega atas kuali leper api sederhana.",
+      "Tuang sedikit adunan telur, terus tekap sekeping roti atasnya. Tunggu 1 minit sampai telur melekat.",
+      "Terbalikkan, bakar sisi roti satu lagi sampai garing.",
+      "Angkat, picit mayo dan sos cili zigzag, potong dan makan panas!"
+    ],
+    chefTip: "Celup sekejap muka roti dalam adunan telur sebelum tekap — telur melekat sekata dan tak tumpah keliling kuali."
+  },
+  {
+    id: "roti-cheese-leleh",
+    name: "Roti Cheese Leleh Bermentega (Grilled Cheese)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "5 minit",
+    gear: "1 Kuali Leper & Penutup",
+    bannerIcon: "🧀",
+    image: "images/roti_cheese_leleh.png",
+    bannerGradient: "linear-gradient(135deg, #fbbf24 0%, #b45309 100%)",
+    desc: "Roti Gardenia disapu mentega di luar, diisi keju keping/mozzarella, dibakar perlahan sampai keemasan rangup dan keju meleleh tarik panjang.",
+    vibe: "Luar rangup bermentega, dalam keju cair menarik",
+    cravingCall: "Tekak nak benda masin berlemak dan cheesy yang siap dalam 5 minit.",
+    pantryTags: ["roti", "mentega"],
+    ingredients: [
+      "2 keping roti Gardenia",
+      "2 keping keju cheddar / segenggam mozzarella",
+      "1 sudu besar mentega lembut"
+    ],
+    steps: [
+      "Sapu mentega pada sebelah luar kedua-dua keping roti.",
+      "Letak sekeping roti (bahagian mentega ke bawah) atas kuali api kecil, susun keju dan tutup dengan roti kedua.",
+      "Tutup kuali 2 minit supaya keju cepat cair.",
+      "Terbalikkan, bakar lagi 1–2 minit sampai keemasan. Potong dua dan tarik!"
+    ],
+    chefTip: "Api kecil dan tutup kuali adalah kuncinya — kalau api besar, roti hangus dulu sebelum keju sempat cair."
+  },
+  {
+    id: "roti-planta-gula",
+    name: "Roti Planta Gula Rangup (Nostalgia Childhood Toast)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "3 minit",
+    gear: "1 Kuali Leper / Pembakar Roti",
+    bannerIcon: "🍞",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+    desc: "Roti Gardenia dibakar kuali leper sehingga garing keemasan, disapu Planta/mentega wangi tebal-tebal dan ditabur gula pasir rangup meletup-letup. Simple, klasik, nostalgia!",
+    vibe: "Lemak mentega wangi, manis rangup meletup gula pasir",
+    cravingCall: "Tekak nak kudapan manis nostalgia zaman kanak-kanak yang siap sekelip mata.",
+    pantryTags: ["roti", "mentega"],
+    ingredients: [
+      "2 keping roti Gardenia",
+      "1 sudu besar marjerin Planta / mentega wangi",
+      "1 sudu besar gula pasir"
+    ],
+    steps: [
+      "Bakar roti keping atas kuali leper tanpa minyak sampai kedua-dua belah garing perang.",
+      "Selagi roti panas berwap, sapu Planta/mentega tebal-tebal hingga cair meresap.",
+      "Tabur gula pasir secara merata di atas permukaan mentega.",
+      "Potong dua dan makan terus sewaktu rangup panas!"
+    ],
+    chefTip: "Sapu Planta masa roti tengah betul-betul panas supaya mentega cair meresap ke dalam roti tapi gula tetap berbutir rangup."
+  },
+  {
+    id: "roti-tuna-mayo",
+    name: "Sandwich Tuna Mayo Cili Padi",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "6 minit",
+    gear: "1 Mangkuk & Garfu",
+    bannerIcon: "🐟",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)",
+    desc: "Tuna tin dilenyek bersama mayonis berkrim, bawang cincang dan ketukan cili padi pedas, diapit roti Gardenia lembut. Padat protein, pedas masam manis!",
+    vibe: "Gebu berkrim, pedas menyengat cili padi",
+    cravingCall: "Nak makan sandwich pedas berlemak padat isi tanpa perlu menyalakan api dapur.",
+    pantryTags: ["roti", "tuna", "bawang"],
+    ingredients: [
+      "4 keping roti Gardenia",
+      "1 tin kecil tuna tin (toskan minyak/air)",
+      "2 sudu besar mayonis",
+      "1/2 biji bawang besar (cincang halus)",
+      "2 biji cili padi (cincang halus, jika suka pedas)",
+      "Perahan limau nipis & secubit lada hitam"
+    ],
+    steps: [
+      "Keluarkan tuna tin, toskan air/minyaknya dan masukkan ke dalam mangkuk.",
+      "Lenyek tuna dengan garfu, campurkan mayonis, bawang, cili padi, lada hitam dan perahan limau.",
+      "Kacau sebati hingga jadi pes tuna berkrim.",
+      "Sapu padat atas roti Gardenia, tutup dan potong segi tiga."
+    ],
+    chefTip: "Toskan minyak tuna betul-betul kering supaya adunan mayo pekat dan tak membuatkan roti Gardenia lembik berair."
+  },
+  {
+    id: "nasi-bujang-telur-kicap",
+    name: "Nasi Bujang Telur Mata Kicap Cili Padi",
+    category: "maggi",
+    categoryLabel: "🍜 Maggi & Nasi Impit",
+    time: "4 minit",
+    gear: "1 Kuali Goreng",
+    bannerIcon: "🍳",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #b45309 0%, #451a03 100%)",
+    desc: "Nasi panas-panas ditimpa telur mata tepi garing keemasan dengan kuning cair meletup, disiram kicap manis tebal dan ketukan cili padi perah limau. Menu legend penyelamat lapar 3 pagi!",
+    vibe: "Kuning telur meleleh, kicap manis pedas masam terangkat",
+    cravingCall: "Lapar tahap gaban tapi malas masak rumit — nak nasi telur kicap terpaling nikmat.",
+    pantryTags: ["nasi", "telur"],
+    ingredients: [
+      "1 mangkuk nasi putih panas",
+      "1 biji telur segar",
+      "2 sudu besar kicap manis tebal (Kicap Kipas Udang)",
+      "3 biji cili padi (ketuk / hiris)",
+      "1/2 biji limau kasturi",
+      "Minyak untuk menggoreng"
+    ],
+    steps: [
+      "Panaskan minyak agak banyak dalam kuali sampai berasap sikit.",
+      "Pecahkan telur, goreng api besar sampai tepi garing garing kecoklatan tapi kuning telur masih goyang.",
+      "Angkat telur dan letakkan terus di atas nasi putih panas.",
+      "Siram kicap manis tebal, tabur hirisan cili padi dan perah limau kasturi di atas telur. Gaul suap terus!"
+    ],
+    chefTip: "Guna minyak betul-betul panas masa goreng telur supaya tepi telur jadi garing 'crispy lace' sementara kuning kat tengah kekal meleleh."
+  },
+  {
+    id: "nasi-goreng-butter-egg",
+    name: "Nasi Goreng Mentega Telur Goyang (5 Minit)",
+    category: "maggi",
+    categoryLabel: "🍜 Maggi & Nasi Impit",
+    time: "5 minit",
+    gear: "1 Kuali Goreng",
+    bannerIcon: "🧈",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #eab308 0%, #854d0e 100%)",
+    desc: "Nasi sejuk ditumis kuali dengan mentega wangi, bawang putih cincang dan lada hitam tumbuk, dihidang bersama telur goyang di atas. Harum berlemak zero perasa rumit!",
+    vibe: "Aroma mentega wangi berasap, lembut gurih berlada",
+    cravingCall: "Ada nasi sejuk baki semalam, nak tumis wangi-wangi dengan mentega sekejap.",
+    pantryTags: ["nasi", "telur", "mentega", "bawang"],
+    ingredients: [
+      "1 mangkuk nasi sejuk (leraikan)",
+      "1 sudu besar mentega tulen / Planta",
+      "2 ulas bawang putih (cincang)",
+      "1 biji telur",
+      "1/2 sudu teh serbuk lada hitam",
+      "Secubit garam & daun bawang"
+    ],
+    steps: [
+      "Cairkan mentega dalam kuali, tumis bawang putih hingga kekuningan dan berbau wangi.",
+      "Masukkan nasi sejuk, garam dan lada hitam. Kacau kilat api besar 2 minit hingga nasi sebati beraroma mentega.",
+      "Tolakkan nasi ke tepi kuali, pecahkan telur di ruang kosong. Biar telur separa masak, baru kuis gaul dengan nasi.",
+      "Angkat dan tabur sedikit lada hitam ekstra."
+    ],
+    chefTip: "Guna nasi sejuk dari peti ais supaya butiran nasi berderai cantik dan serap mentega tanpa jadi lekit."
+  },
+  {
+    id: "maggi-goreng-basah",
+    name: "Maggi Goreng Basah Telur Gedik",
+    category: "maggi",
+    categoryLabel: "🍜 Maggi & Nasi Impit",
+    time: "6 minit",
+    gear: "1 Kuali Kecil",
+    bannerIcon: "🍜",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #ef4444 0%, #991b1b 100%)",
+    desc: "Mi Maggi Kari dicelup ringkas, digoreng basah dengan kicap manis, sos cili dan perencah kari, ditarik telur hancur separa basah. Pekat mekit terangkat!",
+    vibe: "Kuah pekat mekit melekit, pedas berlemak mi kenyal",
+    cravingCall: "Bosan Maggi kuah biasa, nak Maggi goreng style mamak yang basah-basah pekat.",
+    pantryTags: ["maggi", "telur"],
+    ingredients: [
+      "1 peket Maggi Kari",
+      "1 biji telur",
+      "1 sudu besar kicap manis",
+      "1 sudu besar sos cili",
+      "1/2 peket perencah Maggi Kari",
+      "2 sudu besar air suam"
+    ],
+    steps: [
+      "Rebus mi Maggi 1 minit setengah (jangan terlalu lembik), toskan.",
+      "Panaskan sedikit minyak, tumis perencah kari, kicap manis dan sos cili sekejap.",
+      "Masukkan mi Maggi dan 2 sudu besar air suam, gaul pantas.",
+      "Pecahkan telur kat tengah mi, biar 30 saat kemudian gaul kasar supaya telur jadi bertali basah.",
+      "Angkat terus semasa berasap lembap basah!"
+    ],
+    chefTip: "Jangan guna seluruh peket perencah sebab kicap dah ada garam — guna 1/2 peket je supaya tak terlalu masin."
+  },
+  {
+    id: "roti-canai-cheese",
+    name: "Roti Canai Cheese Tarik (Roti Canai Frozen)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "6 minit",
+    gear: "1 Kuali Leper (Non-Stick)",
+    bannerIcon: "🧀",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
+    desc: "Roti canai frozen dilayur atas kuali non-stick, ditabur keju Mozzarella/Cheddar tebal di tengah dan dilipat empat. Luar garing berlapis, dalam keju tarik tebal!",
+    vibe: "Kulit garing berlapis, keju tarik kenyal gurih",
+    cravingCall: "Craving roti canai cheese mamak tengah malam tapi tak nak keluar rumah.",
+    pantryTags: ["roti", "mentega"],
+    ingredients: [
+      "1 keping roti canai frozen",
+      "1/2 cawan keju Mozzarella / 2 keping Cheddar",
+      "Sedikit mentega untuk sapu"
+    ],
+    steps: [
+      "Letak roti canai frozen atas kuali leper api sederhana (tanpa defrost).",
+      "Bila roti mula lembut dan garing sikit (1-2 minit), terbalikkan.",
+      "Tabur keju melimpah kat tengah roti, lipat 4 penjuru menjadi segi empat.",
+      "Tekan-tekan sedikit dengan sudip dan balikkan sehingga kedua-dua belah garing perang dan keju di dalam cair.",
+      "Potong 4 dan tarik keju memanjang!"
+    ],
+    chefTip: "Guna api kecil lepas lipat supaya roti tak hangus di luar tapi keju kat dalam sempat cair sepenuhnya."
+  },
+  {
+    id: "roti-telur-cheese-leleh",
+    name: "Roti Telur Cheese Leleh (French Toast Cheese)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "5 minit",
+    gear: "1 Kuali Leper",
+    bannerIcon: "🥪",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #facc15 0%, #ca8a04 100%)",
+    desc: "Roti dicelup telur, diapit cheese dan hirisan sosej, digoreng dengan butter sampai keemasan dan cheese cair meleleh. Gabungan padu!",
+    vibe: "Garing berbutter, telur lembut, cheese meleleh",
+    cravingCall: "Nak gabungan French toast telur dan grilled cheese dalam satu gigitan.",
+    pantryTags: ["roti", "telur", "mentega"],
+    ingredients: [
+      "2 keping roti Gardenia",
+      "1 biji telur",
+      "1 keping keju cheddar",
+      "Sosej atau daging burger (hiris nipis)",
+      "Sedikit mentega & secubit garam"
+    ],
+    steps: [
+      "Pukul telur bersama secubit garam dalam pinggan leper.",
+      "Celupkan kedua-dua keping roti ke dalam adunan telur hingga rata.",
+      "Susun cheese dan sosej/daging di tengah, apit kedua roti.",
+      "Goreng atas kuali leper dengan sedikit mentega dengan api sederhana.",
+      "Balikkan sehingga kedua-dua belah keemasan dan cheese cair."
+    ],
+    chefTip: "Goreng sosej atau daging burger sekejap sebelum letak di tengah roti supaya ia masak sempurna dan sedap dikunyah."
+  },
+  {
+    id: "roti-susu-milo-garing",
+    name: "Roti Susu Garing (Pan-fried Sweet Toast)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "3 minit",
+    gear: "1 Kuali Leper",
+    bannerIcon: "🥛",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)",
+    desc: "Roti disapu mentega dan digoreng rangup. Tuang susu pekat nipis-nipis dan tabur serbuk Milo. Rasa macam roti tsunami tapi versi garing!",
+    vibe: "Luar rangup wangi butter, cair manis susu Milo",
+    cravingCall: "Perlukan gula dan manis-manis lepas penat kerja, ala mamak style.",
+    pantryTags: ["roti", "mentega"],
+    ingredients: [
+      "2 keping roti Gardenia",
+      "1 sudu besar mentega",
+      "2 sudu besar susu pekat manis",
+      "Serbuk Milo secukup rasa"
+    ],
+    steps: [
+      "Sapu mentega pada roti dan goreng atas kuali leper tanpa minyak sampai rangup keemasan.",
+      "Angkat roti garing dan tuang susu pekat manis nipis-nipis berselirat di atasnya.",
+      "Tabur serbuk Milo sebagai penutup.",
+      "Potong memanjang dan nikmati sambil hirup kopi atau teh."
+    ],
+    chefTip: "Roti mesti betul-betul garing sebelum letak susu, kalau tak roti cepat lembik lepas kena susu pekat."
+  },
+  {
+    id: "roti-pisang-nutella-roll",
+    name: "Roti Goreng Pisang / Nutella Roll",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "7 minit",
+    gear: "1 Kuali Leper",
+    bannerIcon: "🍌",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #a16207 0%, #422006 100%)",
+    desc: "Roti dileperkan nipis, disapu Nutella dan pisang, digulung kemas, dicelup telur dan digoreng butter. Crunchy di luar, cair meletup di dalam!",
+    vibe: "Cair coklat Nutella, manis pisang montok",
+    cravingCall: "Teringin dessert fancy ala kafe tapi guna bahan dapur biasa je.",
+    pantryTags: ["roti", "pisang", "telur", "mentega"],
+    ingredients: [
+      "3 keping roti Gardenia (buang kulit tepi)",
+      "1 biji pisang (hiris memanjang/nipis)",
+      "Nutella / mentega kacang",
+      "1 biji telur (dipukul sikit)",
+      "Sedikit mentega untuk menggoreng"
+    ],
+    steps: [
+      "Gelek kepingan roti sampai nipis dan leper (guna gelas jika takda penggelek).",
+      "Sapu Nutella dan letak hirisan pisang kat hujung roti.",
+      "Gulung roti dengan kemas. Tekan sedikit hujungnya supaya tak terbuka.",
+      "Celup gulungan ke dalam telur, kemudian goreng atas kuali bermentega.",
+      "Golek-golekkan sampai semua sisi garing dan keemasan. Sedia dimakan panas!"
+    ],
+    chefTip: "Buang kulit roti supaya mudah digelek dan digulung padat, inti pun tak tumpah sewaktu digoreng."
+  },
+  {
+    id: "roti-goreng-kari",
+    name: "Roti Goreng Cicah Kari (Roti Keping Mamak)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "8 minit",
+    gear: "1 Kuali Leper + Periuk Kecil",
+    bannerIcon: "🍛",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #ea580c 0%, #7c2d12 100%)",
+    desc: "Roti dipotong segi empat, dicelup telur dan digoreng garing, lepas tu dicicah kuah kari pekat panas. Rasa macam roti canai mamak versi Gardenia!",
+    vibe: "Pedas berempah, roti lembut serap kuah kari",
+    cravingCall: "Teringin roti canai kuah kari tapi malas keluar ke kedai mamak.",
+    pantryTags: ["roti", "telur"],
+    ingredients: [
+      "3 keping roti Gardenia (potong 4)",
+      "1 biji telur dipukul + secubit garam",
+      "1 peket perencah Maggi Kari / kuah kari lebihan semalam",
+      "Sedikit minyak / mentega"
+    ],
+    steps: [
+      "Panaskan kuah kari (atau rebus 1/2 cawan air + perencah Maggi Kari sampai pekat).",
+      "Celup potongan roti dalam telur.",
+      "Goreng atas kuali leper sampai kedua-dua belah keemasan.",
+      "Hidang panas bersama mangkuk kuah kari untuk dicicah."
+    ],
+    chefTip: "Tambah sesudu susu cair atau santan dalam kuah Maggi Kari supaya lebih lemak macam kuah dhal mamak."
+  },
+  {
+    id: "roti-bom-ayam-cincang",
+    name: "Roti Bom Inti Ayam Cincang",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "12 minit",
+    gear: "Kuali + Air Fryer (pilihan)",
+    bannerIcon: "💣",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #b45309 0%, #451a03 100%)",
+    desc: "Roti digelek nipis, diisi ayam/daging cincang masak kicap, dilipat jadi poket bertekap garpu dan digoreng garing. Macam karipap roti!",
+    vibe: "Rangup luar, inti berlauk panas meletup",
+    cravingCall: "Nak snek berinti yang mengenyangkan, bukan sekadar roti kosong.",
+    pantryTags: ["roti", "telur", "ayam"],
+    ingredients: [
+      "4 keping roti Gardenia (buang kulit)",
+      "100g ayam / daging cincang",
+      "1 ulas bawang putih & 1/2 biji bawang besar (cincang)",
+      "1 sudu kicap manis + sedikit lada hitam",
+      "1 biji telur (untuk salut)"
+    ],
+    steps: [
+      "Tumis bawang sampai wangi, masukkan ayam cincang, kicap dan lada. Masak sampai kering.",
+      "Gelek roti sampai nipis. Letak sesudu inti di tengah.",
+      "Lipat dua, tekan tepi dengan garpu supaya rapat.",
+      "Celup telur, goreng atau air fryer 180°C selama 6 minit sampai keemasan."
+    ],
+    chefTip: "Pastikan inti betul-betul kering supaya roti tak lembik dan tepi tak terbuka masa goreng."
+  },
+  {
+    id: "roti-sambal-bilis",
+    name: "Roti Bakar Sambal Bilis (Nasi Lemak Versi Roti)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "5 minit",
+    gear: "Toaster / Kuali Leper",
+    bannerIcon: "🌶️",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #dc2626 0%, #7f1d1d 100%)",
+    desc: "Roti bakar garing disapu sambal tumis bilis, dihidang dengan telur mata dan hirisan timun. Semua rasa nasi lemak dalam sekeping roti.",
+    vibe: "Pedas manis sambal, rangup bilis, nostalgia sarapan",
+    cravingCall: "Teringin nasi lemak tapi nasi tak ada, roti je ada.",
+    pantryTags: ["roti", "telur"],
+    ingredients: [
+      "2 keping roti Gardenia",
+      "2 sudu sambal bilis (botol / lebihan)",
+      "1 biji telur",
+      "Beberapa hiris timun",
+      "Sedikit mentega"
+    ],
+    steps: [
+      "Bakar roti dengan sedikit mentega sampai garing.",
+      "Goreng telur mata separuh masak.",
+      "Sapu sambal bilis tebal atas roti.",
+      "Letak telur dan timun di atas. Makan terus!"
+    ],
+    chefTip: "Panaskan sambal sekejap dalam microwave supaya wangi dan senang disapu rata."
+  },
+  {
+    id: "club-sandwich-3-tingkat",
+    name: "Club Sandwich 3 Tingkat",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "10 minit",
+    gear: "Toaster + Kuali Leper",
+    bannerIcon: "🥪",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #65a30d 0%, #365314 100%)",
+    desc: "Tiga lapis roti bakar disusun dengan telur goreng, daging burger/ayam, timun, tomato dan mayo. Dipotong segi tiga ala hotel.",
+    vibe: "Tinggi, padat, kenyang ala room service hotel",
+    cravingCall: "Lapar betul-betul dan nak sandwich yang 'serious'.",
+    pantryTags: ["roti", "telur", "ayam"],
+    ingredients: [
+      "3 keping roti Gardenia (bakar)",
+      "1 biji telur goreng",
+      "1 keping daging burger / ayam goreng",
+      "Hirisan timun, tomato & daun salad",
+      "Mayonis & sos cili"
+    ],
+    steps: [
+      "Bakar 3 keping roti sampai garing.",
+      "Goreng telur dan daging burger.",
+      "Lapis 1: roti + mayo + daging burger + salad. Lapis 2: roti + sos cili + telur + timun + tomato.",
+      "Tutup dengan roti terakhir, cucuk lidi, potong pepenjuru jadi segi tiga."
+    ],
+    chefTip: "Cucuk lidi sebelum potong supaya susunan tak runtuh. Lap tomato dengan tisu supaya roti tak lembik."
+  },
+  {
+    id: "egg-in-a-hole",
+    name: "Roti Telur Lubang (Egg in a Hole)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "5 minit",
+    gear: "1 Kuali Leper + Gelas",
+    bannerIcon: "🍳",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #facc15 0%, #a16207 100%)",
+    desc: "Roti ditebuk bulat di tengah guna mulut gelas, telur dipecah dalam lubang dan digoreng mentega. Kuning telur cair meleleh bila dikoyak!",
+    vibe: "Comel, mentega wangi, kuning telur leleh",
+    cravingCall: "Nak benda cepat, comel dan puas hati dengan 2 bahan je.",
+    pantryTags: ["roti", "telur", "mentega"],
+    ingredients: [
+      "2 keping roti Gardenia",
+      "2 biji telur",
+      "1 sudu mentega",
+      "Garam, lada hitam & kicap (pilihan)"
+    ],
+    steps: [
+      "Tekan mulut gelas di tengah roti untuk buat lubang bulat.",
+      "Cairkan mentega, letak roti dan bulatan kecil atas kuali.",
+      "Pecahkan telur ke dalam lubang, tabur garam & lada.",
+      "Masak 2 minit, terbalikkan perlahan, masak 30 saat lagi untuk kuning cair."
+    ],
+    chefTip: "Guna api kecil-sederhana supaya putih telur masak sebelum roti hangus. Bulatan roti tu goreng sekali buat cicah kuning telur!"
+  },
+  {
+    id: "roti-bakar-kari-daging",
+    name: "Roti Bakar Inti Lebihan Kari Daging",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "7 minit",
+    gear: "Sandwich Maker / Kuali Leper",
+    bannerIcon: "🥘",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #9a3412 0%, #431407 100%)",
+    desc: "Lebihan kari daging/ayam semalam dicarik halus, disumbat dalam roti dan dipanggang garing. Zero membazir, rasa macam jaffle mamak!",
+    vibe: "Berempah pekat, garing tepi, panas berasap",
+    cravingCall: "Ada lauk kari semalam dalam peti, sayang nak buang.",
+    pantryTags: ["roti", "mentega"],
+    ingredients: [
+      "2 keping roti Gardenia",
+      "3 sudu lebihan kari daging / ayam (carik isi, kuah sikit)",
+      "1 keping cheese (pilihan)",
+      "Sedikit mentega"
+    ],
+    steps: [
+      "Panaskan kari sampai kuah pekat, carik isi daging halus.",
+      "Sapu mentega di bahagian luar kedua-dua roti.",
+      "Letak inti kari (dan cheese) di tengah, tutup.",
+      "Panggang dalam sandwich maker atau tekan atas kuali sampai garing kedua belah."
+    ],
+    chefTip: "Jangan letak kuah banyak sangat. Inti mesti pekat supaya roti kekal rangup."
+  },
+  {
+    id: "puding-roti-jimat",
+    name: "Puding Roti Kukus / Bakar (Roti Nak Expired)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "20 minit",
+    gear: "Mangkuk Tahan Panas + Pengukus / Air Fryer",
+    bannerIcon: "🍮",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #d97706 0%, #78350f 100%)",
+    desc: "Roti yang dah nak expired dikoyak, direndam bancuhan susu, telur dan gula, lepas tu dikukus atau dibakar. Lembut gebu macam kastard!",
+    vibe: "Lembut kastard, manis lemak susu, jimat bajet",
+    cravingCall: "Roti dah nak expired, sayang nak buang. Jadikan dessert!",
+    pantryTags: ["roti", "telur", "susu", "mentega"],
+    ingredients: [
+      "4 keping roti Gardenia (koyak kecil)",
+      "1 cawan susu segar / susu cair",
+      "2 biji telur",
+      "3 sudu gula",
+      "1 sudu mentega cair + sedikit esen vanila / kismis (pilihan)"
+    ],
+    steps: [
+      "Pukul telur, susu, gula, mentega dan vanila sampai sebati.",
+      "Masukkan roti koyak, rendam 5 minit sampai serap.",
+      "Tuang dalam mangkuk tahan panas yang disapu mentega.",
+      "Kukus 15–20 minit ATAU air fryer 160°C selama 15 minit sampai set dan atas keperangan."
+    ],
+    chefTip: "Tutup mangkuk dengan aluminium foil masa kukus supaya air wap tak menitis ke atas puding."
+  },
+  {
+    id: "roti-peanut-butter-pisang",
+    name: "Roti Bakar Peanut Butter Pisang",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "3 minit",
+    gear: "Toaster / Kuali Leper",
+    bannerIcon: "🥜",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #ca8a04 0%, #713f12 100%)",
+    desc: "Roti bakar panas disapu mentega kacang tebal, ditabur hirisan pisang dan sedikit madu. Simple, mengenyangkan dan tahan lama.",
+    vibe: "Lemak kacang, manis pisang, kenyang lama",
+    cravingCall: "Nak benda manis tapi mengenyangkan dalam masa 3 minit.",
+    pantryTags: ["roti", "pisang"],
+    ingredients: [
+      "2 keping roti Gardenia",
+      "2 sudu mentega kacang",
+      "1 biji pisang (hiris bulat)",
+      "Sedikit madu / taburan kayu manis (pilihan)"
+    ],
+    steps: [
+      "Bakar roti sampai garing.",
+      "Sapu mentega kacang masa roti masih panas supaya cair sikit.",
+      "Susun hirisan pisang di atas.",
+      "Siram madu atau tabur kayu manis. Siap!"
+    ],
+    chefTip: "Guna pisang yang dah ada bintik coklat. Lebih manis, tak payah tambah madu pun."
+  },
+  {
+    id: "roti-sosej-mayo-bakeri",
+    name: "Roti Gulung Sosej Mayo (Ala Bakeri)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "8 minit",
+    gear: "Air Fryer / Oven Toaster",
+    bannerIcon: "🌭",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #e11d48 0%, #881337 100%)",
+    desc: "Roti digelek nipis, digulung dengan sosej, disapu mayo dan sos tomato di atas, ditabur daun parsli lalu dibakar. Sebiji macam roti sosej kedai bakeri!",
+    vibe: "Lembut gebu, mayo bakar wangi, nostalgia bakeri",
+    cravingCall: "Rindu roti sosej mayo yang selalu beli kat kedai roti.",
+    pantryTags: ["roti", "sosej", "telur"],
+    ingredients: [
+      "4 keping roti Gardenia (buang kulit)",
+      "4 batang sosej ayam",
+      "Mayonis & sos tomato",
+      "1 biji telur (sapu atas)",
+      "Daun parsli kering (pilihan)"
+    ],
+    steps: [
+      "Gelek roti nipis, letak sosej di hujung dan gulung ketat.",
+      "Sapu telur di atas gulungan.",
+      "Picit mayo dan sos tomato zig-zag atas roti, tabur parsli.",
+      "Air fryer 170°C selama 6–7 minit sampai mayo keperangan."
+    ],
+    chefTip: "Letak gulungan dengan sambungan menghadap bawah supaya tak terbuka masa dibakar."
+  },
+  {
+    id: "roti-stick-kayu-manis",
+    name: "Roti Stick Gula Kayu Manis (Churros Roti)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "6 minit",
+    gear: "1 Kuali Leper / Air Fryer",
+    bannerIcon: "🥖",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #c2410c 0%, #431407 100%)",
+    desc: "Roti dipotong jejari panjang, digoreng mentega sampai rangup, lepas tu digolek dalam gula + serbuk kayu manis. Rasa macam churros!",
+    vibe: "Rangup manis, wangi kayu manis, snek tak berhenti",
+    cravingCall: "Malam-malam nak mengunyah benda manis rangup sambil tengok movie.",
+    pantryTags: ["roti", "mentega"],
+    ingredients: [
+      "3 keping roti Gardenia (potong jejari 3 batang sekeping)",
+      "2 sudu mentega",
+      "3 sudu gula pasir",
+      "1/2 sudu kecil serbuk kayu manis",
+      "Coklat cair / susu pekat untuk cicah (pilihan)"
+    ],
+    steps: [
+      "Campur gula dan kayu manis dalam pinggan.",
+      "Cairkan mentega atas kuali, goreng jejari roti sampai semua sisi garing.",
+      "Masa masih panas, golek terus dalam campuran gula kayu manis.",
+      "Hidang dengan coklat cair atau susu pekat untuk cicah."
+    ],
+    chefTip: "Roti yang dah 2–3 hari lebih sesuai sebab kurang lembap, jadi lebih rangup."
+  },
+  {
+    id: "roti-aiskrim-malaysia",
+    name: "Roti Aiskrim Malaysia (Nostalgia Tepi Jalan)",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "2 minit",
+    gear: "Tiada! (Pinggan je)",
+    bannerIcon: "🍦",
+    image: "",
+    bannerGradient: "linear-gradient(135deg, #ec4899 0%, #831843 100%)",
+    desc: "Sekeping roti lembut dibalut sebongkah aiskrim (potong dari kotak), ditabur meses atau disiram Milo. Macam beli dari motor aiskrim zaman sekolah!",
+    vibe: "Sejuk lembut manis, nostalgia budak-budak",
+    cravingCall: "Panas terik, nak benda sejuk manis yang buat teringat zaman kecik.",
+    pantryTags: ["roti"],
+    ingredients: [
+      "1–2 keping roti Gardenia (lembut, jangan bakar)",
+      "Aiskrim kotak (perisa jagung / durian / vanila / coklat)",
+      "Meses coklat / serbuk Milo / susu pekat (pilihan)"
+    ],
+    steps: [
+      "Potong aiskrim kotak jadi bongkah tebal 2cm.",
+      "Letak bongkah aiskrim di tengah roti.",
+      "Tabur meses atau Milo, siram susu pekat kalau suka.",
+      "Lipat roti dan makan cepat sebelum cair!"
+    ],
+    chefTip: "Perisa jagung atau durian paling ori rasa macam pakcik aiskrim. Simpan roti dalam peti 5 minit dulu supaya aiskrim lambat cair."
   }
 ];
 const HEALTH_METRICS = {
@@ -1070,7 +1764,35 @@ const HEALTH_METRICS = {
   "keropok-lekor": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Protein ikan sedap tetapi digoreng rendam minyak penuh (deep fried). Makan sesekali." },
   "karipap-frozen-berapi": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Pastri beku berlapis lelemak shortening & digoreng minyak. Kudapan cheat rangup." },
   "popia-frozen-rangup": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Kulit popia beku goreng minyak garing. Kudapan rangup sedap untuk santai sesekali." },
-  "cucur-badak-frozen": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Kuih tradisional goreng minyak berinti kelapa pedas. Sedap dimakan waktu teringin." }
+  "cucur-badak-frozen": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Kuih tradisional goreng minyak berinti kelapa pedas. Sedap dimakan waktu teringin." },
+  "roti-sardin-pedas": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Sardin kaya omega-3 & kalsium tulang ikan, minyak minimum. Kenyang berkhasiat." },
+  "roti-telur-mayo": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Telur rebus protein tulen tanpa goreng, tapi mayonis tinggi lemak. Sapu sederhana." },
+  "roti-john-mini": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Telur & roti mengenyangkan, tapi mentega, sosej dan sos menambah lemak & garam." },
+  "roti-cheese-leleh": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Keju & mentega tinggi lemak tepu. Sedap gila, tapi simpan untuk malam istimewa." },
+  "roti-telur-lemas": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Roti bersalut telur dibakar sedikit mentega. Mengenyangkan dan selesa perut." },
+  "roti-bakar-kaya": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Roti bakar tanpa minyak, tapi kaya & butter tinggi gula dan lemak. Makan sederhana." },
+  "roti-sosej-gulung": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Sosej daging proses & keju tinggi garam. Kudapan cheat sesekali." },
+  "piza-roti-segera": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Sos, sosej & keju tinggi garam dan lemak. Puas hati, tapi jangan selalu." },
+  "roti-planta-gula": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Roti bakar bermentega & gula pasir. Memuaskan selera manis santai malam." },
+  "roti-tuna-mayo": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Tuna tinggi protein & omega-3, disapu mayo sederhana. Mengenyangkan & sihat." },
+  "nasi-bujang-telur-kicap": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Protein telur & karbohidrat nasi putih. Menu simple seimbang penepis lapar." },
+  "nasi-goreng-butter-egg": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Mentega wangi & telur goyang protein tinggi. Kenyang memuaskan." },
+  "maggi-goreng-basah": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Mi segera & sos tinggi sodium. Nikmat waktu craving, tapi jarakkan makan." },
+  "roti-canai-cheese": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Keju & roti canai tinggi kalori & lelemak. Sedap layan waktu teringin." },
+  "roti-telur-cheese-leleh": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Mentega, keju, dan sosej diproses agak tinggi kalori dan sodium. Makan bersederhana." },
+  "roti-susu-milo-garing": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Gula tinggi dari susu pekat dan Milo. Kudapan cheat penambah tenaga ringkas." },
+  "roti-pisang-nutella-roll": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Manis berganda Nutella dan pisang, digoreng butter. Memang sedap, tapi tinggi kalori!" },
+  "roti-goreng-kari": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Kuah kari segera tinggi sodium & roti goreng. Sedap, tapi jarakkan makan." },
+  "roti-bom-ayam-cincang": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Protein ayam cincang mengenyangkan. Guna air fryer untuk kurangkan minyak." },
+  "roti-sambal-bilis": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Bilis kaya kalsium & telur protein, tapi sambal berminyak. Makan sederhana." },
+  "club-sandwich-3-tingkat": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Protein & sayur segar lengkap, tapi 3 keping roti & mayo agak berat." },
+  "egg-in-a-hole": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Hanya roti & telur dengan sedikit mentega. Protein tulen, ringkas & seimbang." },
+  "roti-bakar-kari-daging": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Guna semula lauk sedia ada, protein daging tinggi. Kuah kari berlemak, ambil sikit." },
+  "puding-roti-jimat": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Susu & telur berkhasiat, dikukus tanpa minyak. Gula boleh dikurangkan." },
+  "roti-peanut-butter-pisang": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Lemak sihat kacang, kalium & serat pisang. Tenaga tahan lama tanpa goreng." },
+  "roti-sosej-mayo-bakeri": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Sosej proses & mayo tinggi lemak dan garam. Layan sesekali je." },
+  "roti-stick-kayu-manis": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Goreng mentega & salut gula. Snek manis untuk cheat day." },
+  "roti-aiskrim-malaysia": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Aiskrim tinggi gula & lemak. Nostalgia manis untuk sesekali." }
 };
 RECIPES.forEach(recipe => {
   recipe.health = HEALTH_METRICS[recipe.id] || {
@@ -1817,7 +2539,7 @@ function renderMenuGrid() {
     card.id = `card-${recipe.id}`;
     card.innerHTML = `
       <div class="food-card-banner" style="background: ${recipe.bannerGradient}">
-        ${recipe.image ? `<img src="${recipe.image}" alt="${recipe.name}" class="food-card-img" loading="lazy" onerror="this.style.display='none'">` : ''}
+        ${recipe.image ? `<img src="${recipe.image}" alt="${recipe.name}" class="food-card-img" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">` : ''}
         <div class="banner-icon" ${recipe.image ? 'style="display:none;"' : ''}>${recipe.bannerIcon}</div>
         <div class="card-badges">
           <span class="time-badge">⏱️ ${recipe.time}</span>
