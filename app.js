@@ -2565,22 +2565,7 @@ function openRecipeModal(recipe) {
     }
   }
 
-  const shareModalBtn = document.getElementById("shareModalBtn");
-  if (shareModalBtn) {
-    shareModalBtn.onclick = () => {
-      if(sfx.playTick) sfx.playTick();
-      shareRecipe(recipe);
-    };
-  }
-  
-  const shareWABtn = document.getElementById("shareWABtn");
-  if (shareWABtn) shareWABtn.onclick = () => { if(sfx.playTick) sfx.playTick(); shareToWhatsApp(recipe); };
-  
-  const shareXBtn = document.getElementById("shareXBtn");
-  if (shareXBtn) shareXBtn.onclick = () => { if(sfx.playTick) sfx.playTick(); shareToTwitter(recipe); };
-  
-  const shareFBBtn = document.getElementById("shareFBBtn");
-  if (shareFBBtn) shareFBBtn.onclick = () => { if(sfx.playTick) sfx.playTick(); shareToFacebook(recipe); };
+
   dom.modalTitle.textContent = `${recipe.bannerIcon} ${recipe.name}`;
   dom.modalCravingBadge.textContent = `🔥 Sektor Selera: ${recipe.categoryLabel}`;
   dom.modalVibeBox.textContent = `💡 Kenapa tekak kau nak benda ni sekarang: "${recipe.cravingCall}"`;
@@ -2613,13 +2598,30 @@ function openRecipeModal(recipe) {
   const ytLink = recipe.ytLink || ('https://www.youtube.com/results?search_query=' + encodeURIComponent(recipe.name + ' resepi'));
   
   dom.modalActionsBar.innerHTML = `
-    <button class="btn-spin-globe" onclick="closeRecipeModal()" style="padding: 0.65rem 1.6rem; font-size: 0.95rem;">
-      Dah Nampak, Nak Masak Sekarang! 😋
+    <div class="social-share-btns" style="display: flex; gap: 0.5rem; margin-right: auto;">
+      <button class="btn-social" id="shareWABtn" aria-label="Share to WhatsApp" style="background: #25D366; color: white; border: none; border-radius: 9999px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="WhatsApp">📱</button>
+      <button class="btn-social" id="shareXBtn" aria-label="Share to X" style="background: #000000; color: white; border: 1px solid rgba(255,255,255,0.2); border-radius: 9999px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="X (Twitter)">🐦</button>
+      <button class="btn-social" id="shareFBBtn" aria-label="Share to Facebook" style="background: #1877F2; color: white; border: none; border-radius: 9999px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 1.2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.2); transition: 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="Facebook">📘</button>
+    </div>
+    <button class="btn-share" id="shareModalBtn" aria-label="Copy Link" style="padding: 0.65rem 1.2rem; font-size: 0.95rem; background: rgba(255, 255, 255, 0.08); color: var(--text-main); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 9999px; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease;">
+      <span>🔗</span> Salin Pautan
     </button>
     <a href="${ytLink}" target="_blank" class="btn-yt-video">
       <span>▶️</span> Tonton Video YT
     </a>
+    <button class="btn-spin-globe" onclick="closeRecipeModal()" style="padding: 0.65rem 1.6rem; font-size: 0.95rem;">
+      Dah Nampak, Nak Masak Sekarang! 😋
+    </button>
   `;
+
+  const shareModalBtn = document.getElementById("shareModalBtn");
+  if (shareModalBtn) shareModalBtn.onclick = () => { if(sfx.playTick) sfx.playTick(); shareRecipe(recipe); };
+  const shareWABtn = document.getElementById("shareWABtn");
+  if (shareWABtn) shareWABtn.onclick = () => { if(sfx.playTick) sfx.playTick(); shareToWhatsApp(recipe); };
+  const shareXBtn = document.getElementById("shareXBtn");
+  if (shareXBtn) shareXBtn.onclick = () => { if(sfx.playTick) sfx.playTick(); shareToTwitter(recipe); };
+  const shareFBBtn = document.getElementById("shareFBBtn");
+  if (shareFBBtn) shareFBBtn.onclick = () => { if(sfx.playTick) sfx.playTick(); shareToFacebook(recipe); };
 
   dom.recipeModal.classList.add("active");
   document.body.style.overflow = "hidden";
