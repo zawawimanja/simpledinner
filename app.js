@@ -767,6 +767,34 @@ const RECIPES = [
     chefTip: "Guna api sederhana kecil masa menggoreng supaya telur masak elok meresap ke dalam roti, bukan hangus di luar tapi basah di dalam."
   },
   {
+    id: "roti-banjir-kacang-krim",
+    name: "Roti Bakar Banjir Baked Beans & Krim Cendawan",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "4 minit",
+    gear: "Toaster & Microwave",
+    bannerIcon: "🍞",
+    image: "images/mushroom_soup.jpg",
+    bannerGradient: "linear-gradient(135deg, #d97706 0%, #b45309 100%)",
+    desc: "Kepingan roti dibakar garing hingga krup-krap, dimakan bersama gabungan 'fusion' luar biasa: limpahan kuah baked beans yang manis masin dan sup krim cendawan pekat. Mewah dan mengenyangkan!",
+    vibe: "Krup krap, manis tomato masin kacang, dan lemak berkrim cendawan",
+    cravingCall: "Nak gabungkan lauk tin yang ada kat dapur jadi satu hidangan mewah ala-ala kafe gaya Inggeris (English Breakfast).",
+    pantryTags: ["roti", "sardin", "cendawan"],
+    ingredients: [
+      "2-3 keping roti putih / gandum",
+      "Setengah tin Baked Beans",
+      "Setengah tin Mushroom Soup (atau 1 paket serbuk sup cendawan dibancuh pekat)",
+      "Secubit lada hitam & secebis mentega (pilihan)"
+    ],
+    steps: [
+      "Bakar roti keping dalam pembakar roti (toaster) atau di atas kuali tanpa minyak sehingga sangat garing.",
+      "Panaskan Baked Beans dalam mangkuk kecil menggunakan microwave (1 minit) bersama secebis mentega dan lada hitam.",
+      "Panaskan juga Mushroom Soup dalam mangkuk berasingan sehingga pekat berasap.",
+      "Cara makan paling nikmat: Koyak roti garing, celup ke dalam sup cendawan pekat, kemudian sudukan baked beans di atasnya. Ngap!"
+    ],
+    chefTip: "Pastikan roti dibakar ekstra garing supaya ia tak cepat lembik bila dicelup ke dalam sup krim pekat."
+  },
+  {
     id: "roti-sosej-gulung",
     name: "Roti Sosej Gulung Cheese Berapi",
     category: "roti",
