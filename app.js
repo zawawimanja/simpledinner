@@ -1099,7 +1099,7 @@ const RECIPES = [
     time: "3 minit",
     gear: "1 Kuali Leper Sahaja",
     bannerIcon: "🫓",
-    image: "images/chicken_wrap.jpg",
+    image: "images/tortilla_telur_gulung.jpg",
     bannerGradient: "linear-gradient(135deg, #d97706 0%, #b45309 100%)",
     desc: "Roti canai segera dilayur di kuali, diisi telur pukul dan hirisan bawang di tengah, dilipat empat segi kemas. Luar garing berlapis krup-krap, dalam berintikan telur empuk berwap!",
     vibe: "Kulit garing krup-krap, inti telur bawang empuk berasap panas",
