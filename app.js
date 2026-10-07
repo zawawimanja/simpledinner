@@ -57,6 +57,34 @@ const RECIPES = [
     chefTip: "Secubit garam halus tu rahsia penting peniaga pasar malam — ia potong rasa muak manis dan naikkan rasa lemak berkrim berkali ganda!"
   },
   {
+    id: "jagung-nyiur-kampung",
+    name: "Jagung Rebus Gaul Nyiur (Kelapa Parut)",
+    category: "kudap",
+    categoryLabel: "🌽 Sektor Jagung Manis",
+    time: "3 minit",
+    gear: "1 Mangkuk",
+    bannerIcon: "🌽",
+    image: "images/jagung_cawan.png",
+    bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #166534 100%)",
+    desc: "Makanan kampung sejati! Biji jagung manis panas digaul rata bersama kelapa parut (nyiur) segar, secubit garam halus, dan sedikit gula. Manis, masin, berlemak dan sangat nostalgia sama macam ubi rebus.",
+    vibe: "Manis jagung berjus, masin lemak kelapa parut, rasa kembali ke zaman kanak-kanak",
+    cravingCall: "Tekak nak kudapan kampung yang sangat simple, manis berjus semula jadi dan lemak-lemak masin kelapa.",
+    pantryTags: ["jagung"],
+    ingredients: [
+      "1 cawan jagung manis (tin atau lerai segar)",
+      "3 sudu besar kelapa parut (nyiur) segar / kering",
+      "1/2 sudu teh gula putih / gula pasir",
+      "Secubit kecil garam halus"
+    ],
+    steps: [
+      "Jika guna jagung tin, toskan airnya. Panaskan jagung sebentar di dalam microwave (1 minit) atau rebus/kukus sekejap hingga berasap panas.",
+      "Dalam mangkuk berasingan, ramas atau gaulkan kelapa parut bersama secubit garam dan gula.",
+      "Masukkan jagung yang panas-panas itu ke dalam mangkuk kelapa tadi.",
+      "Gaul rata supaya setiap butir jagung disaluti serpihan lemak kelapa. Sudukan perlahan-lahan nikmati rasa kampung!"
+    ],
+    chefTip: "Garam halus jangan tinggal! Ia sangat penting untuk 'potong' manis jagung dan menaikkan rasa lemak masin kelapa (nyiur) tu supaya seimbang."
+  },
+  {
     id: "cucur-jagung-manis",
     name: "Cucur Jagung Manis Rangup & Lembut",
     category: "lempeng",
