@@ -2518,6 +2518,23 @@ function updateFocusedCard(recipe) {
     healthDesc.textContent = `💡 ${recipe.health.desc}`;
   }
 }
+function shareToWhatsApp(recipe) {
+  const url = window.location.href.split('?')[0];
+  const text = `Tengok resipi "${recipe.name}" ni kat Planet Comfortia! Memang ngam untuk makan malam. 😋\n${url}`;
+  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+function shareToTwitter(recipe) {
+  const url = window.location.href.split('?')[0];
+  const text = `Tengok resipi "${recipe.name}" ni kat Planet Comfortia! Memang ngam untuk makan malam. 😋`;
+  window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+}
+
+function shareToFacebook(recipe) {
+  const url = window.location.href.split('?')[0];
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+}
+
 function shareRecipe(recipe) {
   const url = window.location.href.split('?')[0]; 
   const textToShare = `Tengok resipi "${recipe.name}" ni kat Planet Comfortia! Memang ngam untuk makan malam. 😋`;
@@ -2555,6 +2572,15 @@ function openRecipeModal(recipe) {
       shareRecipe(recipe);
     };
   }
+  
+  const shareWABtn = document.getElementById("shareWABtn");
+  if (shareWABtn) shareWABtn.onclick = () => { if(sfx.playTick) sfx.playTick(); shareToWhatsApp(recipe); };
+  
+  const shareXBtn = document.getElementById("shareXBtn");
+  if (shareXBtn) shareXBtn.onclick = () => { if(sfx.playTick) sfx.playTick(); shareToTwitter(recipe); };
+  
+  const shareFBBtn = document.getElementById("shareFBBtn");
+  if (shareFBBtn) shareFBBtn.onclick = () => { if(sfx.playTick) sfx.playTick(); shareToFacebook(recipe); };
   dom.modalTitle.textContent = `${recipe.bannerIcon} ${recipe.name}`;
   dom.modalCravingBadge.textContent = `🔥 Sektor Selera: ${recipe.categoryLabel}`;
   dom.modalVibeBox.textContent = `💡 Kenapa tekak kau nak benda ni sekarang: "${recipe.cravingCall}"`;
