@@ -605,7 +605,14 @@ const RECIPES = [
     chefTip: "Masak terus dalam keadaan beku keras! Kalau biar defrost sampai lembik, kulitnya mudah koyak dan serap minyak."
   },
   {
-    /pau_gebu.jpg,
+    id: "pau-gebu-panas",
+    name: "Pau Gebu Lembut Sutera Panas",
+    category: "frozen",
+    categoryLabel: "🥟 Geng Frozen Kuih",
+    time: "4 minit",
+    gear: "Pengukus / Microwave Berpenutup",
+    bannerIcon: "🥮",
+    image: "images/pau_gebu.jpg",
     bannerGradient: "linear-gradient(135deg, #64748b 0%, #334155 100%)",
     desc: "Pau frozen putih gebu selembut sutera. Inti sambal bilis pedas manis, daging atau kaya. Cukup lembut, panas menggebu bila dipegang.",
     vibe: "Lembut gebu macam bantal kapas, isi sambal atau daging berasap panas manis pedas",
@@ -624,7 +631,14 @@ const RECIPES = [
     chefTip: "Tisu dapur lembap dalam microwave berfungsi persis periuk stim mini — elak pau jadi kering atau liat macam getah."
   },
   {
-    /popia_goreng.jpg,
+    id: "popia-frozen-rangup",
+    name: "Popia Sayur & Ayam Frozen Rangup Krup-Krap",
+    category: "frozen",
+    categoryLabel: "🥟 Geng Frozen Kuih",
+    time: "5 minit",
+    gear: "Air Fryer / Kuali Menggoreng",
+    bannerIcon: "🥢",
+    image: "images/popia_goreng.jpg",
     bannerGradient: "linear-gradient(135deg, #d97706 0%, #92400e 100%)",
     desc: "Popia frozen digoreng terus sampai kulit garing nipis keemasan. Inti sengkuang sayur dan ayam yang manis berjus dicicah sos cili manis berkilat.",
     vibe: "Kulit rangup nipis krup-krap, inti sayur manis berjus basah",
@@ -644,7 +658,14 @@ const RECIPES = [
     chefTip: "Jangan tinggal popia terlalu lama semasa menggoreng kerana kulit popia nipis mudah cepat garing keemasan."
   },
   {
-    /cucur_badak.jpg,
+    id: "cucur-badak-frozen",
+    name: "Cucur Badak & Kuih Melayu Frozen Panas",
+    category: "frozen",
+    categoryLabel: "🥟 Geng Frozen Kuih",
+    time: "6 minit",
+    gear: "1 Kuali Minyak Panas",
+    bannerIcon: "🍠",
+    image: "images/cucur_badak.jpg",
     bannerGradient: "linear-gradient(135deg, #ea580c 0%, #9a3412 100%)",
     desc: "Kuih tradisional frozen kegemaran: adunan keledek empuk lembut dengan inti kelapa pedas berempah. Digoreng keemasan panas-panas beraroma.",
     vibe: "Empuk keledek lemak manis, inti kelapa pedas berempah padu",
@@ -664,7 +685,14 @@ const RECIPES = [
     chefTip: "Guna api sederhana kecil agar inti kelapa dalam panas sekata tanpa lapisan kulit luar cepat gelap."
   },
   {
-    /sup_telur_enoki.jpg,
+    id: "sup-telur-enoki-panas",
+    name: "Sup Telur Bersarang Cendawan Enoki",
+    category: "bubur",
+    categoryLabel: "🥣 Geng Bubur & Sup",
+    time: "3 minit",
+    gear: "1 Periuk Kecil & Mangkuk",
+    bannerIcon: "🍲",
+    image: "images/sup_telur_enoki.jpg",
     bannerGradient: "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
     desc: "Sup jernih panas menenangkan perut malam hari: cendawan enoki segar berjus dan tali telur gebu bersarang. Sangat licin, wangi minyak bijan, tak buat perut sebu.",
     vibe: "Hirup kuah panas suam, enoki kenyal berjus, tali telur gebu sutera",
@@ -687,7 +715,14 @@ const RECIPES = [
     chefTip: "Kacau kuah berpusar sebelum tuang telur supaya telur masak gebu bersarang macam sup hotel tanpa bergumpal ketul besar."
   },
   {
-    /tortilla_telur_gulung.jpg,
+    id: "tortilla-telur-gulung",
+    name: "Tortilla Tekap Telur Gulung (Egg Wrap)",
+    category: "wrap",
+    categoryLabel: "🌯 Geng Wrap & Shawarma",
+    time: "2 minit",
+    gear: "1 Kuali Leper Sahaja",
+    bannerIcon: "🌯",
+    image: "images/tortilla_telur_gulung.jpg",
     bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
     desc: "Pecahkan telur atas kuali, terus tekap kepingan tortilla di atasnya. Balikkan, picit sos cili & mayo, gulung kemas semasa panas. Sangat empuk, sedap dan kenyang tanpa sebu!",
     vibe: "Telur melekat empuk pada roti gandum lembut, picit sos terus gulung panas",
@@ -912,7 +947,14 @@ const RECIPES = [
     chefTip: "Trik kopitiam: Pastikan telur berada pada suhu bilik (bukan terus dari peti sejuk) supaya masa rendaman 6 minit menghasilkan putih telur berkrim dan kuning berair goyang sempurna!"
   },
   {
-    /keledek_madu.jpg,
+    id: "keledek-madu-microwave",
+    name: "Ubi Keledek Madu Gebu Berwap (Microwave)",
+    category: "lenyek",
+    categoryLabel: "🥔 Geng Lenyek & Empuk",
+    time: "4 minit",
+    gear: "Microwave & Tisu Lembap",
+    bannerIcon: "🍠",
+    image: "images/keledek_madu.jpg",
     bannerGradient: "linear-gradient(135deg, #ea580c 0%, #c2410c 100%)",
     desc: "Ubi keledek madu gebu empuk berasap panas: isi manis karamel semulajadi seperti kek span, diselit secebis mentega cair dan secubit garam. Zero kuali, kenyang empuk berkhasiat.",
     vibe: "Empuk gebu macam kek, manis asli madu, berwap wangi panas",
@@ -934,7 +976,14 @@ const RECIPES = [
     chefTip: "Balut tisu lembap bertindak seperti ruang stim wap mikro — mengelakkan kulit ubi daripada mengering dan menjadikan isi dalamnya selembut kastard."
   },
   {
-    /telur_hancur.jpg,
+    id: "telur-hancur-mentega",
+    name: "Telur Hancur Mentega Meleleh (Creamy Scrambled)",
+    category: "bubur",
+    categoryLabel: "🥚 Sektor Telur Sutera",
+    time: "1 minit",
+    gear: "1 Kuali Leper Kecil",
+    bannerIcon: "🍳",
+    image: "images/telur_hancur.jpg",
     bannerGradient: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
     desc: "Dua biji telur dikacau perlahan dengan mentega wangi di atas api kecil selama 40 saat. Tekstur selembut sutera dan berkrim basah, ditabur lada hitam dan secubit garam.",
     vibe: "Lembut gebu berkrim macam kastard sutera, aroma mentega wangi meleleh",
@@ -956,7 +1005,14 @@ const RECIPES = [
     chefTip: "Jangan biar telur kering keras di kuali; angkat masa masih basah berkrim (runny) supaya teksturnya kekal selembut sutera hotel!"
   },
   {
-    /telur_dadar.jpg,
+    id: "telur-dadar-bawang-karamel",
+    name: "Telur Dadar Bawang Merah Karamel Garing",
+    category: "lempeng",
+    categoryLabel: "🥞 Geng Lempeng & Telur",
+    time: "2 minit",
+    gear: "1 Kuali Leper Sahaja",
+    bannerIcon: "🧅",
+    image: "images/telur_dadar.jpg",
     bannerGradient: "linear-gradient(135deg, #b45309 0%, #78350f 100%)",
     desc: "Hirisan bawang merah banyak-banyak digoreng garing sehingga manis berkaramel, disatukan dengan telur dadar berkerak keemasan. Wangi satu rumah bila lapar malam!",
     vibe: "Bawang manis berkaramel, tepi telur garing berkerak wangi",
@@ -979,7 +1035,14 @@ const RECIPES = [
     chefTip: "Goreng bawang dulu sekejap sebelum tuang telur supaya gula semulajadi bawang keluar berkaramel manis dan garing."
   },
   {
-    /lempeng_pisang.jpg,
+    id: "lempeng-pisang-kampung",
+    name: "Lempeng Pisang Kampung Gebu (Tanpa Minyak)",
+    category: "lempeng",
+    categoryLabel: "🥞 Geng Lempeng & Cucur",
+    time: "3 minit",
+    gear: "1 Kuali Leper Sahaja",
+    bannerIcon: "🍌",
+    image: "images/lempeng_pisang.jpg",
     bannerGradient: "linear-gradient(135deg, #ca8a04 0%, #a16207 100%)",
     desc: "Pisang masak ranum dilenyek bersama tepung gandum dan secubit garam, dilayur atas kuali leper tanpa minyak. Sangat empuk gebu, manis semulajadi tanpa gula tambahan.",
     vibe: "Empuk gebu beraroma pisang kampung, manis asli tanpa setitis minyak goreng",
@@ -1205,7 +1268,14 @@ const RECIPES = [
     chefTip: "Toskan minyak tuna betul-betul kering supaya adunan mayo pekat dan tak membuatkan roti Gardenia lembik berair."
   },
   {
-    /nasi_bujang.jpg,
+    id: "nasi-bujang-telur-kicap",
+    name: "Nasi Bujang Telur Mata Kicap Cili Padi",
+    category: "maggi",
+    categoryLabel: "🍜 Maggi & Nasi Impit",
+    time: "4 minit",
+    gear: "1 Kuali Goreng",
+    bannerIcon: "🍳",
+    image: "images/nasi_bujang.jpg",
     bannerGradient: "linear-gradient(135deg, #b45309 0%, #451a03 100%)",
     desc: "Nasi panas-panas ditimpa telur mata tepi garing keemasan dengan kuning cair meletup, disiram kicap manis tebal dan ketukan cili padi perah limau. Menu legend penyelamat lapar 3 pagi!",
     vibe: "Kuning telur meleleh, kicap manis pedas masam terangkat",
@@ -1228,7 +1298,14 @@ const RECIPES = [
     chefTip: "Guna minyak betul-betul panas masa goreng telur supaya tepi telur jadi garing 'crispy lace' sementara kuning kat tengah kekal meleleh."
   },
   {
-    /nasi_goreng_butter.jpg,
+    id: "nasi-goreng-butter-egg",
+    name: "Nasi Goreng Mentega Telur Goyang (5 Minit)",
+    category: "maggi",
+    categoryLabel: "🍜 Maggi & Nasi Impit",
+    time: "5 minit",
+    gear: "1 Kuali Goreng",
+    bannerIcon: "🧈",
+    image: "images/nasi_goreng_butter.jpg",
     bannerGradient: "linear-gradient(135deg, #eab308 0%, #854d0e 100%)",
     desc: "Nasi sejuk ditumis kuali dengan mentega wangi, bawang putih cincang dan lada hitam tumbuk, dihidang bersama telur goyang di atas. Harum berlemak zero perasa rumit!",
     vibe: "Aroma mentega wangi berasap, lembut gurih berlada",
@@ -1251,7 +1328,14 @@ const RECIPES = [
     chefTip: "Guna nasi sejuk dari peti ais supaya butiran nasi berderai cantik dan serap mentega tanpa jadi lekit."
   },
   {
-    /maggi_goreng_basah.jpg,
+    id: "maggi-goreng-basah",
+    name: "Maggi Goreng Basah Telur Gedik",
+    category: "maggi",
+    categoryLabel: "🍜 Maggi & Nasi Impit",
+    time: "6 minit",
+    gear: "1 Kuali Kecil",
+    bannerIcon: "🍜",
+    image: "images/maggi_goreng_basah.jpg",
     bannerGradient: "linear-gradient(135deg, #ef4444 0%, #991b1b 100%)",
     desc: "Mi Maggi Kari dicelup ringkas, digoreng basah dengan kicap manis, sos cili dan perencah kari, ditarik telur hancur separa basah. Pekat mekit terangkat!",
     vibe: "Kuah pekat mekit melekit, pedas berlemak mi kenyal",
@@ -1361,7 +1445,14 @@ const RECIPES = [
     chefTip: "Roti mesti betul-betul garing sebelum letak susu, kalau tak roti cepat lembik lepas kena susu pekat."
   },
   {
-    /roti_pisang_nutella.jpg,
+    id: "roti-pisang-nutella-roll",
+    name: "Roti Goreng Pisang / Nutella Roll",
+    category: "roti",
+    categoryLabel: "🍞 Geng Roti Gardenia",
+    time: "7 minit",
+    gear: "1 Kuali Leper",
+    bannerIcon: "🍌",
+    image: "images/roti_pisang_nutella.jpg",
     bannerGradient: "linear-gradient(135deg, #a16207 0%, #422006 100%)",
     desc: "Roti dileperkan nipis, disapu Nutella dan pisang, digulung kemas, dicelup telur dan digoreng butter. Crunchy di luar, cair meletup di dalam!",
     vibe: "Cair coklat Nutella, manis pisang montok",
@@ -2428,7 +2519,7 @@ function openRecipeModal(recipe) {
       modalImg.style.display = "none";
     }
   }
-  
+
   const shareModalBtn = document.getElementById("shareModalBtn");
   if (shareModalBtn) {
     shareModalBtn.onclick = () => {
@@ -2436,7 +2527,6 @@ function openRecipeModal(recipe) {
       shareRecipe(recipe);
     };
   }
-
   dom.modalTitle.textContent = `${recipe.bannerIcon} ${recipe.name}`;
   dom.modalCravingBadge.textContent = `🔥 Sektor Selera: ${recipe.categoryLabel}`;
   dom.modalVibeBox.textContent = `💡 Kenapa tekak kau nak benda ni sekarang: "${recipe.cravingCall}"`;
