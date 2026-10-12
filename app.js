@@ -2395,8 +2395,116 @@ const RECIPES = [
     ],
     "chefTip": "Kelar-kelar permukaan sosej supaya ia cepat masak sekata dan bahagian luarnya garing rangup keemasan."
   }
+,
+  {
+    "id": "korean-corn-cheese",
+    "name": "Korean Corn Cheese Meleleh (Jagung Keju Tarik K-BBQ)",
+    "category": "kudap",
+    "categoryLabel": "🌽 Sektor Jagung Manis",
+    "time": "4 minit",
+    "gear": "Kuali Leper / Microwave",
+    "bannerIcon": "🧀",
+    "image": "images/korean_corn_cheese.jpg",
+    "bannerGradient": "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
+    "desc": "Biji jagung manis tin digaul sedikit mayonis, mentega dan gula, ditaburi lapisan keju Mozzarella tebal dan dipanaskan sehingga keju mencair perang keemasan serta menarik panjang.",
+    "vibe": "Manis lemak jagung bersatu dengan masin gurih keju tarik yang mengalir panas!",
+    "cravingCall": "Craving kudapan ala kafe K-BBQ Korea yang super cheesy dan puas disuap sudu demi sudu.",
+    "pantryTags": [
+      "jagung",
+      "mentega"
+    ],
+    "ingredients": [
+      "1 cawan jagung manis tin (toskan airnya)",
+      "1 sudu besar mayonis",
+      "1 sudu kecil mentega / marjerin",
+      "1 sudu kecil gula pasir",
+      "Segenggam keju Mozzarella parut (atau 2 keping keju Cheddar)",
+      "Sedikit daun parsli kering / serbuk cili (hiasan)"
+    ],
+    "steps": [
+      "Campurkan jagung manis bersama mayonis, mentega dan gula dalam mangkuk kecil hingga sebati.",
+      "Tuangkan campuran jagung ke atas kuali leper atau pinggan tahan microwave.",
+      "Taburkan keju Mozzarella tebal-tebal di atas seluruh permukaan jagung.",
+      "Tutup kuali dengan penutup dan masak atas api kecil selama 3-4 minit (atau microwave 90 saat) sehingga keju cair meleleh berbuih.",
+      "Tabur parsli kering dan terus suap panas-panas sambil tarik kejunya!"
+    ],
+    "chefTip": "Campuran mayonis dan gula tu rahsia peniaga Korea — ia buat rasa jagung berkrim berkilat dan potong rasa masin keju dengan sempurna!"
+  },
+  {
+    "id": "sup-jagung-telur-sutera",
+    "name": "Sup Jagung Telur Sutera (Chinese Style Egg Drop Soup)",
+    "category": "bubur",
+    "categoryLabel": "🥣 Geng Bubur & Sup",
+    "time": "5 minit",
+    "gear": "Periuk Kecil & Garpu",
+    "bannerIcon": "🥣",
+    "image": "images/sup_jagung_telur.jpg",
+    "bannerGradient": "linear-gradient(135deg, #eab308 0%, #a16207 100%)",
+    "desc": "Sup manis jagung berkuah likat jernih dan beraroma, dihiasi tali-tali telur sutera halus gebu yang meluncur di tekak. Menenangkan perut dan melegakan badan.",
+    "vibe": "Suam-suam licin, manis semula jadi jagung dengan kelembutan telur halus tanpa setitik minyak.",
+    "cravingCall": "Perut lapar tengah malam tapi taknak benda berminyak berat, nak sup panas yang sedap hirup sampai licin mangkuk.",
+    "pantryTags": [
+      "jagung",
+      "telur"
+    ],
+    "ingredients": [
+      "1 tin jagung manis (kisar separuh atau guna terus)",
+      "1-2 biji telur ayam (dipukul sebati)",
+      "2 cawan air / stok ayam",
+      "1/2 kiub pati ayam",
+      "1 sudu besar tepung jagung (dibancuh sedikit air)",
+      "Sedikit minyak bijan & lada sulah putih"
+    ],
+    "steps": [
+      "Didihkan air bersama kiub pati ayam dan jagung manis dalam periuk kecil.",
+      "Tuangkan bancuhan tepung jagung sambil kacau rata sehingga kuah sup menjadi pekat likat dan berkilat.",
+      "Kecilkan api. Tuangkan telur pukul secara perlahan-lahan macam benang halus sambil tangan lagi satu mengacau sup secara membulat laju dengan garpu.",
+      "Telur akan masak serta-merta menjadi tali-tali sutera yang cantik gebu terapung.",
+      "Tutup api, renjis beberapa titik minyak bijan dan lada sulah. Hidang panas berasap!"
+    ],
+    "chefTip": "Jangan tuang telur masa kuah tengah mendidih buak-buak besar — kecilkan api dulu dan kacau laju supaya telur tak berketul kasar macam telur rebus."
+  },
+  {
+    "id": "nasi-jagung-butter-wangi",
+    "name": "Nasi Jagung Butter Wangi Rice Cooker",
+    "category": "nasi",
+    "categoryLabel": "🍚 Geng Nasi & Karbo",
+    "time": "15 minit",
+    "gear": "Periuk Nasi (Rice Cooker)",
+    "bannerIcon": "🍚",
+    "image": "images/nasi_jagung_butter.jpg",
+    "bannerGradient": "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)",
+    "desc": "Beras dimasak bersama sebutir-butir jagung manis, sebuku mentega wangi dan secubit stok ayam di dalam rice cooker. Nasi kuning berkilat harum, manis berlemak, ratah begitu sahaja pun dah terangkat!",
+    "vibe": "Aroma wangi mentega menembusi segenap ruang dapur, nasi gebu bersalut jus jagung manis.",
+    "cravingCall": "Bosan nasi putih kosong, nak nasi berperisa yang wangi mewah tapi cuma campak semua dalam rice cooker.",
+    "pantryTags": [
+      "jagung",
+      "mentega",
+      "nasi"
+    ],
+    "ingredients": [
+      "2 cawan beras (dibersihkan macam biasa)",
+      "1 tin jagung manis (toskan air)",
+      "1-2 sudu besar mentega / Planta wangi",
+      "1/2 kiub pati ayam (dihancurkan)",
+      "Air secukupnya mengikut sukatan beras biasa",
+      "Secubit garam halus"
+    ],
+    "steps": [
+      "Masukkan beras yang dah dibasuh dan air mengikut sukatan memasak nasi biasa ke dalam periuk rice cooker.",
+      "Masukkan jagung manis, hancuran kiub pati ayam, secubit garam dan letak mentega di atas beras.",
+      "Kacau sedikit bagi sebati, tutup periuk dan tekan butang Cook.",
+      "Bila butang bertukar ke Warm, buka penutup dan gembur-gemburkan nasi perlahan-lahan dengan senduk supaya mentega dan jagung rata.",
+      "Senduk ke dalam pinggan, makan panas-panas bersama telur mata atau lauk kegemaran!"
+    ],
+    "chefTip": "Mentega yang mencair bersama kanji beras semasa mendidih mengelakkan butiran nasi daripada melekat dan memberi kilauan emas yang sangat menyelerakan!"
+  }
 ];
 const HEALTH_METRICS = {
+  "korean-corn-cheese": {"level":"medium","label":"🟡 Sederhana","desc":"Kudapan bertenaga penuh kalsium keju & serat jagung, nikmati secara santai."},
+  "sup-jagung-telur-sutera": {"level":"bagus","label":"🟢 Bagus & Sihat","desc":"Rendah kalori, zero minyak goreng, protein telur mudah hadam dan melegakan sistem penghadaman."},
+  "nasi-jagung-butter-wangi": {"level":"medium","label":"🟡 Sederhana","desc":"Karbohidrat bertenaga dengan serat bijirin jagung, wangi mentega tanpa sebarang bahan pengawet tiruan."},
+
   "kacang-pool-daging-kisar": {"level":"bagus","label":"🟢 Bagus & Sihat","desc":"Tinggi zat besi, protein daging kisar asli & serat sayur biji serta kacang panggang."},
   "roti-puri-kembung-daging-kisar": {"level":"medium","label":"🟡 Sederhana","desc":"Doh gandum digoreng segar, kenyang bertenaga bersama lauk daging kisar berempah."},
   "sloppy-joe-daging-kisar": {"level":"medium","label":"🟡 Sederhana","desc":"Tinggi protein daging lembu tulen dan serat sayur campur, sos tomato bervitamin C."},
