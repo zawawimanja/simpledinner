@@ -58,34 +58,6 @@ const recipesToAdd = `  {
     chefTip: "Nak cucur rangup gila kat luar? Gunakan air panas suam masa membancuh tepung, atau campurkan satu sudu besar minyak masak panas ke dalam adunan sebelum menggoreng!"
   },
   {
-    id: "biskut-milo-celup",
-    name: "Biskut Lemak Celup Milo Pekat",
-    category: "kudap",
-    categoryLabel: "☕ Geng Kudap & Minum Malam",
-    time: "2 minit",
-    gear: "Cawan / Mug",
-    bannerIcon: "☕",
-    image: "",
-    bannerGradient: "linear-gradient(135deg, #4ade80 0%, #166534 100%)",
-    desc: "Makan malam versi orang bujang paling lagenda. Biskut lemak Hup Seng segi empat dicelup perlahan ke dalam air Milo panas pekat berasap.",
-    vibe: "Tenang, simple, dan mengembalikan memori duduk asrama dulu.",
-    cravingCall: "Malas tahap dewa nak buka dapur atau panaskan lauk. Nak buat air je lepas tu rendam biskut sambil tengok siri TV.",
-    pantryTags: ["biskut", "milo"],
-    ingredients: [
-      "3 sudu besar serbuk Milo",
-      "1 sudu besar susu pekat manis",
-      "Air panas menggelegak",
-      "Setengah peket Biskut Lemak (Hup Seng / Ping Pong)"
-    ],
-    steps: [
-      "Bancuh Milo pekat dengan susu dan air panas di dalam mug idaman awak.",
-      "Buka biskut lemak, susun atas pinggan.",
-      "Celupkan biskut lemak ke dalam Milo selama 3-4 saat (jangan lama sangat nanti hancur lebur jatuh dalam cawan!).",
-      "Suap terus masuk mulut. Ulang sampai sedar-sedar biskut dah habis sepeket."
-    ],
-    chefTip: "Seni mencelup biskut sangat kritikal. Kalau celup 2 saat ia masih keras, kalau 5 saat ia akan gugur ke dasar cawan. 3.5 saat adalah waktu keemasan (golden ratio)!"
-  },
-  {
     id: "makaroni-sardin",
     name: "Makaroni Goreng Sardin Super Ringkas",
     category: "pasta",

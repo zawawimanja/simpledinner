@@ -81,33 +81,6 @@ const recipesToAdd = `  {
       "Angkat dan tuang atas pinggan. Picitkan sos cili bentuk zigzag kat atas. Settle!"
     ],
     chefTip: "Masa pecahkan telur tu, biarkan telur tu masak sikit je dulu baru kacau. Nanti telur tu berketul cantik, takdela hancur lebur macam serbuk."
-  },
-  {
-    id: "biskut-mentega-gula",
-    name: "Biskut Lemak Sapu Mentega Gula",
-    category: "kudap",
-    categoryLabel: "☕ Geng Kudap & Minum Malam",
-    time: "2 minit",
-    gear: "Pisau Sapu & Pinggan",
-    bannerIcon: "🧈",
-    image: "",
-    bannerGradient: "linear-gradient(135deg, #fde047 0%, #a16207 100%)",
-    desc: "Snek zaman budak-budak tengok kartun pagi Ahad. Biskut lemak disapu mentega tebal dan ditabur gula pasir yang berkilau. Kombinasi masin lemak dan manis krup-krap!",
-    vibe: "Nostalgia zaman sekolah rendah, simple tapi buat tak boleh berhenti mengunyah.",
-    cravingCall: "Nak benda manis dan rangup, tapi taknak coklat atau keropok masin. Nak rasa 'homey' dan simple.",
-    pantryTags: ["biskut"],
-    ingredients: [
-      "4-5 keping biskut lemak (Hup Seng / Jacob's / Ping Pong)",
-      "Mentega atau marjerin (Planta dll) secukupnya",
-      "1 sudu besar gula pasir"
-    ],
-    steps: [
-      "Ambil sekeping biskut lemak.",
-      "Sapukan lapisan mentega dengan berani di atas permukaannya. Tak perlu malu-malu, biar tebal sikit baru sedap.",
-      "Ambil secubit gula pasir dan taburkan serata atas mentega tadi. (Gula akan melekat pada mentega).",
-      "Ngap terus! Boleh juga lapiskan dengan satu lagi biskut jadi macam 'sandwich' biskut."
-    ],
-    chefTip: "Gunakan gula pasir kasar berbanding gula halus. Tekstur krup-krap gula tu lah rahsia utama yang buat dia sangat ketagih!"
   }
 ];`;
 

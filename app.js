@@ -513,6 +513,7 @@ const RECIPES = [
       "Keluarkan, belah tanda 'X' di atas dan picit tepi supaya isinya terbuka empuk.",
       "Sumbat mentega ke tengah isi panas berasap, letak kepingan keju dan biar cair melimpah!"
     ],
+    chefTip: "Kentang besar lagi cantik jadi jacket potato, tapi potong dua dulu kalau nak cepat — microwave masak rata dalam 4 minit je. Letak mentega masa isi masih berasap supaya ia meleleh ke dalam semua celah."
   },
   {
     id: "cekodok-bilis-rangup",
@@ -949,7 +950,7 @@ const RECIPES = [
     id: "telur-separuh-masak-kopitiam",
     name: "Telur Separuh Masak Kicap & Lada Sulah",
     category: "bubur",
-    categoryLabel: "🥚 Sektor Telur Sutera",
+    categoryLabel: "🥚 Sektor Telur & Sutera",
     time: "6 minit (Rendam Air Panas)",
     gear: "1 Mangkuk & Air Mendidih Sahaja",
     bannerIcon: "🥚",
@@ -1007,7 +1008,7 @@ const RECIPES = [
     id: "telur-hancur-mentega",
     name: "Telur Hancur Mentega Meleleh (Creamy Scrambled)",
     category: "bubur",
-    categoryLabel: "🥚 Sektor Telur Sutera",
+    categoryLabel: "🥚 Sektor Telur & Sutera",
     time: "1 minit",
     gear: "1 Kuali Leper Kecil",
     bannerIcon: "🍳",
@@ -1299,7 +1300,7 @@ const RECIPES = [
     id: "nasi-bujang-telur-kicap",
     name: "Nasi Bujang Telur Mata Kicap Cili Padi",
     category: "maggi",
-    categoryLabel: "🍜 Maggi & Nasi Impit",
+    categoryLabel: "🍜 Geng Maggi & Nasi Impit",
     time: "4 minit",
     gear: "1 Kuali Goreng",
     bannerIcon: "🍳",
@@ -1329,7 +1330,7 @@ const RECIPES = [
     id: "nasi-goreng-butter-egg",
     name: "Nasi Goreng Mentega Telur Goyang (5 Minit)",
     category: "maggi",
-    categoryLabel: "🍜 Maggi & Nasi Impit",
+    categoryLabel: "🍜 Geng Maggi & Nasi Impit",
     time: "5 minit",
     gear: "1 Kuali Goreng",
     bannerIcon: "🧈",
@@ -1359,7 +1360,7 @@ const RECIPES = [
     id: "maggi-goreng-basah",
     name: "Maggi Goreng Basah Telur Gedik",
     category: "maggi",
-    categoryLabel: "🍜 Maggi & Nasi Impit",
+    categoryLabel: "🍜 Geng Maggi & Nasi Impit",
     time: "6 minit",
     gear: "1 Kuali Kecil",
     bannerIcon: "🍜",
@@ -1443,34 +1444,6 @@ const RECIPES = [
       "Balikkan sehingga kedua-dua belah keemasan dan cheese cair."
     ],
     chefTip: "Goreng sosej atau daging burger sekejap sebelum letak di tengah roti supaya ia masak sempurna dan sedap dikunyah."
-  },
-  {
-    id: "roti-susu-milo-garing",
-    name: "Roti Susu Garing (Pan-fried Sweet Toast)",
-    category: "roti",
-    categoryLabel: "🍞 Geng Roti Gardenia",
-    time: "3 minit",
-    gear: "1 Kuali Leper",
-    bannerIcon: "🥛",
-    image: "images/roti_susu_milo.png",
-    bannerGradient: "linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)",
-    desc: "Roti disapu mentega dan digoreng rangup. Tuang susu pekat nipis-nipis dan tabur serbuk Milo. Rasa macam roti tsunami tapi versi garing!",
-    vibe: "Luar rangup wangi butter, cair manis susu Milo",
-    cravingCall: "Perlukan gula dan manis-manis lepas penat kerja, ala mamak style.",
-    pantryTags: ["roti", "mentega"],
-    ingredients: [
-      "2 keping roti Gardenia",
-      "1 sudu besar mentega",
-      "2 sudu besar susu pekat manis",
-      "Serbuk Milo secukup rasa"
-    ],
-    steps: [
-      "Sapu mentega pada roti dan goreng atas kuali leper tanpa minyak sampai rangup keemasan.",
-      "Angkat roti garing dan tuang susu pekat manis nipis-nipis berselirat di atasnya.",
-      "Tabur serbuk Milo sebagai penutup.",
-      "Potong memanjang dan nikmati sambil hirup kopi atau teh."
-    ],
-    chefTip: "Roti mesti betul-betul garing sebelum letak susu, kalau tak roti cepat lembik lepas kena susu pekat."
   },
   {
     id: "roti-pisang-nutella-roll",
@@ -1814,7 +1787,7 @@ const RECIPES = [
       "Lipat roti dan makan cepat sebelum cair!"
     ],
     chefTip: "Perisa jagung atau durian paling ori rasa macam pakcik aiskrim. Simpan roti dalam peti 5 minit dulu supaya aiskrim lambat cair."
-  },
+  },
   {
     id: "pisang-rebus-kelapa",
     name: "Pisang Rebus Cicah Kelapa Parut",
@@ -1986,34 +1959,6 @@ const RECIPES = [
     chefTip: "Nak cucur rangup gila kat luar? Gunakan air panas suam masa membancuh tepung, atau campurkan satu sudu besar minyak masak panas ke dalam adunan sebelum menggoreng!"
   },
   {
-    id: "biskut-milo-celup",
-    name: "Biskut Lemak Celup Milo Pekat",
-    category: "kudap",
-    categoryLabel: "☕ Geng Kudap & Minum Malam",
-    time: "2 minit",
-    gear: "Cawan / Mug",
-    bannerIcon: "☕",
-    image: "images/biskut_milo.jpg",
-    bannerGradient: "linear-gradient(135deg, #4ade80 0%, #166534 100%)",
-    desc: "Makan malam versi orang bujang paling lagenda. Biskut lemak Hup Seng segi empat dicelup perlahan ke dalam air Milo panas pekat berasap.",
-    vibe: "Tenang, simple, dan mengembalikan memori duduk asrama dulu.",
-    cravingCall: "Malas tahap dewa nak buka dapur atau panaskan lauk. Nak buat air je lepas tu rendam biskut sambil tengok siri TV.",
-    pantryTags: ["biskut", "milo"],
-    ingredients: [
-      "3 sudu besar serbuk Milo",
-      "1 sudu besar susu pekat manis",
-      "Air panas menggelegak",
-      "Setengah peket Biskut Lemak (Hup Seng / Ping Pong)"
-    ],
-    steps: [
-      "Bancuh Milo pekat dengan susu dan air panas di dalam mug idaman awak.",
-      "Buka biskut lemak, susun atas pinggan.",
-      "Celupkan biskut lemak ke dalam Milo selama 3-4 saat (jangan lama sangat nanti hancur lebur jatuh dalam cawan!).",
-      "Suap terus masuk mulut. Ulang sampai sedar-sedar biskut dah habis sepeket."
-    ],
-    chefTip: "Seni mencelup biskut sangat kritikal. Kalau celup 2 saat ia masih keras, kalau 5 saat ia akan gugur ke dasar cawan. 3.5 saat adalah waktu keemasan (golden ratio)!"
-  },
-  {
     id: "makaroni-sardin",
     name: "Makaroni Goreng Sardin Super Ringkas",
     category: "pasta",
@@ -2125,34 +2070,6 @@ const RECIPES = [
     chefTip: "Masa pecahkan telur tu, biarkan telur tu masak sikit je dulu baru kacau. Nanti telur tu berketul cantik, takdela hancur lebur macam serbuk."
   },
   {
-    id: "biskut-mentega-gula",
-    name: "Biskut Lemak Sapu Mentega Gula",
-    category: "kudap",
-    categoryLabel: "☕ Geng Kudap & Minum Malam",
-    time: "2 minit",
-    gear: "Pisau Sapu & Pinggan",
-    bannerIcon: "🧈",
-    image: "images/biskut_mentega_gula.jpg",
-    bannerGradient: "linear-gradient(135deg, #fde047 0%, #a16207 100%)",
-    desc: "Snek zaman budak-budak tengok kartun pagi Ahad. Biskut lemak disapu mentega tebal dan ditabur gula pasir yang berkilau. Kombinasi masin lemak dan manis krup-krap!",
-    vibe: "Nostalgia zaman sekolah rendah, simple tapi buat tak boleh berhenti mengunyah.",
-    cravingCall: "Nak benda manis dan rangup, tapi taknak coklat atau keropok masin. Nak rasa 'homey' dan simple.",
-    pantryTags: ["biskut"],
-    ingredients: [
-      "4-5 keping biskut lemak (Hup Seng / Jacob's / Ping Pong)",
-      "Mentega atau marjerin (Planta dll) secukupnya",
-      "1 sudu besar gula pasir"
-    ],
-    steps: [
-      "Ambil sekeping biskut lemak.",
-      "Sapukan lapisan mentega dengan berani di atas permukaannya. Tak perlu malu-malu, biar tebal sikit baru sedap.",
-      "Ambil secubit gula pasir dan taburkan serata atas mentega tadi. (Gula akan melekat pada mentega).",
-      "Ngap terus! Boleh juga lapiskan dengan satu lagi biskut jadi macam 'sandwich' biskut."
-    ],
-    chefTip: "Gunakan gula pasir kasar berbanding gula halus. Tekstur krup-krap gula tu lah rahsia utama yang buat dia sangat ketagih!"
-  }
-,
-  {
     "id": "kacang-pool-daging-kisar",
     "name": "Kacang Pool Daging Kisar Telur Goyang (Cicah Roti Bakar)",
     "category": "lauk",
@@ -2226,7 +2143,7 @@ const RECIPES = [
     "id": "sloppy-joe-daging-kisar",
     "name": "Sloppy Joe Daging Kisar Sayur Biji (Sandwic Melimpah)",
     "category": "roti",
-    "categoryLabel": "🍔 Geng Roti & Daging Kisar",
+    "categoryLabel": "🍞 Geng Roti & Daging Kisar",
     "time": "7 minit",
     "gear": "1 Kuali & Pinggan",
     "bannerIcon": "🍔",
@@ -2498,10 +2415,559 @@ const RECIPES = [
       "Senduk ke dalam pinggan, makan panas-panas bersama telur mata atau lauk kegemaran!"
     ],
     "chefTip": "Mentega yang mencair bersama kanji beras semasa mendidih mengelakkan butiran nasi daripada melekat dan memberi kilauan emas yang sangat menyelerakan!"
+  },
+  {
+    "id": "puding-jagung-kastard",
+    "name": "Puding Jagung Pejal Semula Jadi (Tanpa Gula Tambahan)",
+    "category": "kudap",
+    "categoryLabel": "\ud83c\udf3d Sektor Jagung Manis",
+    "time": "18 minit",
+    "gear": "Mangkuk Tahan Panas + Pengukus / Air Fryer",
+    "bannerIcon": "\ud83c\udf6e",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #fbbf24 0%, #d97706 100%)",
+    "desc": "Jagung manis dikisar bersama susu dan telur tanpa setitik gula halus \u2014 kemanisannya datang terus dari jus jagung asli. Dikukus sampai SET PADU jadi puding pejal yang boleh diiris kiub, berintipan biji jagung sebiji-sebiji.",
+    "vibe": "Pejal gebu boleh potong kiub, pecah manis jus jagung asli setiap kali tergigit",
+    "cravingCall": "Nak dessert manis lemak yang selesa di hati sebab betul-betul semula jadi, tanpa gula proses.",
+    "pantryTags": ["jagung", "telur", "susu"],
+    "ingredients": [
+      "1 tin jagung manis (kisar separuh, biarkan separuh lagi utuh jadi biji)",
+      "2 biji telur",
+      "1 cawan susu cair (low fat lagi ringan)",
+      "1/2 sudu teh esen vanila (naikkan rasa manis tanpa gula)",
+      "Secubit kecil garam",
+      "Pilihan: 1 biji pisang ranum dilenyek kalau nak lagi manis"
+    ],
+    "steps": [
+      "Kisar separuh jagung bersama susu sampai hancur lembut, kemudian gaul balik dengan baki jagung biji.",
+      "Dalam mangkuk lain, pukul telur, vanila dan garam. Tuang bancuhan jagung, kacau rata \u2014 tiada gula ditambah.",
+      "Tuang adunan ke dalam mangkuk tahan panas (jangan penuh sangat, bagi ruang untuk mengembang).",
+      "Kukus 14-18 minit (atau air fryer 160\u00b0C lebih kurang 12 minit) sampai SET PADU \u2014 cucuk garfu tengah, terus keluar bersih tanpa bancuhan melekat.",
+      "Biar sejuk betul baru keluar dari acuan, kemudian iris jadi kiub. Lagi sejuk, lagi pejal!"
+    ],
+    "chefTip": "Nak pejal betul-betul boleh potong: tambah 1 sudu besar tepung jagung dan pastikan kukus cukup masa sampai garfu keluar bersih. Guna jagung manis bermutu \u2014 sebab tiada gula, jagunglah yang memberi keseluruhan rasa manis."
+  },
+  {
+    "id": "wedges-kentang-berempah",
+    "name": "Wedges Kentang Berempah Air Fryer (Potato Wedges)",
+    "category": "kudap",
+    "categoryLabel": "\ud83c\udf5f Geng Kudap & Goreng",
+    "time": "12 minit",
+    "gear": "Air Fryer / Kuali Goreng",
+    "bannerIcon": "\ud83e\udd54",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #f59e0b 0%, #7c2d12 100%)",
+    "desc": "Kentang dipotong baji tebal dengan kulit masih melekat, dilumur mentega cair, serbuk kunyit, paprika & bawang putih, kemudian digoreng air fryer sampai garing keemasan di luar, lembut gebu di dalam. Cicah mayo & sos cili.",
+    "vibe": "Garing pedas berempah di hujung, lembut panas berkrim di tengah, kulit kentang wangi",
+    "cravingCall": "Nak snek kentang yang lebih tebal & berempah dari fries biasa, garing di luar tapi tak berminyak terlampau.",
+    "pantryTags": ["kentang", "mentega"],
+    "ingredients": [
+      "2 biji kentang sederhana (dibasuh, potong baji/wedge, kulit biarkan)",
+      "1 sudu besar mentega / marjerin cair",
+      "1/2 sudu teh serbuk kunyit & paprika",
+      "1/2 sudu teh bawang putih halus / garlic powder",
+      "Secubit garam laut & lada hitam",
+      "Mayo & sos cili untuk cicah"
+    ],
+    "steps": [
+      "Rendam wedge kentang dalam air sejuk 5 minit, kemudian tos & lap kering betul-betul (ini rahsia garing!).",
+      "Gaul wedge dengan mentega cair, kunyit, paprika, bawang putih, garam & lada sampai salut rata.",
+      "Susun satu lapis dalam bakul air fryer (jangan bertindih). Air fryer 200\u00b0C 10-12 minit, goncang bakul separuh masa.",
+      "Alternatif: goreng dalam minyak panas sederhana sampai keemasan, kemudian toskan minyak.",
+      "Angkat masa masih garing panas, hidang bersama mayo & sos cili!"
+    ],
+    "chefTip": "Kulit kentang jangan buang — ia bagi tekstur rangup & extra serat. Rendam air sejuk untuk keluarkan kanji lebihan supaya wedge lebih garing di luar dan lembut di dalam."
+  },
+  {
+    "id": "kentang-keprek-garing",
+    "name": "Kentang Keprek Garing Berempah (Smashed Potato)",
+    "category": "kudap",
+    "categoryLabel": "\ud83c\udf5f Geng Kudap & Goreng",
+    "time": "15 minit",
+    "gear": "Periuk Rebus + Air Fryer / Oven",
+    "bannerIcon": "\ud83e\udd54",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #f59e0b 0%, #92400e 100%)",
+    "desc": "Kentang kecil direbus empuk, kemudian ditekan (keprek) sampai pecah rata, dilumur mentega cair & rempah, lalu dipanggang air fryer sampai tepi garing keemasan rangup tapi tengah masih lembut gebu.",
+    "vibe": "Tepi rangup berminyak wangi, tengah lembut berkrim, lapisan-lapisan kepingan kentang keemasan",
+    "cravingCall": "Nak kentang garing yang lebih berlayer & fun dari fries biasa, tapi taknak repot kupas atau potong halus.",
+    "pantryTags": ["kentang", "mentega"],
+    "ingredients": [
+      "5-6 biji kentang kecil/sederahan (dibasuh, boleh keep kulit)",
+      "1 sudu besar mentega / marjerin cair",
+      "1/2 sudu teh serbuk kunyit & paprika",
+      "Secubit garam laut, lada hitam & bawang putih halus",
+      "Sedikit minyak zaitun / minyak masak untuk sapu"
+    ],
+    "steps": [
+      "Rebus kentang utuh dalam air bergaram sehingga empuk (garfu terus tembus), lebih kurang 8-10 minit. Toskan.",
+      "Letak kentang atas papan, tekan perlahan dengan bawah cawan/gelas sampai leper & sedikit pecah (jangan hancur).",
+      "Sapukan mentega cair dan tabur rempah + garam + lada kat atas setiap keping kentang keprek.",
+      "Susun dalam air fryer/oven, 200\u00b0C selama 8-10 minit sampai tepi garing keemasan.",
+      "Hidang panas dengan cip serbuk pedas / cecah mayo bawang putih!"
+    ],
+    "chefTip": "Selepas rebus, biar kentang beruap kering sejurus supaya permukaan lebih cepat garing. Tekan jangan terlalu kuat — nak kekal ada lantai tengah yang tebal lembut."
+  },
+  {
+    "id": "kentang-hash-sarapan",
+    "name": "Kentang Hash Sarapan 1 Kuali (Potato Hash Telur)",
+    "category": "kudap",
+    "categoryLabel": "\ud83c\udf73 Geng Telur & Sosej",
+    "time": "12 minit",
+    "gear": "1 Kuali Leper",
+    "bannerIcon": "\ud83e\udd54",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #fbbf24 0%, #b45309 100%)",
+    "desc": "Kentang dipotong dadu kecil, digoreng kering dalam kuali bersama hirisan bawang sampai garing keemasan, lepas tu dipecahkan telur terus atasnya. Sarapan padu murah yang kenyang sampai tengah hari.",
+    "vibe": "Dadu kentang garing di tepi, manis bawang terkaramel, kuning telur cair meleleh",
+    "cravingCall": "Pagi lapar nak sarapan berat gurih yang tak perlu roti atau sereal, guna apa yang ada dalam peti sejuk.",
+    "pantryTags": ["kentang", "telur", "bawang"],
+    "ingredients": [
+      "2 biji kentang (dikupas, dipotong dadu kecil 1cm)",
+      "1/2 biji bawang besar (dihiris)",
+      "2 biji telur",
+      "1 sudu besar mentega / minyak masak",
+      "Secubit garam, lada hitam & serbuk paprika"
+    ],
+    "steps": [
+      "Panaskan mentega/minyak dalam kuali. Masuk kentang dadu, ratakan, jangan kacau selalu biar sisi garing keemasan.",
+      "Bila kentang dah separuh masak & wangi, masuk hirisan bawang, garam, lada & paprika. Gaul rata.",
+      "Bentuk longgokan kentang rata, buat 2 lubang kecil, pecahkan telur ke dalam lubang.",
+      "Tutup kuali, masak api perlahan 2-3 minit sampai putih telur set tapi kuning masih cair.",
+      "Tabur sedikit lagi garam & lada, terus hidang dalam kuali!"
+    ],
+    "chefTip": "Potong kentang sama kecil supaya masak serentak & cepat garing. Nak lagi padu, campur baki sosej atau ayam cincang sekali time menggoreng."
+  },
+  {
+    "id": "kroket-kentang-air-fryer",
+    "name": "Kroket Kentang Oat Air Fryer (Guna Mashed Lebihan)",
+    "category": "lenyek",
+    "categoryLabel": "\ud83e\udd54 Geng Lenyek & Empuk",
+    "time": "15 minit",
+    "gear": "Air Fryer / Oven",
+    "bannerIcon": "\ud83e\udd54",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #fcd34d 0%, #b45309 100%)",
+    "desc": "Sisa mashed potato kelmarin dibentuk jadi batang kroket, diguli oat kisar dan celup telur, kemudian dibakar air fryer dengan semburan minyak nipis. Luar rangup keemasan, dalam lembut berlemak kentang \u2014 tanpa goreng rendam minyak.",
+    "vibe": "Kulit oat garing keemasan, inti kentang lemak lembut cair di lidah",
+    "cravingCall": "Ada mashed potato lebihan semalam sayang nak buang, nak ubah jadi snek garing tapi taknak repot goreng minyak banyak.",
+    "pantryTags": ["kentang", "telur"],
+    "ingredients": [
+      "1-2 cawan mashed potato lebihan (sejuk peti sejuk supaya mudah dibentuk)",
+      "1/2 cawan oat penuh (dikisar kasar jadi serbuk)",
+      "1 biji telur (dipukul)",
+      "Secubit garam, lada hitam & serbuk bawang putih",
+      "Semburan/minyak zaitun sedikit sahaja untuk sapuan"
+    ],
+    "steps": [
+      "Ambil segenggam mashed potato, bentuk jadi batang/uli padat. Kalau nak, masukkan intipan keju atau sosej kat tengah.",
+      "Guna oat kisar kasar sebagai salut kering (ganti serbuk roti & tepung) \u2014 celup telur dulu, kemudian guli oat sampai rata.",
+      "Simpan dalam peti sejuk 10 minit supaya kroket set & tak hancur masa dibakar.",
+      "Susun dalam bakul air fryer, sapu/sembur nipis minyak. Bakar 190\u00b0C selama 8-10 minit, balikkan separuh masa.",
+      "Angkat bila luar garing keemasan, cicah mayo sos cili atau sos keju!"
+    ],
+    "chefTip": "Mashed potato yang dah sejuk peti lebih keras & mudah dibentuk. Salut oat kisar bagi rangup hampir sama dengan serbuk roti tapi lebih serat & tanpa minyak goreng."
+  },
+  {
+    "id": "puding-pisang-oat-kukus",
+    "name": "Puding Pisang Oat Kukus Tanpa Gula Tambahan",
+    "category": "kudap",
+    "categoryLabel": "\ud83c\udf4c Geng Pisang & Ubi",
+    "time": "12 minit",
+    "gear": "Mangkuk Tahan Panas + Pengukus / Microwave",
+    "bannerIcon": "\ud83c\udf6e",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #84cc16 0%, #3f6212 100%)",
+    "desc": "Pisang ranum dilenyek, digaul bersama oat penuh, telur dan sedikit susu, kemudian dikukus sehingga jadi puding gebu manis semula jadi. Zero gula halus, zero tepung kasar \u2014 dessert sihat yang tetap mengenyangkan.",
+    "vibe": "Manis pisang semula jadi, tekstur oat kenyal mengenyang, bau wangi bila dibuka penutup pengukus",
+    "cravingCall": "Nak dessert lembut manis tapi hati kecik tahu ia tinggi gula. Cari versi sihat yang tetap sedap dan tak buat rasa bersalah.",
+    "pantryTags": ["pisang", "telur", "nasi"],
+    "ingredients": [
+      "2 biji pisang ranum (dilenyek lumat \u2014 makin hitam kulit, makin manis)",
+      "1 cawan oat penuh (rolled oats, dikisar kasar kalau suka halus)",
+      "2 biji telur",
+      "1/2 cawan susu cair / susu oat",
+      "1/2 sudu teh baking powder",
+      "Madu & segenggam kacang (pilihan, untuk hidang)"
+    ],
+    "steps": [
+      "Lenyek pisang sampai lumat berair, kemudian gaul bersama telur dan susu sampai sebati.",
+      "Masukkan oat dan baking powder, kacau rata. Biar 5 minit supaya oat menyerap dan mengembang.",
+      "Tuang ke dalam mangkuk/acuan tahan panas (sapu tipis mentega supaya tak melekat).",
+      "Kukus 8-10 minit (atau microwave 3-4 minit) sampai atasnya set dan dibenamkan garfu terus keluar bersih.",
+      "Hidang suam dengan sedikit madu dan taburan kacang kalau nak lagi padu."
+    ],
+    "chefTip": "Guna pisang betul-betul ranum (kulit dah berbintik hitam) \u2014 itu 'gula' semula jadi, tak perlu tambah madu pun lagi sedap!"
+  },
+  {
+    "id": "puding-keledek-kukus",
+    "name": "Puding Keledek Kukus Pejal (Boleh Iris Kiub)",
+    "category": "kudap",
+    "categoryLabel": "\ud83c\udf4c Geng Pisang & Ubi",
+    "time": "20 minit",
+    "gear": "Pengukus + Mangkuk/Acuan",
+    "bannerIcon": "\ud83c\udf60",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #f97316 0%, #7c2d12 100%)",
+    "desc": "Keledek oranye dilek halus jadi bahan utama (bukan susu), digaul bersama telur dan oat kisar kemudian dikukus sampai SET PADU. Jadi blok pejal yang boleh diiris kiub dan dipegang \u2014 manis bumi semula jadi ubi, tanpa setitik gula.",
+    "vibe": "Padat berisi, manis tanah keledek asli, wangi kukusan dan gebu bila digigit",
+    "cravingCall": "Nak puding yang betul-betul ada isi dan mengenyangkan \u2014 bukan cuma susu beku \u2014 tapi tetap pejal boleh potong kiub.",
+    "pantryTags": ["ubi", "telur", "tepung"],
+    "ingredients": [
+      "2 cawan keledek/ubi rebus (dilenyek halus sampai sejuk)",
+      "2 biji telur",
+      "1/2 cawan oat kisar atau tepung jagung",
+      "2-3 sudu besar susu cair/santan (sekadar lembapkan, bukan bahan utama)",
+      "1/2 sudu teh esen vanila & secubit garam",
+      "Pilihan: daun pandan waktu kukus + taburan kelapa parut tipis"
+    ],
+    "steps": [
+      "Rebus atau kukus keledek sampai betul-betul empuk, kemudian lenyek halus sampai jadi puri pekat. Biar sejuk sekejap.",
+      "Gaul puri keledek bersama telur, oat kisar (atau tepung jagung), vanila dan garam sampai jadi adunan kental yang boleh dibentuk.",
+      "Kalau terlalu kering/retak, tambah susu atau santan sudu demi sudu \u2014 adunan mesti KENTAL, bukan cair.",
+      "Tekan padatkan ke dalam acuan (sapu nipis minyak supaya mudah keluar), tutup dengan foil/plastik.",
+      "Kukus 15-20 minit sampai set padu \u2014 cucuk garfu di tengah, terus keluar bersih tanpa bancuhan melekat.",
+      "Biar betul-betul sejuk baru iris jadi kiub. Sejuk peti lagi mengeras dia!",
+      "Hidang kosong, atau tabur kelapa parut tipis & cicah sedikit kicap kalau suka style kampung manis-lemak."
+    ],
+    "chefTip": "Keledek oranye memang jadi lebih manis bila dimasak \u2014 sebab itu langsung tak perlu gula. Oat kisar bukan sahaja pengikat, tapi tambah serat supaya puding ini kenyang lama dan tak bangkitkan gula darah macam puding susu."
+  },
+  {
+    "id": "kruton-roti-herba-air-fryer",
+    "name": "Kruton Roti Herba Air Fryer (Tabur Atas Sup & Salad)",
+    "category": "roti",
+    "categoryLabel": "🍞 Geng Roti Gardenia",
+    "time": "10 minit",
+    "gear": "Air Fryer / Oven",
+    "bannerIcon": "🧄",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #fbbf24 0%, #92400e 100%)",
+    "desc": "Roti keping dipotong kiub, digaul mentega cair + bawang putih + herba kemudian dibakar air fryer sampai rangup garing seluruhnya. Tiada minyak rendam, tiada gula, dan roti nak expired pun habis berguna.",
+    "vibe": "Rangup kunyah, wangi bawang putih herba, pinggir keemasan merata",
+    "cravingCall": "Nak benda rangup untuk kunyah santai, tapi tak nak goreng minyak macam keropok. Boleh juga tabur atas sup bagi ada tekstur.",
+    "pantryTags": ["roti", "mentega", "bawang"],
+    "ingredients": [
+      "4-5 keping roti Gardenia (yang sudah sedikit basi lagi sesuai)",
+      "1 sudu besar mentega (dileburkan)",
+      "2 ulas bawang putih (dicincang halus)",
+      "1 sudu kecil oregano / serbuk bawang / daun sup kering",
+      "Secubit garam & lada hitam",
+      "Pilihan: 1 sudu besar serbuk keju atau nutritional yeast + paprika"
+    ],
+    "steps": [
+      "Panaskan air fryer 180°C (atau oven 170°C) lebih kurang 3 minit.",
+      "Potong roti jadi kiub 1.5-2 cm. Kiub kecil lagi rangup, kiub besar lagi berinti lembut.",
+      "Gaul kiub roti dengan mentega cair, bawang putih dan herba sampai semua permukaan berkilat nipis.",
+      "Susun satu lapis dalam bakul air fryer (jangan bertindih, kalau penuh bakar dua pusingan).",
+      "Bakar 6-8 minit, goyang bakul 2 kali tengah jalan supaya masak merata.",
+      "Keluarkan dan biarkan sejuk 5 minit — ia akan jadi lebih rangup bila betul-betul sejuk. Simpan dalam jar kedap."
+    ],
+    "chefTip": "Kunci rangup tahan lama: jangan bakar sampai bertindih dan jangan terus masuk jar masa panas — wap buat dia lembik semula. Paling best tabur atas sup jagung, sup ayam bening atau salad, atau jejak terus jadi snek digital."
+  },
+  {
+    "id": "bruschetta-tomato-kampung",
+    "name": "Bruschetta Kampung Tomato Bawang Bakar",
+    "category": "roti",
+    "categoryLabel": "🍞 Geng Roti Gardenia",
+    "time": "8 minit",
+    "gear": "Air Fryer / Kuali Leper",
+    "bannerIcon": "🍅",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #ef4444 0%, #b91c1c 100%)",
+    "desc": "Roti dibakar garing (bukan digoreng), digosok bawang putih dan dimahkotai inti tomato isi berperah limau. Jus tomato menyerap ke dalam roti sementara pinggirnya tetap rangup.",
+    "vibe": "Segar berair masam manis, roti rangup di luar, isi tomato sejuk di atas",
+    "cravingCall": "Nak roti yang ada rasa fresh dan ringan — bukan lagi roti keju leleh atau roti gula.",
+    "pantryTags": ["roti", "bawang", "sayur"],
+    "ingredients": [
+      "3 keping roti Gardenia",
+      "3-4 biji tomato isi (dibuang biji, didad halus)",
+      "1/4 bawang besar / 2 bawang merah (dihiris nipis)",
+      "1 ulas bawang putih (biarkan integal untuk menggosok)",
+      "1 sudu kecil jus limau nipis",
+      "Secubit garam & lada hitam, daun ketumbar / daun sup",
+      "Pilihan: 1 sudu kecil minyak zaitun atau mentega cair"
+    ],
+    "steps": [
+      "Dad tomato, buang biji dan airnya dulu supaya inti tidak lembik dan roti kekal rangup.",
+      "Gaul tomato + bawang + jus limau + garam, perap 3-5 minit biar rasa menyatu.",
+      "Bakar roti air fryer 180°C selama 4-5 minit sampai garing keemasan (atau bakar atas kuali leper).",
+      "Gosok bawang putih mentah kat permukaan roti masa masih panas dan berpori.",
+      "Senduk inti tomato atas roti, tabur herba dan titiskan minyak zaitun kalau ada.",
+      "Hidang serta-merta sebelum roti menyerap air tomato."
+    ],
+    "chefTip": "Toskan air tomato ialah kunci utama — kalau malas, perap tomato dengan garam 5 minit kemudian buang air yang keluar. Tomato kurang manis di hujung musim? Setitik madu kecil membantu tanpa merosakkan konsep sihat."
+  },
+  {
+    "id": "tumis-kangkung-bawang-putih",
+    "name": "Kangkung / Bayam Tumis Bawang Putih Ekspres",
+    "category": "lauk",
+    "categoryLabel": "🥬 Geng Sayur & Lauk Sihat",
+    "time": "6 minit",
+    "gear": "Kuali Leper / Wok",
+    "bannerIcon": "🥬",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #22c55e 0%, #166534 100%)",
+    "desc": "Sayur hijau ditumis api besar dengan bawang putih dan hanya satu sudu minyak. Batang kekal rangup berair, daun layu lembut — wangi mamak dalam 6 minit tanpa santan tanpa goreng.",
+    "vibe": "Panas wangi bawang, batang crunch, daun lembut hijau berkilat",
+    "cravingCall": "Nak makan sayur betul-betul, bukan sekadar hiasan timun. Perut rasa lapang lepas makan menu berat berminyak.",
+    "pantryTags": ["sayur", "bawang", "cendawan"],
+    "ingredients": [
+      "1 ikat kangkung / bayam (akar dibuang, siangi)",
+      "3 ulas bawang putih (dihiris nipis)",
+      "1 sudu besar minyak masak",
+      "1 sudu kecil kicap cair atau sos tiram",
+      "Secubit garam & lada sulah",
+      "Pilihan: enoki / cendawan belah, 3-4 ekor bilis, sekubit belacan, cili padi"
+    ],
+    "steps": [
+      "Basuh sayur dan toskan betul-betul — sayur berair membuatkan dia merebus, bukan menumis.",
+      "Panaskan kuali dengan minyak atas api besar. Goreng bawang putih 20-30 saat sampai wangi (jangan sampai hangit hitam).",
+      "Masukkan batang kangkung dulu, tumis 30 saat, kemudian baru masuk daun.",
+      "Tambah kicap cair, garam dan lada. Gaul cepat 1-2 minit sahaja sampai daun baru layu.",
+      "Kalau pakai enoki, masuk paling akhir sebab dia cepat luruh dan mengeluarkan air.",
+      "Angkat terus ke pinggan. Sisa haba kuali akan terus Masak sayur walaupun dah diangkat."
+    ],
+    "chefTip": "Api kena betul-betul besar dan jangan tutup kuali — kangkung kekal hijau cantik, tidak lembik dan berlendir. Nak versi nol-minyak: rendam air panas 60 saat, toskan, kemudian gaul bawang putih mentega sekubit."
+  },
+  {
+    "id": "sup-ayam-sayur-bening",
+    "name": "Sup Ayam Sayur Bening (Kuah Jernih Rendah Lemak)",
+    "category": "bubur",
+    "categoryLabel": "🥣 Geng Bubur & Sup",
+    "time": "25 minit",
+    "gear": "Periuk Kecil",
+    "bannerIcon": "🍲",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #fde68a 0%, #d97706 100%)",
+    "desc": "Ayam direneh api kecil bersama halia dan bawang putih sampai kuahnya jernih tapi gurih asli, kemudian diisi wortel, kubis dan enoki. Tiada krim, tiada minyak banyak — hanya air, protein dan sayur.",
+    "vibe": "Kuach panas jernih, isi ayam disuir lembut, sayur manis semula jadi",
+    "cravingCall": "Nak makan malam yang ringan dan berair — badan rasa lapang, tidak berat macam kari atau goreng.",
+    "pantryTags": ["ayam", "sayur", "bawang", "cendawan"],
+    "ingredients": [
+      "250 g dada / 2 paha ayam (buang kulit untuk lebih ringan)",
+      "3 ulas bawang putih (dititik) & 2 cm halia (dihiris)",
+      "1 bawang besar (dibelah empat) & 1-2 wortel (dipotong)",
+      "1/4 kubis atau sekawan sawi, 1 cawan cendawan enoki",
+      "1.5 liter air",
+      "Garam, lada & 1 sudu kecil sos ikan",
+      "Taburan: daun sup, sedikit bawang goreng"
+    ],
+    "steps": [
+      "Rebus air dengan ayam atas api kecil. Bila mula berbuih, kecilkan api dan buang buih/kotoran yang terapung.",
+      "Masukkan halia dan bawang putih titik, reneh 10-12 minit sampai isi ayam lembut.",
+      "Tambah wortel dan bawang besar, reneh 8 minit sampai sayur baru lembut di luar.",
+      "Masukkan kubis dan enoki, masak 4-5 minit sahaja supaya masih ada crunch.",
+      "Perasakan dengan garam, lada dan sos ikan. Jangan biar sampai mendidih bergelora.",
+      "Angkat ayam, suir isi dan masukkan semula ke dalam kuah. Tabur daun sup + bawang goreng."
+    ],
+    "chefTip": "Jangan biarkan api besar mendidih bergelora — kuah akan jadi keruh dan hilang kejernihan. Lebihan isi ayam yang disuir boleh disimpan untuk tabur atas bubur, maggi kari atau salad esok."
+  },
+  {
+    "id": "dada-ayam-air-fryer-herba",
+    "name": "Dada Ayam Air Fryer Herba (Juicy Dalam, Tiada Goreng)",
+    "category": "lauk",
+    "categoryLabel": "🥬 Geng Sayur & Lauk Sihat",
+    "time": "18 minit",
+    "gear": "Air Fryer / Oven",
+    "bannerIcon": "🍗",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #fbbf24 0%, #dc2626 100%)",
+    "desc": "Dada ayam diperap dengan yoghurt tanpa gula, bawang putih dan herba — asid yoghurt melembutkan serat isi tanpa perlu minyak banyak. Dibakar air fryer sampai luar keemasan, dalam masih berjus.",
+    "vibe": "Luar berkerak herba wangi, dalam lembut juicy bila dihiris",
+    "cravingCall": "Nak protein sungguh-sungguh supaya kenyang lama, tapi tak nak ayam goreng berlauk minyak.",
+    "pantryTags": ["ayam", "bawang", "susu"],
+    "ingredients": [
+      "250 g dada ayam (atau 4 paha kecil tanpa tulang)",
+      "2 sudu besar yoghurt plain tanpa gula (atau susu cair)",
+      "3 ulas bawang putih (dicincang halus)",
+      "1 sudu kecil serbuk kari / paprika + 1/2 sudu kecil oregano",
+      "1 sudu kecil jus limau nipis",
+      "Garam & lada hitam",
+      "1 sudu kecil minyak masak (untuk disapu nipis)"
+    ],
+    "steps": [
+      "Belah dua atau potong isi 1.5-2 cm supaya tebalnya seragam — ini rahsia masak rata.",
+      "Gaul semua bahan perap, perap sekurang-kurangnya 15 minit (semalaman lagi best).",
+      "Keluarkan dari peti sejuk 10 minit sebelum dimasak; sapu nipis minyak pada permukaan.",
+      "Panaskan air fryer 190°C. Susun satu lapis, bakar 8 minit.",
+      "Balik ayam, bakar 6-8 minit lagi sampai luar keemasan dan jus yang keluar berwarna jernih.",
+      "Rehat 3 minit sebelum dihiris supaya jus tersebar semula dalam isi."
+    ],
+    "chefTip": "Jangan potong ayam sejurus keluar dari air fryer — jus akan tumpah dan isi jadi kering. Nak lagi juicy, rendam dulu isi ayam dalam air garam (brine) 20 minit, kemudian lap kering sebelum diperap herba."
+  },
+  {
+    "id": "ikan-kembung-kukus-halia",
+    "name": "Ikan Kembung Kukus Halia & Kicap Cili",
+    "category": "lauk",
+    "categoryLabel": "🥬 Geng Sayur & Lauk Sihat",
+    "time": "20 minit",
+    "gear": "Pengukus / Pinggan Tahan Panas",
+    "bannerIcon": "🐟",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #7dd3fc 0%, #0369a1 100%)",
+    "desc": "Ikan kembung dikukus bersama halia sampai isi terpisah lembut dan mata ikan memutih, kemudian disiram kicap cair, cili padi dan minyak bijan panas. Sifar minyak goreng, omega-3 penuh.",
+    "vibe": "Wangi halia menyengat, isi ikan manis lembut, kuah kicap masin pedas",
+    "cravingCall": "Nak makan ikan asli dan bukan ikan tin — rasa bersih, ringan dan perut senang.",
+    "pantryTags": ["ikan", "bawang", "cendawan"],
+    "ingredients": [
+      "2 ekor ikan kembung (siang & dibersih, atau 2 keping filak apa saja)",
+      "4 cm halia (dihiris jadi juliene tipis)",
+      "2 ulas bawang putih (dicincang) & 1-2 cili padi",
+      "2 sudu besar kicap cair",
+      "1 sudu kecil sos ikan & 1 sudu kecil minyak bijan (pilihan)",
+      "1 genggam cendawan enoki & daun sup",
+      "1 limau nipis"
+    ],
+    "steps": [
+      "Letak ikan atas pinggan tahan panas, tabur separuh halia atas dan dalam perut ikan.",
+      "Kukus 12-15 minit atas api sederhana besar (microwave: tutup plastik, 5-6 minit).",
+      "Buang air kukusan pertama yang keluar — itu yang membawa bau hanyir.",
+      "Susun baki halia, bawang putih, cili dan enoki atas ikan. Curah kicap + sos ikan + minyak bijan.",
+      "Kukus/panaskan 2-3 minit lagi sampai wangi halia naik ke permukaan kuah.",
+      "Perah limau nipis dan tabur daun sup sebelum hidang."
+    ],
+    "chefTip": "Tanda ikan baru masak: mata jadi putih keruh dan isi di bahagian tebal mudah terpisah dari tulang. Overcook satu minit pun isi kembung jadi kering. Kalau ada kuah asalnya, jangan buang — itu stok ikan paling gurih untuk bubur."
+  },
+  {
+    "id": "salad-timun-yogurt-limau",
+    "name": "Salad Timun Yoghurt Limau Segar",
+    "category": "salad",
+    "categoryLabel": "🥗 Geng Salad Fresh",
+    "time": "5 minit",
+    "gear": "Tiada! (Mangkuk je)",
+    "bannerIcon": "🥒",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #6ee7b7 0%, #047857 100%)",
+    "desc": "Timun, tomato dan bawang dihiris nipis, digaul dengan dressing yoghurt plain dan perahan limau — masam sejuk menyegarkan tanpa mayo berlemak tepu. Sifar dapur, sifar haba.",
+    "vibe": "Sejuk rangup berair, masam manis ringan, nafas terasa bersih",
+    "cravingCall": "Nak sesuatu fresh dan renyah dalam pinggan untuk melunakkan menu berat, tanpa rasa bersalah.",
+    "pantryTags": ["sayur", "salad", "bawang", "susu"],
+    "ingredients": [
+      "1 timun besar (dihiris bulat nipis atau dikiub)",
+      "2 biji tomato (dipotong)",
+      "1/4 bawang besar (dihiris sehalus mungkin)",
+      "3 sudu besar yoghurt plain tanpa gula",
+      "1 sudu kecil jus limau nipis, secubit garam & lada",
+      "Daun ketumbar / daun pudina",
+      "Pilihan: serbuk cili atau paprika untuk taburan"
+    ],
+    "steps": [
+      "Tabur sedikit garam pada hirisan timun, perap 5 minit kemudian toskan airnya.",
+      "Kacau yoghurt + jus limau + garam + lada sampai jadi dressing licin.",
+      "Gaul timun, tomato dan bawang dengan dressing, tekan lembut supaya rasa masuk.",
+      "Sejukkan 5 minit dalam peti (atau hidang terus kalau tak tahan).",
+      "Tabur daun ketumbar / pudina dan sedikit serbuk cili sebelum hidang."
+    ],
+    "chefTip": "Toskan air timun selepas digaram = kunci salad tidak berair dan dressing tidak cair. Tiada yoghurt? Guna 1 sudu kecil minyak zaitun + limau nipis + setitik madu, sama sedap dan lebih ringan."
+  },
+  {
+    "id": "salad-buah-yogurt-madu",
+    "name": "Salad Buah Yoghurt Madu Sejuk",
+    "category": "salad",
+    "categoryLabel": "🥗 Geng Salad Fresh",
+    "time": "5 minit",
+    "gear": "Tiada! (Mangkuk je)",
+    "bannerIcon": "🍓",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #f9a8d4 0%, #be185d 100%)",
+    "desc": "Campuran buah musim dipotong kiub sebiji gigit, digaul lembut dengan yoghurt dan secubit madu, diakhir dengan perahan limau dan daun pudina. Dessert sejuk yang benar-benar isi buah, bukan puding cair.",
+    "vibe": "Berair manis asam sejuk di mulut, setiap sudu ada rangup buah",
+    "cravingCall": "Nak penutup makan yang sejuk dan manis ringan lepas menu berat, tanpa terasa bersalah macam puding gula.",
+    "pantryTags": ["buah", "susu", "pisang"],
+    "ingredients": [
+      "3 cawan buah campuran (tembikai, betik, oren, epal, anggur, pisang)",
+      "3 sudu besar yoghurt plain",
+      "1 sudu kecil madu (atau setitik je kalau buah sudah manis)",
+      "1 sudu kecil jus limau nipis",
+      "Daun pudina / daun ketumbar",
+      "Taburan: segenggam kacang panggang cincang atau kelapa sangai"
+    ],
+    "steps": [
+      "Potong semua buah saiz sama lebih kurang 2 cm — lagi cantik dan setiap sudu ada campuran.",
+      "Sejukkan buah dalam peti 15 minit (buah sejuk rasa lebih manis semula jadi).",
+      "Kacau yoghurt + madu + jus limau sampai jadi dressing nipis.",
+      "Gaul buah dengan dressing perlahan-lahan supaya buah tidak hancur dan anggur tidak pecah.",
+      "Tabur pudina dan kacang panggang, hidang sejuk serta-merta."
+    ],
+    "chefTip": "Jangan gaul dressing awal-awal — buah akan keluarkan air dan yoghurt jadi cair. Campur masa nak makan sahaja. Kalau buah masam, tambah madu sedikit; kalau buah manis sangat, perah limau lebih untuk seimbang."
+  },
+  {
+    "id": "pasta-tomato-tuna-bawang",
+    "name": "Makaroni Tomato Tuna Bawang Putih (Pasta Bujang)",
+    "category": "pasta",
+    "categoryLabel": "🍝 Geng Pasta & Barat",
+    "time": "15 minit",
+    "gear": "Periuk Rebus & Kuali",
+    "bannerIcon": "🍝",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #f87171 0%, #991b1b 100%)",
+    "desc": "Sos tomato pekat dimasak dengan bawang putih dan herba, kemudian tuna tin dan cendawan dimasukkan, diikat dengan air pasta berkanji supaya melekat berkilat. Rasa restoran, bahan dapur bujang, tanpa krim keju berat.",
+    "vibe": "Merah pekat melekat pada pasta, tuna gurih, herba wangi naik hidung",
+    "cravingCall": "Nak pasta yang sungguh-sungguh rasa tomato dan protein, bukan sekadar mi segera perasa.",
+    "pantryTags": ["pasta", "tuna", "bawang", "cendawan"],
+    "ingredients": [
+      "1 cawan makaroni / spaghetti (pecah dua kalau perlu)",
+      "1 tin tuna (ditoskan minyaknya)",
+      "3 sudu besar sos tomato / pure (tanpa gula) atau 3 biji tomato isi",
+      "2 ulas bawang putih & 1/2 bawang besar (dicincang)",
+      "1 cawan cendawan dibelah / segenggam bayam",
+      "1 sudu kecil minyak masak atau minyak zaitun",
+      "1 sudu kecil oregano / cili flake, garam & lada"
+    ],
+    "steps": [
+      "Rebus pasta sampai al dente. TOSKAN tapi simpan 1/2 cawan air rebusan pasta.",
+      "Panaskan minyak, tumis bawang besar 2 minit kemudian bawang putih 30 saat sampai wangi.",
+      "Masukkan sos/tomato + herba, masak api kecil 5 minit sampai pekat dan warnanya merah gelap.",
+      "Tambah tuna, cendawan dan sedikit air pasta. Gaul 2 minit sampai sos berkilat melekat.",
+      "Masukkan pasta, gaul rata atas api kecil. Perasakan garam & lada.",
+      "Kalau terlalu kering, tambah air pasta sedikit demi sedikit sampai licin."
+    ],
+    "chefTip": "Air pasta yang berkanji itu bahan rahsia — ia mengikat sos supaya melekat dan berkilat tanpa perlu krim. Bayam masuk paling akhir supaya masih hijau dan ada serat tambahan."
+  },
+  {
+    "id": "dhal-kacang-lentis-reneh",
+    "name": "Dhal Kacang Lentis Reneh Berempah (Tempering Daun Kari)",
+    "category": "lauk",
+    "categoryLabel": "🥬 Geng Sayur & Lauk Sihat",
+    "time": "30 minit",
+    "gear": "Periuk Kecil",
+    "bannerIcon": "🫘",
+    "image": "",
+    "bannerGradient": "linear-gradient(135deg, #fcd34d 0%, #b45309 100%)",
+    "desc": "Kacang lentis direneh dengan kunyit, halia dan bawang sampai lembut dan pekat, kemudian disiram tempering bawang putih, cili kering dan daun kari bergoreng. Protein tumbuhan paling murah yang mengenyangkan macam makan daging.",
+    "vibe": "Pekat lembut keemasan, wangi daun kari & kunyit, masin gurih menenangkan",
+    "cravingCall": "Nak lauk berisi yang bukan daging dan bukan goreng, tapi tetap buat kenyang lama dan puas hati.",
+    "pantryTags": ["kacang", "bawang", "nasi", "roti"],
+    "ingredients": [
+      "1 cawan kacang lentis merah/kuning (dibasuh & ditoskan)",
+      "4 cawan air",
+      "1 bawang besar & 3 ulas bawang putih (dicincang)",
+      "1/2 inci halia (dititik) & 1/2 sudu kecil serbuk kunyit",
+      "1 sudu kecil serbuk kari / garam masala",
+      "1 tomato (dipotong) & 1 sudu besar minyak untuk tempering",
+      "10 helai daun kari + 2 cili kering (pilihan), limau nipis"
+    ],
+    "steps": [
+      "Reneh lentis dengan air, kunyit, halia dan separuh bawang atas api kecil 20-25 minit sampai kacang lembut.",
+      "Tekan separuh dhal dengan belakang sudu supaya jadi pekat, tapi biarkan ada biji utuh.",
+      "Kuali lain: panaskan minyak, goreng bawang putih hiris + cili kering + daun kari 1-2 minit sampai wangi dan bintik keemasan (tempering).",
+      "Curahkan tempering panas ke dalam dhal, masukkan tomato, reneh 5 minit lagi.",
+      "Perasakan garam, matikan api dan perah sedikit limau nipis.",
+      "Hidang atas nasi putih, dengan roti bakar, atau bersama kangkung tumis untuk lengkap serat.",
+      "Kalau suka lebih pekat dan berlemak-lemak, tambah 2 sudu besar santan di akhir."
+    ],
+    "chefTip": "Dhal lagi sedap esok — rasa rempah akan menyerap dan teksturnya makin pekat. Simpan tanpa tempering, kemudian buat tempering baru masa nak makan supaya wanginya masih hidup."
   }
 ];
 const HEALTH_METRICS = {
   "korean-corn-cheese": {"level":"medium","label":"🟡 Sederhana","desc":"Kudapan bertenaga penuh kalsium keju & serat jagung, nikmati secara santai."},
+  "puding-jagung-kastard": {"level":"bagus","label":"🟢 Bagus & Sihat","desc":"Jagung + telur + susu, dikukus tanpa minyak dan TANPA gula tambahan. Manis dari jus jagung asli."},
+  "wedges-kentang-berempah": {"level":"medium","label":"🟡 Sederhana (Medium)","desc":"Kentang asli kaya kalium & serat; air fryer kurangkan minyak berbanding fries rendam goreng."},
+  "kentang-keprek-garing": {"level":"medium","label":"🟡 Sederhana (Medium)","desc":"Kentang asli + mentega, dipanggang air fryer bukan goreng rendam minyak. Lebih ringan dari fries."},
+  "kentang-hash-sarapan": {"level":"medium","label":"🟡 Sederhana (Medium)","desc":"Karbo kentang + protein telur & bawang. Minyak sederhana, sarapan kenyang seimbang."},
+  "kroket-kentang-air-fryer": {"level":"bagus","label":"🟢 Bagus & Sihat","desc":"Dibakar air fryer dengan minyak nipis, salut oat tinggi serat. Jimat mashed lebihan tanpa goreng rendam."},
+  "puding-pisang-oat-kukus": {"level":"bagus","label":"🟢 Bagus & Sihat","desc":"Pisang manis semula jadi + oat serat tinggi & protein telur. Dikukus tanpa minyak, tanpa gula halus."},
+  "puding-keledek-kukus": {"level":"bagus","label":"🟢 Bagus & Sihat","desc":"Karbo kompleks ubi + serat & beta-karoten, protein telur. Dikukus tanpa minyak & tanpa gula. Isi padat, bukan susu semata."},
   "sup-jagung-telur-sutera": {"level":"bagus","label":"🟢 Bagus & Sihat","desc":"Rendah kalori, zero minyak goreng, protein telur mudah hadam dan melegakan sistem penghadaman."},
   "nasi-jagung-butter-wangi": {"level":"medium","label":"🟡 Sederhana","desc":"Karbohidrat bertenaga dengan serat bijirin jagung, wangi mentega tanpa sebarang bahan pengawet tiruan."},
 
@@ -2560,7 +3026,6 @@ const HEALTH_METRICS = {
   "maggi-goreng-basah": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Mi segera & sos tinggi sodium. Nikmat waktu craving, tapi jarakkan makan." },
   "roti-canai-cheese": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Keju & roti canai tinggi kalori & lelemak. Sedap layan waktu teringin." },
   "roti-telur-cheese-leleh": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Mentega, keju, dan sosej diproses agak tinggi kalori dan sodium. Makan bersederhana." },
-  "roti-susu-milo-garing": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Gula tinggi dari susu pekat dan Milo. Kudapan cheat penambah tenaga ringkas." },
   "roti-pisang-nutella-roll": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Manis berganda Nutella dan pisang, digoreng butter. Memang sedap, tapi tinggi kalori!" },
   "roti-goreng-kari": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Kuah kari segera tinggi sodium & roti goreng. Sedap, tapi jarakkan makan." },
   "roti-bom-ayam-cincang": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Protein ayam cincang mengenyangkan. Guna air fryer untuk kurangkan minyak." },
@@ -2572,7 +3037,30 @@ const HEALTH_METRICS = {
   "roti-peanut-butter-pisang": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Lemak sihat kacang, kalium & serat pisang. Tenaga tahan lama tanpa goreng." },
   "roti-sosej-mayo-bakeri": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Sosej proses & mayo tinggi lemak dan garam. Layan sesekali je." },
   "roti-stick-kayu-manis": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Goreng mentega & salut gula. Snek manis untuk cheat day." },
-  "roti-aiskrim-malaysia": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Aiskrim tinggi gula & lemak. Nostalgia manis untuk sesekali." }
+  "roti-aiskrim-malaysia": { level: "cheat", label: "🔴 Kurang Sihat (Cheat)", desc: "Aiskrim tinggi gula & lemak. Nostalgia manis untuk sesekali." },
+  "jagung-nyiur-kampung": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Jagung rebus asli tinggi serat, kelapa parut bagi lemak semula jadi. Tanpa minyak & tanpa gula." },
+  "ubi-kayu-cicah-kelapa": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Ubi kayu karbo kompleks mengenyangkan lama, direbus kosong tanpa minyak. Serat tinggi, indeks glisemik rendah." },
+  "pisang-rebus-kelapa": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Pisang rebus kaya kalium & serat, kemanisan semula jadi + kelapa parut. Sifar minyak dimasak." },
+  "keledek-rebus-simple": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Keledek oranye beta-karoten & serat tinggi, direbus tanpa minyak dan tanpa gula tambahan." },
+  "sardin-tin-limau": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Sardin omega-3 & kalsium dari tulang ikan. Perah limau naikkan penyerapan zat besi. Toskan minyak tin." },
+  "roti-banjir-kacang-krim": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Kacang pangang bagi serat & protein, tapi krim cendawan + roti putih naikkan lemak dan garam." },
+  "lempeng-kelapa-peknga": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Lempeng kampung dengan santan & kelapa. Digoreng nipis jadi lebih ringan daripada goreng rendam." },
+  "pulut-gaul-kelapa": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Pulut cepat bagi tenaga tapi rendah serat. Kelapa tambah lemak baik — sesuai sederhana waktu sarapan." },
+  "cucur-bawang-bilis": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Bawang merah antioksidan & bilis kalsium, tapi digoreng minyak. Hadkan 3-4 ketul waktu santai." },
+  "makaroni-sardin": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Protein & omega-3 dari sardin, tapi pasta putih karbo halus. Portion sederhana lagi seimbang." },
+  "maggi-remas-goncang": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Tanpa minyak & air rebusan ditoskan (lagi ringan dari Maggi kuah), tapi serbuk perasa tetap tinggi sodium." },
+  "bubur-kicap-bilis": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Nasi lembutkan mudah dicerna + bilis kalsium. Kicap tambah sodium — cukup secubit dua." },
+  "sosej-scramble-butter": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Telur protein tinggi, tapi sosej proses & mentega bawa lemak tepu. Lagi seimbang kalau ada tomato/timun." },
+  "kruton-roti-herba-air-fryer": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Roti dibakar dengan sapuan mentega nipis — tanpa goreng rendam & tanpa gula. Tapi ia topping, bukan lauk; portion kecil lagi sihat." },
+  "bruschetta-tomato-kampung": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Roti dibakar bukan digoreng + tomato likopena, bawang & vitamin C. Lemak minimum, serat dari sayur." },
+  "tumis-kangkung-bawang-putih": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Sayur hijau kaya serat, folat & kalium. Hanya 1 sudu minyak, tanpa santan. Zero karbo halus." },
+  "sup-ayam-sayur-bening": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Protein ayam + serat sayur dalam kuah air jernih, bukan krim. Rendah kalori, mengenyangkan dan menghidrat." },
+  "dada-ayam-air-fryer-herba": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Protein tanpa lemak tinggi, dibakar dengan minyak disapu nipis. Yoghurt melembutkan isi tanpa perlu goreng." },
+  "ikan-kembung-kukus-halia": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Ikan kembung omega-3 setara salmon, dikukus tanpa minyak goreng. Halia membantu pencernaan & buang hanyir." },
+  "salad-timun-yogurt-limau": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Kalium & serat dari timun-tomato, protein dan kalsium yoghurt. Tanpa mayo berlemak tepu, tanpa dimasak." },
+  "salad-buah-yogurt-madu": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Vitamin C, kalium & serat dari buah asli + probiotik yoghurt. Madu secubit kecil sahaja." },
+  "pasta-tomato-tuna-bawang": { level: "medium", label: "🟡 Sederhana (Medium)", desc: "Tuna omega-3 + likopena tomato + cendawan, tanpa krim keju. Pasta putih karbo halus — tambah sayur lagi seimbang." },
+  "dhal-kacang-lentis-reneh": { level: "bagus", label: "🟢 Bagus & Sihat", desc: "Protein & serat tumbuhan, indeks glisemik rendah, zat besi dan folat. Hanya 1 sudu minyak untuk tempering." }
 };
 RECIPES.forEach(recipe => {
   recipe.health = HEALTH_METRICS[recipe.id] || {
