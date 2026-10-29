@@ -3,89 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Planet Comfortia — Midnight Comfort Food 3D</title>
-  <meta name="description" content="Pusing Planet Comfortia 3D untuk memilih makanan malam kegemaran anda: bubur lembut, lempeng gebu, cucur jagung manis, mashed potato dan sup pekat berkrim. Bawah 15 minit, anti-renyah.">
+  <title>Resepi Malam — Comfort Food Malam Mudah</title>
+  <meta name="description" content="99 resipi makan malam bujang bawah 20 minit: bubur lembut, lempeng gebu, cucur jagung manis, kentang air fryer, puding pejal dan sup panas. Tapis ikut bahan yang ada dalam dapur anda.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌙</text></svg>">
 </head>
 <body>
   <header class="top-header">
     <div class="container top-header-content">
       <a href="#" class="brand-logo" id="brandLogoLink">
-        <span class="brand-icon">🪐</span>
-        <span class="brand-title">Planet Comfortia</span>
+        <span class="brand-icon">🌙</span>
+        <span class="brand-title">Resepi Malam</span>
       </a>
       <div class="status-pill" id="liveClockPill">
         <span class="status-dot"></span>
-        <span id="liveClock">Orbit Aktif</span>
+        <span id="liveClock">Waktu Makan Malam</span>
       </div>
     </div>
   </header>
   <main class="container">
-    <section class="globe-hero-section" id="globeHeroSection">
+    <section class="malam-hero" id="malamHeroSection">
       <h1 class="hero-title-compact">
-        Pening Nak Makan Apa? <span class="gradient-text">Pusing Planet Comfortia!</span>
+        Pening Nak Makan Apa? <span class="gradient-text">Ini Resepi Malam Untuk Kau.</span>
       </h1>
-      <div class="globe-stage-wrapper" id="globeStageWrapper">
-        <div class="globe-hud-header">
-          <div class="hud-radar-status">
-            <span class="radar-sweep"></span>
-            <span>Navigasi Orbit 3D • Planet Comfortia</span>
-          </div>
-          <div class="hud-instructions">
-            👆 Tarik planet untuk pusing manual atau tekan butang di bawah
-          </div>
-        </div>
-        <div class="globe-canvas-container" id="globeCanvasContainer">
-          <canvas id="globeCanvas"></canvas>
-          <div class="globe-target-reticle" id="globeReticle">
-            <div class="reticle-target-arrow" id="reticleTargetArrow">
-              <div class="target-arrow-badge" id="targetArrowBadge">
-                <span class="arrow-radar-pulse"></span>
-                <span id="targetArrowText">📍 SASARAN ORBIT</span>
-              </div>
-              <div class="target-arrow-stem">
-                <svg viewBox="0 0 24 24" width="34" height="34" class="arrow-svg" fill="none">
-                  <path d="M12 22L3 9H8V2H16V9H21L12 22Z" fill="url(#arrowGrad)"/>
-                  <defs>
-                    <linearGradient id="arrowGrad" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
-                      <stop stop-color="#fef08a"/>
-                      <stop offset="0.4" stop-color="#f59e0b"/>
-                      <stop offset="1" stop-color="#b45309"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="globe-focus-card" id="globeFocusCard">
-          <div class="focus-card-left">
-            <div class="focus-dish-icon" id="focusDishIcon">🥣</div>
-            <div>
-              <div class="focus-badge-row">
-                <span class="focus-badge" id="focusBadge">Geng Bubur Lembut • ⏱️ 4 minit</span>
-                <span class="health-pill health-bagus" id="focusHealthPill">🟢 Bagus &amp; Sihat</span>
-              </div>
-              <h2 class="focus-dish-name" id="focusDishName">Bubur Oat Savoury Telur Goyang</h2>
-              <div class="focus-dish-vibe" id="focusDishVibe">✨ Tekak nak rasa hangat, masin gurih dan licin tanpa tunggu lama.</div>
-              <div class="focus-health-desc" id="focusHealthDesc">🥗 Oat bijirin penuh &amp; telur: mudah hadam, kenyang lena tanpa lemak berat.</div>
-            </div>
-          </div>
-          <div class="focus-card-actions" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <button class="btn-spin-globe" id="spinGlobeBtn" style="flex: 1;">
-              <span>🪐</span> Pusing Planet Comfortia!
-            </button>
-            <button class="btn-open-direct" id="openFocusedRecipeBtn" style="flex: 1;">
-              Buka Resipi Terus ➔
-            </button>
-            <button class="btn-share" id="shareGlobeBtn" aria-label="Kongsi Resipi" style="padding: 0.65rem 1rem; border-radius: 9999px; background: rgba(255, 255, 255, 0.1); color: white; border: 1px solid rgba(255, 255, 255, 0.2); cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; min-width: max-content;">
-              📤 Kongsi
-            </button>
-          </div>
-        </div>
-      </div>
+      <p class="hero-subtitle">
+        99 menu bujang bawah 20 minit — tick bahan yang ada dalam dapur, terus keluar yang ngam.
+      </p>
     </section>
     <section class="pantry-section" id="pantrySection">
       <div class="pantry-header">
@@ -315,7 +258,7 @@
           <button class="btn-share" id="shareModalBtn" aria-label="Copy Link" style="padding: 0.65rem 1.2rem; font-size: 0.95rem; background: rgba(255, 255, 255, 0.08); color: var(--text-main); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 9999px; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; transition: all 0.3s ease;">
             <span>🔗</span> Salin Pautan
           </button>
-          <button class="btn-spin-globe" onclick="closeRecipeModal()" style="padding: 0.65rem 1.6rem; font-size: 0.95rem;">
+          <button class="btn-malam-cta" onclick="closeRecipeModal()" style="padding: 0.65rem 1.6rem; font-size: 0.95rem;">
             Dah Nampak, Nak Masak Sekarang! 😋
           </button>
         </div>
@@ -325,7 +268,7 @@
   <footer class="main-footer">
     <div class="container">
       <p class="footer-quote">"Malam-malam perut nak tenang, makanan panas empuk peneman tidur lena."</p>
-      <p>Planet Comfortia Midnight • Dunia masakan comfort food khas mengikut citarasa anda.</p>
+      <p>Resepi Malam • Kumpulan menu comfort food malam, dipilih ikut apa yang ada dalam dapur kau.</p>
     </div>
   </footer>
   <script src="app.js"></script>

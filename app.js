@@ -3133,516 +3133,11 @@ class SoundFX {
   }
 }
 const sfx = new SoundFX();
-function generateRingTexture() {
-  const canvas = document.createElement("canvas");
-  canvas.width = 512;
-  canvas.height = 64;
-  const ctx = canvas.getContext("2d");
-  const grad = ctx.createLinearGradient(0, 0, canvas.width, 0);
-  grad.addColorStop(0, "rgba(245, 158, 11, 0)");
-  grad.addColorStop(0.15, "rgba(251, 191, 36, 0.4)");
-  grad.addColorStop(0.3, "rgba(245, 158, 11, 0.8)");
-  grad.addColorStop(0.45, "rgba(217, 119, 6, 0.2)");
-  grad.addColorStop(0.6, "rgba(251, 191, 36, 0.85)");
-  grad.addColorStop(0.75, "rgba(249, 115, 22, 0.5)");
-  grad.addColorStop(0.9, "rgba(245, 158, 11, 0.25)");
-  grad.addColorStop(1, "rgba(245, 158, 11, 0)");
-  ctx.fillStyle = grad;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-  return new THREE.CanvasTexture(canvas);
-}
-function generateCloudTexture() {
-  const canvas = document.createElement("canvas");
-  canvas.width = 1024;
-  canvas.height = 512;
-  const ctx = canvas.getContext("2d");
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (let i = 0; i < 55; i++) {
-    const cx = Math.random() * canvas.width;
-    const cy = Math.random() * (canvas.height * 0.7) + (canvas.height * 0.15);
-    const rad = Math.random() * 80 + 35;
-    const grad = ctx.createRadialGradient(cx, cy, 0, cx, cy, rad);
-    grad.addColorStop(0, "rgba(254, 243, 199, 0.35)");
-    grad.addColorStop(0.5, "rgba(255, 255, 255, 0.18)");
-    grad.addColorStop(1, "transparent");
-    ctx.fillStyle = grad;
-    ctx.beginPath();
-    ctx.arc(cx, cy, rad, 0, Math.PI * 2);
-    ctx.fill();
-  }
-  const texture = new THREE.CanvasTexture(canvas);
-  texture.wrapS = THREE.RepeatWrapping;
-  return texture;
-}
-class PlanetComfortiaGlobe {
-  constructor(canvasId, recipes, onSelect) {
-    this.canvas = document.getElementById(canvasId);
-    this.recipes = recipes;
-    this.onSelect = onSelect;
-    this.markers = [];
-    this.isSpinning = false;
-    this.radius = 4.8;
-    this.currentFocusedRecipe = recipes[0];
-    this.isDragging = false;
-    this.previousMousePosition = { x: 0, y: 0 };
-    this.dragVelocity = { x: 0, y: 0 };
-    this.init();
-  }
-  init() {
-    if (!window.THREE) return;
-    const container = this.canvas.parentElement;
-    const width = container.clientWidth;
-    const height = container.clientHeight;
-    this.scene = new THREE.Scene();
-    this.camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-    this.camera.position.z = 16.5;
-    this.renderer = new THREE.WebGLRenderer({
-      canvas: this.canvas,
-      alpha: true,
-      antialias: true,
-      powerPreference: "high-performance"
-    });
-    this.renderer.setSize(width, height);
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.85);
-    this.scene.add(ambientLight);
-    const sunLight = new THREE.DirectionalLight(0xfef08a, 1.6);
-    sunLight.position.set(8, 10, 8);
-    this.scene.add(sunLight);
-    const rimLight = new THREE.DirectionalLight(0x38bdf8, 0.9);
-    rimLight.position.set(-8, -6, -6);
-    this.scene.add(rimLight);
-    this.planetGroup = new THREE.Group();
-    this.scene.add(this.planetGroup);
-    this.createPlanetSphere();
-    this.createCloudLayer();
-    this.createPlanetaryRings();
-    this.createAtmosphereHalo();
-    this.createStarCosmos();
-    this.createMenuBeacons();
-    this.create3DPointerArrow();
-    this.setupInteractions();
-    this.animate();
-    window.addEventListener("resize", () => this.onWindowResize());
-  }
-  createPlanetSphere() {
-    const loader = new THREE.TextureLoader();
-    const planetTex = loader.load('images/planet_comfortia.jpg');
-    planetTex.wrapS = THREE.RepeatWrapping;
-    const sphereGeo = new THREE.SphereGeometry(this.radius, 64, 64);
-    const sphereMat = new THREE.MeshPhongMaterial({
-      map: planetTex,
-      shininess: 45,
-      specular: 0xf59e0b,
-      bumpScale: 0.05
-    });
-    this.planetMesh = new THREE.Mesh(sphereGeo, sphereMat);
-    this.planetGroup.add(this.planetMesh);
-  }
-  createCloudLayer() {
-    const cloudTex = generateCloudTexture();
-    const cloudGeo = new THREE.SphereGeometry(this.radius * 1.018, 48, 48);
-    const cloudMat = new THREE.MeshPhongMaterial({
-      map: cloudTex,
-      transparent: true,
-      opacity: 0.6,
-      blending: THREE.AdditiveBlending
-    });
-    this.cloudMesh = new THREE.Mesh(cloudGeo, cloudMat);
-    this.planetGroup.add(this.cloudMesh);
-  }
-  createPlanetaryRings() {
-    const ringTex = generateRingTexture();
-    const ringGeo = new THREE.RingGeometry(this.radius * 1.35, this.radius * 2.05, 64);
-    const pos = ringGeo.attributes.position;
-    const uvs = ringGeo.attributes.uv;
-    for (let i = 0; i < pos.count; i++) {
-      const x = pos.getX(i);
-      const y = pos.getY(i);
-      const d = Math.sqrt(x * x + y * y);
-      const u = (d - this.radius * 1.35) / (this.radius * 0.7);
-      uvs.setXY(i, u, 0.5);
-    }
-    const ringMat = new THREE.MeshBasicMaterial({
-      map: ringTex,
-      side: THREE.DoubleSide,
-      transparent: true,
-      opacity: 0.65
-    });
-    this.ringMesh = new THREE.Mesh(ringGeo, ringMat);
-    this.ringMesh.rotation.x = Math.PI / 2.5;
-    this.ringMesh.rotation.y = 0.2;
-    this.planetGroup.add(this.ringMesh);
-  }
-  createAtmosphereHalo() {
-    const atmoGeo = new THREE.SphereGeometry(this.radius * 1.18, 36, 36);
-    const atmoMat = new THREE.ShaderMaterial({
-      vertexShader: `
-        varying vec3 vNormal;
-        void main() {
-          vNormal = normalize(normalMatrix * normal);
-          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-        }
-      `,
-      fragmentShader: `
-        varying vec3 vNormal;
-        void main() {
-          float intensity = pow(0.68 - dot(vNormal, vec3(0, 0, 1.0)), 2.0);
-          gl_FragColor = vec4(0.96, 0.65, 0.1, 1.0) * intensity * 0.85;
-        }
-      `,
-      blending: THREE.AdditiveBlending,
-      side: THREE.BackSide,
-      transparent: true
-    });
-    const atmosphere = new THREE.Mesh(atmoGeo, atmoMat);
-    this.scene.add(atmosphere);
-  }
-  createStarCosmos() {
-    const starCount = 500;
-    const starGeo = new THREE.BufferGeometry();
-    const positions = new Float32Array(starCount * 3);
-    const colors = new Float32Array(starCount * 3);
-    for (let i = 0; i < starCount * 3; i += 3) {
-      positions[i] = (Math.random() - 0.5) * 100;
-      positions[i + 1] = (Math.random() - 0.5) * 100;
-      positions[i + 2] = (Math.random() - 0.5) * 100 - 15;
-      if (Math.random() > 0.6) {
-        colors[i] = 0.98; colors[i + 1] = 0.75; colors[i + 2] = 0.15;
-      } else if (Math.random() > 0.4) {
-        colors[i] = 0.22; colors[i + 1] = 0.74; colors[i + 2] = 0.97;
-      } else {
-        colors[i] = 1.0; colors[i + 1] = 1.0; colors[i + 2] = 1.0;
-      }
-    }
-    starGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-    starGeo.setAttribute("color", new THREE.BufferAttribute(colors, 3));
-    const starMat = new THREE.PointsMaterial({
-      size: 0.32,
-      vertexColors: true,
-      transparent: true,
-      opacity: 0.75
-    });
-    this.scene.add(new THREE.Points(starGeo, starMat));
-  }
-  createBeaconSprite(icon, title, imagePath = null) {
-    const canvas = document.createElement("canvas");
-    canvas.width = 120;
-    canvas.height = 120;
-    const texture = new THREE.CanvasTexture(canvas);
-    texture.minFilter = THREE.LinearFilter;
-    const renderCanvas = (imgObj = null) => {
-      const ctx = canvas.getContext("2d");
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "rgba(7, 10, 20, 0.90)";
-      ctx.strokeStyle = "#f59e0b";
-      ctx.lineWidth = 4;
-      ctx.beginPath();
-      ctx.arc(60, 60, 50, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.stroke();
-      if (imgObj && imgObj.complete && imgObj.naturalWidth !== 0) {
-        ctx.save();
-        ctx.beginPath();
-        ctx.arc(60, 60, 50, 0, Math.PI * 2);
-        ctx.clip();
-        ctx.drawImage(imgObj, 10, 10, 100, 100);
-        ctx.restore();
-        ctx.strokeStyle = "#f59e0b";
-        ctx.lineWidth = 3;
-        ctx.beginPath();
-        ctx.arc(60, 60, 50, 0, Math.PI * 2);
-        ctx.stroke();
-      } else {
-        ctx.font = "60px sans-serif";
-        ctx.textAlign = "center";
-        ctx.textBaseline = "middle";
-        ctx.fillText(icon, 60, 65);
-      }
-      texture.needsUpdate = true;
-    };
-    renderCanvas(null);
-    if (imagePath) {
-      const img = new Image();
-      img.onload = () => {
-        renderCanvas(img);
-      };
-      img.src = imagePath;
-    }
-    const spriteMat = new THREE.SpriteMaterial({ map: texture, transparent: true });
-    const sprite = new THREE.Sprite(spriteMat);
-    sprite.scale.set(0.7, 0.7, 1);
-    return sprite;
-  }
-  createMenuBeacons() {
-    const total = this.recipes.length;
-    const phi = Math.PI * (3 - Math.sqrt(5));
-    this.recipes.forEach((recipe, i) => {
-      const y = 1 - (i / (total - 1)) * 2;
-      const radiusAtY = Math.sqrt(1 - y * y);
-      const theta = phi * i;
-      const x = Math.cos(theta) * radiusAtY;
-      const z = Math.sin(theta) * radiusAtY;
-      const pos = new THREE.Vector3(x, y, z).multiplyScalar(this.radius);
-      const spritePos = pos.clone().multiplyScalar(1.08);
-      const sprite = this.createBeaconSprite(recipe.bannerIcon, recipe.name, recipe.image);
-      sprite.position.copy(spritePos);
-      const beaconGroup = new THREE.Group();
-      beaconGroup.add(sprite);
-      beaconGroup.userData = {
-        recipe: recipe,
-        origPos: pos.clone(),
-        index: i
-      };
-      this.planetGroup.add(beaconGroup);
-      this.markers.push(beaconGroup);
-    });
-  }
-  create3DPointerArrow() {
-    this.pointer3DGroup = new THREE.Group();
-    const coneGeo = new THREE.ConeGeometry(0.28, 0.82, 16);
-    coneGeo.rotateX(Math.PI);
-    const coneMat = new THREE.MeshBasicMaterial({
-      color: 0xf59e0b
-    });
-    const coneMesh = new THREE.Mesh(coneGeo, coneMat);
-    coneMesh.position.y = 0.41;
-    this.pointer3DGroup.add(coneMesh);
-    const ringGeo = new THREE.TorusGeometry(0.4, 0.035, 12, 32);
-    const ringMat = new THREE.MeshBasicMaterial({
-      color: 0xfde68a,
-      transparent: true,
-      opacity: 0.9
-    });
-    this.pointer3DRing = new THREE.Mesh(ringGeo, ringMat);
-    this.pointer3DRing.rotation.x = Math.PI / 2;
-    this.pointer3DGroup.add(this.pointer3DRing);
-    this.planetGroup.add(this.pointer3DGroup);
-    if (this.recipes.length > 0) {
-      this.update3DPointerPosition(this.recipes[0]);
-    }
-  }
-  update3DPointerPosition(recipe) {
-    if (!this.pointer3DGroup || !recipe) return;
-    const marker = this.markers.find(m => m.userData.recipe.id === recipe.id);
-    if (!marker) return;
-    const normPos = marker.userData.origPos.clone().normalize();
-    const arrowPos = normPos.clone().multiplyScalar(this.radius * 1.35);
-    this.pointer3DGroup.position.copy(arrowPos);
-    this.pointer3DGroup.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), normPos);
-  }
-  setupInteractions() {
-    const dom = this.canvas;
-    this.raycaster = new THREE.Raycaster();
-    this.mouse = new THREE.Vector2();
-    const onStart = (clientX, clientY) => {
-      if (this.isSpinning) return;
-      this.isDragging = true;
-      this.previousMousePosition = { x: clientX, y: clientY };
-      this.dragVelocity = { x: 0, y: 0 };
-    };
-    const onMove = (clientX, clientY) => {
-      if (!this.isDragging || this.isSpinning) return;
-      const deltaX = clientX - this.previousMousePosition.x;
-      const deltaY = clientY - this.previousMousePosition.y;
-      this.dragVelocity = {
-        x: deltaX * 0.005,
-        y: deltaY * 0.005
-      };
-      this.planetGroup.rotation.y += this.dragVelocity.x;
-      this.planetGroup.rotation.x += this.dragVelocity.y;
-      this.previousMousePosition = { x: clientX, y: clientY };
-      this.checkHover();
-    };
-    const onEnd = () => {
-      this.isDragging = false;
-    };
-    dom.addEventListener("mousedown", (e) => onStart(e.clientX, e.clientY));
-    window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
-    window.addEventListener("mouseup", onEnd);
-    dom.addEventListener("touchstart", (e) => {
-      if (e.touches.length === 1) onStart(e.touches[0].clientX, e.touches[0].clientY);
-    }, { passive: true });
-    window.addEventListener("touchmove", (e) => {
-      if (e.touches.length === 1) onMove(e.touches[0].clientX, e.touches[0].clientY);
-    }, { passive: true });
-    window.addEventListener("touchend", onEnd);
-    dom.addEventListener("click", (e) => {
-      if (this.isSpinning) return;
-      const rect = dom.getBoundingClientRect();
-      this.mouse.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
-      this.mouse.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
-      this.raycaster.setFromCamera(this.mouse, this.camera);
-      const intersects = this.raycaster.intersectObjects(this.planetGroup.children, true);
-      if (intersects.length > 0) {
-        let hitMarker = null;
-        intersects.forEach(hit => {
-          let cur = hit.object;
-          while (cur && cur !== this.planetGroup) {
-            if (cur.userData && cur.userData.recipe) {
-              hitMarker = cur;
-              break;
-            }
-            cur = cur.parent;
-          }
-        });
-        if (hitMarker && hitMarker.userData.recipe) {
-          sfx.playLock();
-          this.focusOnRecipe(hitMarker.userData.recipe, true);
-        }
-      }
-    });
-  }
-  checkHover() {
-    let bestDist = Infinity;
-    let bestRecipe = null;
-    const forward = new THREE.Vector3(0, 0, 1);
-    this.markers.forEach(m => {
-      const currentPos = m.userData.origPos.clone().applyMatrix4(this.planetGroup.matrixWorld);
-      const angle = forward.angleTo(currentPos.clone().normalize());
-      if (angle < bestDist) {
-        bestDist = angle;
-        bestRecipe = m.userData.recipe;
-      }
-    });
-    if (bestRecipe) {
-      if (bestRecipe !== this.currentFocusedRecipe) {
-        this.currentFocusedRecipe = bestRecipe;
-        updateFocusedCard(bestRecipe);
-      }
-      this.update3DPointerPosition(bestRecipe);
-    }
-  }
-  spinToRandomRecipe(forceRecipe = null) {
-    if (this.isSpinning) return;
-    this.isSpinning = true;
-    sfx.playWhoosh();
-    let target = forceRecipe;
-    if (!target) {
-      if (this.recipes.length > 1) {
-        let newTarget;
-        do {
-          newTarget = this.recipes[Math.floor(Math.random() * this.recipes.length)];
-        } while (this.currentFocusedRecipe && newTarget.id === this.currentFocusedRecipe.id);
-        target = newTarget;
-      } else {
-        target = this.recipes[0];
-      }
-    }
-    this.currentFocusedRecipe = target;
-    const marker = this.markers.find(m => m.userData.recipe.id === target.id);
-    const pos = marker.userData.origPos.clone().normalize();
-    const targetTheta = Math.atan2(-pos.x, pos.z);
-    const targetPhi = Math.asin(pos.y);
-    const extraSpins = 4 * Math.PI * 2;
-    const startRotY = this.planetGroup.rotation.y;
-    const startRotX = this.planetGroup.rotation.x;
-    const finalRotY = startRotY + extraSpins + (targetTheta - (startRotY % (Math.PI * 2)));
-    const finalRotX = -targetPhi;
-    const reticle = document.getElementById("globeReticle");
-    const arrowText = document.getElementById("targetArrowText");
-    if (reticle) {
-      reticle.classList.remove("locking");
-      reticle.classList.add("spinning");
-    }
-    if (arrowText) {
-      arrowText.textContent = "🛰️ MENGESAN KOORDINAT...";
-    }
-    const startTime = performance.now();
-    const duration = 2400;
-    let lastTick = 0;
-    const animateSpin = (now) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const ease = 1 - Math.pow(1 - progress, 4);
-      this.planetGroup.rotation.y = startRotY + (finalRotY - startRotY) * ease;
-      this.planetGroup.rotation.x = startRotX + (finalRotX - startRotX) * ease;
-      if (now - lastTick > 120 && progress < 0.85) {
-        sfx.playTick();
-        lastTick = now;
-        this.checkHover();
-      }
-      if (progress < 1) {
-        requestAnimationFrame(animateSpin);
-      } else {
-        this.isSpinning = false;
-        this.currentFocusedRecipe = target;
-        if (reticle) {
-          reticle.classList.remove("spinning");
-          reticle.classList.add("locking");
-          setTimeout(() => reticle.classList.remove("locking"), 700);
-        }
-        sfx.playLock();
-        updateFocusedCard(target);
-        this.update3DPointerPosition(target);
-        if (this.onSelect) this.onSelect(target);
-      }
-    };
-    requestAnimationFrame(animateSpin);
-  }
-  focusOnRecipe(recipe, openModal = false) {
-    const marker = this.markers.find(m => m.userData.recipe.id === recipe.id);
-    if (!marker) return;
-    const pos = marker.userData.origPos.clone().normalize();
-    const targetTheta = Math.atan2(-pos.x, pos.z);
-    const targetPhi = Math.asin(pos.y);
-    const startRotY = this.planetGroup.rotation.y;
-    const startRotX = this.planetGroup.rotation.x;
-    const finalRotY = startRotY + (targetTheta - (startRotY % (Math.PI * 2)));
-    const finalRotX = -targetPhi;
-    const startTime = performance.now();
-    const duration = 800;
-    const animateFocus = (now) => {
-      const elapsed = now - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-      const ease = 1 - Math.pow(1 - progress, 3);
-      this.planetGroup.rotation.y = startRotY + (finalRotY - startRotY) * ease;
-      this.planetGroup.rotation.x = startRotX + (finalRotX - startRotX) * ease;
-      if (progress < 1) {
-        requestAnimationFrame(animateFocus);
-      } else {
-        this.currentFocusedRecipe = recipe;
-        updateFocusedCard(recipe);
-        this.update3DPointerPosition(recipe);
-        if (openModal) {
-          openRecipeModal(recipe);
-        }
-      }
-    };
-    requestAnimationFrame(animateFocus);
-  }
-  onWindowResize() {
-    const container = this.canvas.parentElement;
-    const width = container.clientWidth;
-    const height = container.clientHeight;
-    this.camera.aspect = width / height;
-    this.camera.updateProjectionMatrix();
-    this.renderer.setSize(width, height);
-  }
-  animate() {
-    requestAnimationFrame(() => this.animate());
-    if (this.cloudMesh) {
-      this.cloudMesh.rotation.y += 0.0018;
-    }
-    if (this.pointer3DRing) {
-      this.pointer3DRing.rotation.z += 0.04;
-    }
-    if (!this.isDragging && !this.isSpinning) {
-      this.planetGroup.rotation.y += 0.0011;
-      this.dragVelocity.x *= 0.94;
-      this.dragVelocity.y *= 0.94;
-      this.planetGroup.rotation.y += this.dragVelocity.x;
-      this.planetGroup.rotation.x += this.dragVelocity.y;
-    }
-    this.renderer.render(this.scene, this.camera);
-  }
-}
 const state = {
   activeCategory: "all",
   activeHealth: "all",
   searchQuery: "",
-  selectedPantry: new Set(),
-  globeInstance: null
+  selectedPantry: new Set()
 };
 const dom = {
   menuGrid: document.getElementById("menuGrid"),
@@ -3652,12 +3147,6 @@ const dom = {
   healthTabs: document.querySelectorAll(".health-tab"),
   pantryChips: document.querySelectorAll(".pantry-chip"),
   resetPantryBtn: document.getElementById("resetPantryBtn"),
-  spinGlobeBtn: document.getElementById("spinGlobeBtn"),
-  focusDishIcon: document.getElementById("focusDishIcon"),
-  focusBadge: document.getElementById("focusBadge"),
-  focusDishName: document.getElementById("focusDishName"),
-  focusDishVibe: document.getElementById("focusDishVibe"),
-  openFocusedRecipeBtn: document.getElementById("openFocusedRecipeBtn"),
   recipeModal: document.getElementById("recipeModal"),
   closeModalBtn: document.getElementById("closeModalBtn"),
   modalCravingBadge: document.getElementById("modalCravingBadge"),
@@ -3675,42 +3164,18 @@ function updateLiveClock() {
   const now = new Date();
   const timeStr = now.toLocaleTimeString('ms-MY', { hour: '2-digit', minute: '2-digit' });
   if (dom.liveClock) {
-    dom.liveClock.textContent = `${timeStr} • Orbit Aktif`;
-  }
-}
-function updateFocusedCard(recipe) {
-  if (!recipe) return;
-  if (recipe.image) {
-    dom.focusDishIcon.innerHTML = `<img src="${recipe.image}" alt="${recipe.name}" class="focus-dish-thumb" onerror="this.onerror=null; this.parentElement.textContent='${recipe.bannerIcon}'">`;
-  } else {
-    dom.focusDishIcon.textContent = recipe.bannerIcon;
-  }
-  dom.focusBadge.textContent = `${recipe.categoryLabel} • ⏱️ ${recipe.time}`;
-  dom.focusDishName.textContent = recipe.name;
-  dom.focusDishVibe.textContent = `✨ ${recipe.cravingCall}`;
-  const arrowText = document.getElementById("targetArrowText");
-  if (arrowText) {
-    arrowText.textContent = `📍 ${recipe.bannerIcon} ${recipe.name}`;
-  }
-  const healthPill = document.getElementById("focusHealthPill");
-  const healthDesc = document.getElementById("focusHealthDesc");
-  if (healthPill && recipe.health) {
-    healthPill.textContent = recipe.health.label;
-    healthPill.className = `health-pill health-${recipe.health.level}`;
-  }
-  if (healthDesc && recipe.health) {
-    healthDesc.textContent = `💡 ${recipe.health.desc}`;
+    dom.liveClock.textContent = `${timeStr} • Waktu Makan Malam`;
   }
 }
 function shareToWhatsApp(recipe) {
   const url = window.location.href.split('?')[0];
-  const text = `Tengok resipi "${recipe.name}" ni kat Planet Comfortia! Memang ngam untuk makan malam. 😋\n${url}`;
+  const text = `Tengok resipi "${recipe.name}" ni kat Resepi Malam! Memang ngam untuk makan malam. 😋\n${url}`;
   window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`, '_blank');
 }
 
 function shareToTwitter(recipe) {
   const url = window.location.href.split('?')[0];
-  const text = `Tengok resipi "${recipe.name}" ni kat Planet Comfortia! Memang ngam untuk makan malam. 😋`;
+  const text = `Tengok resipi "${recipe.name}" ni kat Resepi Malam! Memang ngam untuk makan malam. 😋`;
   window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
 }
 
@@ -3721,11 +3186,11 @@ function shareToFacebook(recipe) {
 
 function shareRecipe(recipe) {
   const url = window.location.href.split('?')[0]; 
-  const textToShare = `Tengok resipi "${recipe.name}" ni kat Planet Comfortia! Memang ngam untuk makan malam. 😋`;
+  const textToShare = `Tengok resipi "${recipe.name}" ni kat Resepi Malam! Memang ngam untuk makan malam. 😋`;
   
   if (navigator.share) {
     navigator.share({
-      title: 'Planet Comfortia - ' + recipe.name,
+      title: 'Resepi Malam - ' + recipe.name,
       text: textToShare,
       url: url
     }).catch(err => console.log('Ralat share:', err));
@@ -3783,7 +3248,7 @@ function openRecipeModal(recipe) {
   
   dom.modalActionsBar.innerHTML = `
     <div style="display: flex; flex-direction: column; gap: 1rem; width: 100%;">
-      <button class="btn-spin-globe" onclick="closeRecipeModal()" style="width: 100%; padding: 0.8rem; font-size: 1.1rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(217, 119, 6, 0.4);">
+      <button class="btn-malam-cta" onclick="closeRecipeModal()" style="width: 100%; padding: 0.8rem; font-size: 1.1rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(217, 119, 6, 0.4);">
         Dah Nampak, Nak Masak Sekarang! 😋
       </button>
       
@@ -3861,13 +3326,13 @@ function renderMenuGrid() {
         <div style="font-size: 3rem; margin-bottom: 0.5rem;">🍳</div>
         <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.5rem;">Tiada Menu Ditemui</h3>
         <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">Cuba tukar pilihan bahan dapur, tahap kesihatan, atau sektor lain.</p>
-        <button class="btn-spin-globe" onclick="resetAllFilters()" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Reset Saringan</button>
+        <button class="btn-malam-cta" onclick="resetAllFilters()" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Reset Saringan</button>
       </div>
     `;
     dom.resultsCount.textContent = "0 menu";
     return;
   }
-  dom.resultsCount.innerHTML = `Menunjukkan <span class="highlight-match">${filtered.length} menu</span> padu di Planet Comfortia`;
+  dom.resultsCount.innerHTML = `Menunjukkan <span class="highlight-match">${filtered.length} menu</span> padu untuk malam ni`;
   filtered.forEach(recipe => {
     const card = document.createElement("div");
     card.className = "food-card glass";
@@ -3904,9 +3369,6 @@ function renderMenuGrid() {
     `;
     card.addEventListener("click", () => {
       sfx.playTick();
-      if (state.globeInstance) {
-        state.globeInstance.focusOnRecipe(recipe, false);
-      }
       openRecipeModal(recipe);
     });
     dom.menuGrid.appendChild(card);
@@ -3928,31 +3390,6 @@ function resetAllFilters() {
 }
 window.resetAllFilters = resetAllFilters;
 function setupEventListeners() {
-  dom.spinGlobeBtn.addEventListener("click", () => {
-    sfx.init();
-    dom.spinGlobeBtn.disabled = true;
-    dom.spinGlobeBtn.innerHTML = `<span>⏳</span> Mengorbit Planet Comfortia...`;
-    state.globeInstance.spinToRandomRecipe();
-    setTimeout(() => {
-      dom.spinGlobeBtn.disabled = false;
-      dom.spinGlobeBtn.innerHTML = `<span>🪐</span> Pusing Planet Comfortia!`;
-    }, 2600);
-  });
-  dom.openFocusedRecipeBtn.addEventListener("click", () => {
-    if (state.globeInstance && state.globeInstance.currentFocusedRecipe) {
-      openRecipeModal(state.globeInstance.currentFocusedRecipe);
-    }
-  });
-
-  const shareGlobeBtn = document.getElementById("shareGlobeBtn");
-  if (shareGlobeBtn) {
-    shareGlobeBtn.addEventListener("click", () => {
-      if(sfx.playTick) sfx.playTick();
-      if (state.globeInstance && state.globeInstance.currentFocusedRecipe) {
-        shareRecipe(state.globeInstance.currentFocusedRecipe);
-      }
-    });
-  }
   dom.closeModalBtn.addEventListener("click", closeRecipeModal);
   dom.recipeModal.addEventListener("click", (e) => {
     if (e.target === dom.recipeModal) closeRecipeModal();
@@ -3969,10 +3406,6 @@ function setupEventListeners() {
       tab.classList.add("active");
       state.activeCategory = tab.dataset.category;
       renderMenuGrid();
-      const firstMatch = getFilteredRecipes()[0];
-      if (firstMatch && state.globeInstance) {
-        state.globeInstance.focusOnRecipe(firstMatch, false);
-      }
     });
   });
   dom.healthTabs.forEach(tab => {
@@ -3982,10 +3415,6 @@ function setupEventListeners() {
       tab.classList.add("active");
       state.activeHealth = tab.dataset.health;
       renderMenuGrid();
-      const firstMatch = getFilteredRecipes()[0];
-      if (firstMatch && state.globeInstance) {
-        state.globeInstance.focusOnRecipe(firstMatch, false);
-      }
     });
   });
   dom.pantryChips.forEach(chip => {
@@ -4018,9 +3447,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderMenuGrid();
   updateLiveClock();
   setInterval(updateLiveClock, 30000);
-  state.globeInstance = new PlanetComfortiaGlobe("globeCanvas", RECIPES, (chosen) => {
-    updateFocusedCard(chosen);
-  });
-  updateFocusedCard(RECIPES[0]);
 });
 
